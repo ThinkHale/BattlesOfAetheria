@@ -10,3 +10,13 @@ art-inbox/**/*.png
 art-inbox/**/*.jpg
 !art-inbox/README.md
 art-inbox/**/*.log
+
+# Local secrets (API keys)
+.env.local
+.env*.local
+
+# 3D work files (Meshy downloads, Blender scenes, renders) stay local; only the recipes are committed.
+art-inbox/3d/**
+!art-inbox/3d/**/
+!art-inbox/3d/**/strips.json
+!art-inbox/3d/arenas/pieces.tsv

@@ -1,0 +1,92 @@
+{
+ "idle": {
+  "action": "Combat_Stance",
+  "frames": 10,
+  "loop": true
+ },
+ "walk": {
+  "action": "Walk_Fight_Forward",
+  "frames": 10,
+  "loop": true
+ },
+ "dash": {
+  "action": "Stand_Dodge",
+  "frames": 8,
+  "loop": false
+ },
+ "guard": {
+  "action": "Sword_Parry",
+  "frames": 6,
+  "loop": false,
+  "range": [
+   0,
+   20
+  ]
+ },
+ "jump": {
+  "action": "Regular_Jump",
+  "frames": 10,
+  "loop": false,
+  "lock_rise": true
+ },
+ "light": {
+  "action": "Right_Hand_Sword_Slash",
+  "frames": 8,
+  "loop": false
+ },
+ "light2": {
+  "action": "Left_Slash",
+  "frames": 10,
+  "loop": false
+ },
+ "light3": {
+  "action": "Thrust_Slash",
+  "frames": 10,
+  "loop": false
+ },
+ "heavy": {
+  "action": "Charged_Slash",
+  "frames": 10,
+  "loop": false
+ },
+ "air": {
+  "action": "Basic_Jump",
+  "frames": 10,
+  "loop": false,
+  "range": [
+   30,
+   110
+  ],
+  "lock_rise": true
+ },
+ "throw": {
+  "action": "Shield_Push_Left",
+  "frames": 9,
+  "loop": false
+ },
+ "special": {
+  "action": "Counterstrike",
+  "frames": 12,
+  "loop": false
+ },
+ "super": {
+  "action": "Triple_Combo_Attack",
+  "frames": 14,
+  "loop": false
+ },
+ "hit": {
+  "action": "Hit_Reaction",
+  "frames": 6,
+  "loop": false
+ },
+ "ko": {
+  "action": "Knock_Down",
+  "frames": 10,
+  "loop": false
+ },
+ "victory": {
+  "action": "Chest_Pound_Taunt",
+  "frames": 12,
+  "loop": true
+ }
+}

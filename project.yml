@@ -61,7 +61,7 @@ targets:
           - EBGaramond.ttf
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.thinkhale.aetheria.clash
+        PRODUCT_BUNDLE_IDENTIFIER: com.thinkhale.aetheriaclash
         PRODUCT_NAME: AetheriaClash
         TARGETED_DEVICE_FAMILY: "1,2"
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
@@ -80,7 +80,7 @@ targets:
       - target: AetheriaClash
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.thinkhale.aetheria.clash.uitests
+        PRODUCT_BUNDLE_IDENTIFIER: com.thinkhale.aetheriaclash.uitests
         GENERATE_INFOPLIST_FILE: YES
         TEST_TARGET_NAME: AetheriaClash
         CODE_SIGN_STYLE: Automatic

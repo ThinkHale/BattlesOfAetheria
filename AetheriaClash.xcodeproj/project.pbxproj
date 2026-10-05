@@ -7,38 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01E246F1B537F4B65FF9CFC2 /* fighter-marcus_varro-idle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7288403E1C635C64A81123DF /* fighter-marcus_varro-idle.png */; };
+		04700889BF53A83629C0B1D0 /* fighter-gaius-jump.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF100BC605B0E6F7E5CEA7F /* fighter-gaius-jump.png */; };
 		081B7ED54C80D41EB15DA2AC /* ui-empire-chosen.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C53076DB2B99DA5D1C55ABF1 /* ui-empire-chosen.m4a */; };
 		08B4E2E7D5F99737BF93020B /* sfx-hit-crushing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 40828C3CC4737707DA4D574D /* sfx-hit-crushing.wav */; };
+		101747E2DD91D46C7D87B719 /* fighter-gaius-walk.png in Resources */ = {isa = PBXBuildFile; fileRef = D31899493A645CDFF388D98A /* fighter-gaius-walk.png */; };
 		1055AADC563FD7CA1920D54B /* sfx-super.wav in Resources */ = {isa = PBXBuildFile; fileRef = CC59A70691BCAEA2075654B5 /* sfx-super.wav */; };
 		109F2510281337209B8FDA44 /* sfx-grab.wav in Resources */ = {isa = PBXBuildFile; fileRef = C61493146209DFA1A4178D28 /* sfx-grab.wav */; };
 		143E2C6AECB9BEF61299D623 /* FightScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAFAF46C77B2FFD3C0298D8 /* FightScene.swift */; };
 		1451BFF3B8FBFF045A03844B /* atossa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2081CE7AD8A431A9575AA473 /* atossa.jpg */; };
 		180593FB4F85CED0DD8BCF3E /* FighterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617EED33D16DBEAC9BFD5B4D /* FighterNode.swift */; };
+		183A36CCC1B20D549274DBCC /* fighter-marcus_varro-light3.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7F28D28436307B6581FEB4 /* fighter-marcus_varro-light3.png */; };
 		18A941FD6C78669376283F5A /* sfx-jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25C0AE1734EE94483C101F25 /* sfx-jump.wav */; };
+		192527DDFF84217663725BF1 /* fighter-marcus_varro.json in Resources */ = {isa = PBXBuildFile; fileRef = 399C89DCA5E3F40C38B9EF20 /* fighter-marcus_varro.json */; };
 		19E1EA0D85271512D0C3E342 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA961408F3272B05EDFA751A /* AppModel.swift */; };
+		1BC657AABC4B6E393376B1CC /* fighter-nefru-dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 124ED1BDEF5AB73D81F6DBB7 /* fighter-nefru-dash.png */; };
 		1D53A8357413CF783BDFD514 /* sfx-whoosh-light.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3F448C0491C0586E3FA3B464 /* sfx-whoosh-light.wav */; };
 		1F28FC91455B7CF8CF9AE2CC /* mist-thins.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47479AB1002319E930EA0BC8 /* mist-thins.jpg */; };
+		1FD6DCFAC205CCD74589B39A /* fighter-wei_jian-special.png in Resources */ = {isa = PBXBuildFile; fileRef = 4255A5FA8AC8C5215C096B12 /* fighter-wei_jian-special.png */; };
+		209D49A75E7509CAA15F9452 /* fighter-nefru.json in Resources */ = {isa = PBXBuildFile; fileRef = 4192B762CBFC7B68819C8721 /* fighter-nefru.json */; };
+		2184B3A5EDCCEA5074EF496B /* fighter-marcus_varro-air.png in Resources */ = {isa = PBXBuildFile; fileRef = 862E3E15FB87F2ED3E430E0B /* fighter-marcus_varro-air.png */; };
 		25D3D70BEF763003D0E8FF2C /* sfx-land.wav in Resources */ = {isa = PBXBuildFile; fileRef = 862F6BC7340224972A009E2F /* sfx-land.wav */; };
+		261258F38F4B2D2C840F9A0D /* fighter-gaius-ko.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C355F30CF9626EAD59142 /* fighter-gaius-ko.png */; };
+		295987297339FD65F9B0FF9C /* fighter-wei_jian-light3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4905AB24FA2FD739067F2683 /* fighter-wei_jian-light3.png */; };
 		2DB77A716369EAA8DBD82043 /* sfx-bow.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDDFACE6F46CBFFE4ED814D3 /* sfx-bow.wav */; };
 		2DCA59CD85905A498188E702 /* Cinzel-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EFC68FCC2D95A989C1D16AD /* Cinzel-Black.ttf */; };
 		2E103BE83684C3B4F8FD92E3 /* commanders.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D633D82BA9C941A7949608A9 /* commanders.jpg */; };
 		2FB35CBB0D795B20238659F2 /* tahmina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C6C87B6C42C636CE8687992 /* tahmina.jpg */; };
+		2FD9AD301D137A50B9A2360B /* fighter-gaius-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 4420596673BF9BF3DBF2AEAC /* fighter-gaius-light.png */; };
+		3207BE8B592161A72E35D6D0 /* fighter-nefru-walk.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B4BAC8E461F29D383BE59D /* fighter-nefru-walk.png */; };
+		3424962741B54F8DB94208EC /* fighter-marcus_varro-heavy.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A8D6BA91C866997162A46E /* fighter-marcus_varro-heavy.png */; };
+		39DEE7F16F0E8ADBEC1A9C64 /* fighter-marcus_varro-victory.png in Resources */ = {isa = PBXBuildFile; fileRef = 45A6D3AF6C395C9AF42F7E57 /* fighter-marcus_varro-victory.png */; };
+		3DE463EC07BAA4A84C6B979B /* fighter-nefru-jump.png in Resources */ = {isa = PBXBuildFile; fileRef = CC13F397E4821919B93067CE /* fighter-nefru-jump.png */; };
+		3EC02EC6CAF2F64B9DD94B05 /* fighter-wei_jian-light2.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A50A100008F5A4E8051B58 /* fighter-wei_jian-light2.png */; };
+		4022E8C19F5ABFE924C7DAE9 /* fighter-wei_jian-walk.png in Resources */ = {isa = PBXBuildFile; fileRef = EED3FAE8CC4D97D903F9A76A /* fighter-wei_jian-walk.png */; };
+		42EAFA71B605161020C161BF /* fighter-marcus_varro-hit.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B461E6C22758BFF64D72D2 /* fighter-marcus_varro-hit.png */; };
 		43AFAD040FCB3664D12B0D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27EB2F74786E86ABA2F099E8 /* Assets.xcassets */; };
 		448E311AA6B53F7E832C377E /* sfx-orb.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD9AAE4ED7D778AE9BC52CAC /* sfx-orb.wav */; };
 		45028CB72C8FEAD383152E95 /* sfx-horn.wav in Resources */ = {isa = PBXBuildFile; fileRef = B4233AFFD4411BE89E159116 /* sfx-horn.wav */; };
 		45FA407955A34C3A23F8C83C /* music-title.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B0D8022EC658FCEFE6746DAE /* music-title.m4a */; };
+		46F6AD49618981B877458B34 /* fighter-nefru-idle.png in Resources */ = {isa = PBXBuildFile; fileRef = C3570022378BE02551707861 /* fighter-nefru-idle.png */; };
+		46F6AD7561E70692FDFDC0D6 /* fighter-wei_jian-victory.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F8EB9EF907BDF0FC0A3AC44 /* fighter-wei_jian-victory.png */; };
+		47D005583980DEE8FAD1FED5 /* fighter-marcus_varro-walk.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A275B85C28D164FADF173DF /* fighter-marcus_varro-walk.png */; };
+		4B3AA9C7820EFDF8A60B6739 /* greatWall-far.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D3F29E832AB9F1335F7E8BC /* greatWall-far.jpg */; };
+		4BB77019C894ACA28D8304D1 /* fighter-marcus_varro-dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F8B8FAF0AD5FCB34036B6C /* fighter-marcus_varro-dash.png */; };
 		4FAF82A83FF2E26394598FE7 /* sfx-gallop.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6B6719B26250CAAB62062B4 /* sfx-gallop.wav */; };
+		512989BD908D00F0978AEAA4 /* fighter-marcus_varro-special.png in Resources */ = {isa = PBXBuildFile; fileRef = 559E2ECA4131AA2986854CD9 /* fighter-marcus_varro-special.png */; };
 		5204BD1ADCAFD589F2FC7416 /* sfx-hit-medium.wav in Resources */ = {isa = PBXBuildFile; fileRef = 87DEFFF21206949BEE098AD8 /* sfx-hit-medium.wav */; };
 		52541DC247C09B957B76794B /* sfx-block.wav in Resources */ = {isa = PBXBuildFile; fileRef = E8B56B4FC066C96DA9A67CF9 /* sfx-block.wav */; };
 		5403639444F7D208AFDC464D /* SpriteBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E4847EB5A5187587EEFD7 /* SpriteBody.swift */; };
 		5521213969267C6DDDC80AE9 /* sfx-seal.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6DCC1A99EBEF3F365476F04F /* sfx-seal.wav */; };
+		58464E2E25ADFD9DC1181BAC /* fighter-wei_jian-jump.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DAA84CCA639CD2DE7493650 /* fighter-wei_jian-jump.png */; };
+		5A15E78FF8C1A962A135FF67 /* fighter-nefru-throw.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ABBED14BEF6EDB2F9EF3985 /* fighter-nefru-throw.png */; };
+		5BE60200AB5986E0B4C6858A /* fighter-nefru-light2.png in Resources */ = {isa = PBXBuildFile; fileRef = CCF01CCE19B51815CB903317 /* fighter-nefru-light2.png */; };
 		5CF8AAB5834BFA3B4FC1BF67 /* founding-egypt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9581E74C8DC64ED81DB7846 /* founding-egypt.jpg */; };
 		5DA7A3B50229DFAB872B8F67 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 508AA1AC25B90FA628B32451 /* PrivacyInfo.xcprivacy */; };
 		5F25078437C40B019FBF6163 /* music-kingdom-han.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2024DDE2A04AF0CDA77B0BD0 /* music-kingdom-han.m4a */; };
+		5FC3602D9EBF8399A3F3DD31 /* fighter-wei_jian-idle.png in Resources */ = {isa = PBXBuildFile; fileRef = CA0510E89AEF29A884DF4A85 /* fighter-wei_jian-idle.png */; };
+		61358D77EAC70EB90AC2597A /* fighter-wei_jian-hit.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AFA13F64320E0E48F7F772C /* fighter-wei_jian-hit.png */; };
 		6195F4C1F45037C959EB93AB /* ui-reward.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D2C9A4344DDB69ADD1E37606 /* ui-reward.m4a */; };
 		645E851BAD858CBAA81887DE /* AetheriaClashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9770600351013A79882E9E0 /* AetheriaClashUITests.swift */; };
 		64849D97433CA90837FC2BC7 /* nefru.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 397B5F4A4493017C8F37AB30 /* nefru.jpg */; };
 		64F431D4E69E265DD19E5EB5 /* sfx-counter.wav in Resources */ = {isa = PBXBuildFile; fileRef = 39A81DFEBD87D41CF649C926 /* sfx-counter.wav */; };
+		66E2B34C72B216A5D7E784D5 /* fighter-gaius-idle.png in Resources */ = {isa = PBXBuildFile; fileRef = DA93526D252915E360C97327 /* fighter-gaius-idle.png */; };
+		67D538F32620564CD038648C /* fighter-nefru-special.png in Resources */ = {isa = PBXBuildFile; fileRef = FC50B30747984878F300A093 /* fighter-nefru-special.png */; };
+		6871A06F8AA0142CE9C3568D /* fighter-wei_jian-ko.png in Resources */ = {isa = PBXBuildFile; fileRef = E2DAACEDEB284BA1F431C38B /* fighter-wei_jian-ko.png */; };
 		6A0DF600FFE3DF10B95FB320 /* sfx-crossbow.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF49F1603A0A7A0D7B93FE9A /* sfx-crossbow.wav */; };
 		6A3FE6656BF0E6702B1FE020 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B5FE6AACE0B93873A3C581 /* AudioManager.swift */; };
 		6E23896D407B101C354BD3A2 /* sfx-whoosh-heavy.wav in Resources */ = {isa = PBXBuildFile; fileRef = 933413ED7FFE9391DFF33EB4 /* sfx-whoosh-heavy.wav */; };
@@ -46,30 +79,48 @@
 		74178CB746B873DEF56F05CD /* sfx-dust.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7268C8CB7DF98DE12E9184F1 /* sfx-dust.wav */; };
 		745D9BCF578696BDF3AC9130 /* Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F42A422D6A947B4C0C8AAD /* Effects.swift */; };
 		7C015340D0FD64674AF8C563 /* khepri.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9AF32B8CFF80C7EACC7F5CB9 /* khepri.jpg */; };
+		7CD2D472DE71D1DFA8998D40 /* fighter-marcus_varro-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ABCD5DE028F27AC33ADCA2 /* fighter-marcus_varro-light.png */; };
 		7CED67C96A3A93F5C56A8E17 /* white-wind.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C118EA09C07566F6EB9917E9 /* white-wind.jpg */; };
+		7DA0B562483DCF13F816C6EC /* fighter-nefru-ko.png in Resources */ = {isa = PBXBuildFile; fileRef = 121843E29C678EA410D9B80D /* fighter-nefru-ko.png */; };
 		817A440E7A7334D5D38AE76B /* FighterRig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6228CC23206E7EB264AF21 /* FighterRig.swift */; };
 		81C5C664A9249A40F73B9D20 /* livia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 98D2953C5C3CC38BB4C83CEC /* livia.jpg */; };
 		81F9E1D2332C5FAE6DC31CDA /* sfx-ko.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73CEB8C4FD17600429E5CBD3 /* sfx-ko.wav */; };
 		82D04AC160BCDD8DC94CE736 /* sfx-hit-light.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3F11640E996BCDA6AC09538 /* sfx-hit-light.wav */; };
 		834A475B5F1B69CD2E19D041 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F5AD36F016BD40E1BB03F /* Haptics.swift */; };
+		86DD12ACC298C1F043B409CA /* fighter-gaius-throw.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5F6756DBE59A9C26AE0F6A /* fighter-gaius-throw.png */; };
+		86EA3630982D090C773D06D2 /* fighter-nefru-victory.png in Resources */ = {isa = PBXBuildFile; fileRef = EC34AFD899E400EDBFB72434 /* fighter-nefru-victory.png */; };
 		88B3B7ADCDF6D9E8252D95D6 /* sfx-heal.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1C858B2A1F6B05C13987C2B /* sfx-heal.wav */; };
+		8947E8B368D1152AF7CB9FBE /* fighter-nefru-super.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A42E446D730D830FA8FF68 /* fighter-nefru-super.png */; };
+		8EAE60659E3A14C464412E52 /* fighter-nefru-air.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A14ED9587011DF5E2E4C7E0 /* fighter-nefru-air.png */; };
 		8FCD7DBE53B3C6F96D6FF543 /* music-march.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 54CF1693DDAE015F20C69B07 /* music-march.m4a */; };
+		93E1F7F772F5EC1330351C83 /* fighter-gaius.json in Resources */ = {isa = PBXBuildFile; fileRef = B49B3DD5C913236D0922B059 /* fighter-gaius.json */; };
 		94AF52D0ABD36712DEAC6C53 /* music-kingdom-egypt.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8B1A1D1ADADE4DB47BFCF2DC /* music-kingdom-egypt.m4a */; };
 		95055264D47A9A8778162AF2 /* MenuViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298787E2CC0495E32F6822A /* MenuViews.swift */; };
+		9552369E19CE077F82DC1216 /* nile-far.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C56DFE2529F7A9DC566B218E /* nile-far.jpg */; };
 		9589E20F4E206634F6FF4979 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3200E5D0D856D2EFA6BBB307 /* Profile.swift */; };
+		9A2F1E0666C0CBE8BBD3F14F /* fighter-marcus_varro-super.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18D75FBAF0EEA62A832EE /* fighter-marcus_varro-super.png */; };
 		9A4C944ECD87179B14C92C71 /* ArcadeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEBFAEC4F94F4F0EDAFBFEE /* ArcadeViews.swift */; };
 		9D411436BDD2C159CE79EDF2 /* sfx-victory.wav in Resources */ = {isa = PBXBuildFile; fileRef = B7566BFB53C93E82FC094C00 /* sfx-victory.wav */; };
 		9D45FF5C5F9EC672ED19277F /* aeterna.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D97CFC21FD548D9D8E6F17A /* aeterna.jpg */; };
+		A187DF35FE9DBF3A9E438BA2 /* fighter-wei_jian.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D928130EB0FF8F8E049276D /* fighter-wei_jian.json */; };
 		A1A37C6B79CF5321494D1942 /* sfx-hit-heavy.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0EC9858D3CB358A4066272D1 /* sfx-hit-heavy.wav */; };
+		A2D045833CF52BECE72DFC96 /* fighter-marcus_varro-guard.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8075B5FFF49118DD491DB0 /* fighter-marcus_varro-guard.png */; };
 		A38185A0C7D7BCAAD69E8353 /* FightCore in Frameworks */ = {isa = PBXBuildFile; productRef = F85CBE9982C812882E62818C /* FightCore */; };
 		A3A025BF7FDB521261CDD925 /* music-kingdom-rome.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B8FA4FA3856A47AC84AB7639 /* music-kingdom-rome.m4a */; };
 		A71F66FA5C131F570D4DE0E2 /* InfoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1F12D12FF1D565AA71A4CC /* InfoViews.swift */; };
+		AB711B55271C875E81930DBB /* fighter-gaius-special.png in Resources */ = {isa = PBXBuildFile; fileRef = 260AF9F10F83BA2624B55171 /* fighter-gaius-special.png */; };
 		AD92D984A4645C51B7F0F0B7 /* TouchControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A2E45055A88D50172CFF67 /* TouchControls.swift */; };
 		AE85F26B99709542DEA1CC0B /* sfx-gong.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3D5904154516C5F29B8DD3B /* sfx-gong.wav */; };
+		B13B60F00C6D70AE2C1E6BD6 /* fighter-gaius-victory.png in Resources */ = {isa = PBXBuildFile; fileRef = A1AD5F75A37E5D6D175B3CCE /* fighter-gaius-victory.png */; };
+		B158AE008A627D1B64C5F2A0 /* fighter-wei_jian-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 058A31DC4D82BB14403DEE74 /* fighter-wei_jian-light.png */; };
+		B39D9E594F51AF008FAE9DE3 /* fighter-nefru-hit.png in Resources */ = {isa = PBXBuildFile; fileRef = 80764EB9034ADE3406C5F624 /* fighter-nefru-hit.png */; };
+		B44EA91D1627ABAAF6E1EF0F /* persepolis-far.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E0DA44EAD80A08AE4E7D245 /* persepolis-far.jpg */; };
+		B848BEE8E2CD3536ABC618B0 /* fighter-marcus_varro-throw.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C3EACD51ABB5438490EFA2 /* fighter-marcus_varro-throw.png */; };
 		B88F9595B42B115918C42644 /* music-kingdom-persia.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 65E10630EF7100DCF7F8797B /* music-kingdom-persia.m4a */; };
 		BAA3BC1FD8D3E376F2E55873 /* founding-persia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4D1816A5447C9D1F10E556A /* founding-persia.jpg */; };
 		BE3937438520258B6E5ED105 /* sfx-dash.wav in Resources */ = {isa = PBXBuildFile; fileRef = E0BD2E402C3A9E38276E142D /* sfx-dash.wav */; };
 		C070792113F19A872A055605 /* SelectViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3073B24EA2A7038ED6D04093 /* SelectViews.swift */; };
+		C2AC7F2EFD22605383E2EB76 /* fighter-wei_jian-throw.png in Resources */ = {isa = PBXBuildFile; fileRef = 9075F9B3F1210DBE0F74B890 /* fighter-wei_jian-throw.png */; };
 		C39CB6DD344ABC591C921584 /* Cinzel-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9095A945E9613D2D1676BDC /* Cinzel-Bold.ttf */; };
 		C3D30AE3B488DB6ADEC2F3F4 /* founding-han.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50E9B0A5D01CA41B799B5F30 /* founding-han.jpg */; };
 		C528AAC805967A3646AA3976 /* FightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C9CAD3FA1B6C6447687E2 /* FightView.swift */; };
@@ -77,26 +128,47 @@
 		C7FB5154F8C66FC6754BDE2F /* PaintedParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE09A4E54C4E8A7CB26562 /* PaintedParts.swift */; };
 		C9A4A2ACF9B09F7B85FB1DF4 /* HeroLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC951961036880B8F3A8177 /* HeroLook.swift */; };
 		CA9A600F28C53EF14496A1DD /* founding-rome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FE1413CE0E25A35A7928ABE /* founding-rome.jpg */; };
+		CB10045C10BC136E4C9B57A3 /* fighter-gaius-light3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4332FD1D57C0760144ADE617 /* fighter-gaius-light3.png */; };
+		CBBACF0FECA2C7B0B43C0A19 /* fighter-wei_jian-dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 573FB85D2074284DB5732EE5 /* fighter-wei_jian-dash.png */; };
 		CD6988A457B4EDFB3752678B /* gaius.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9745E4C59EB191AF1140FC7 /* gaius.jpg */; };
 		CF40F4BCA578A0CBA53AA829 /* ArtLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769606E56B88A3C596FE5186 /* ArtLibrary.swift */; };
 		D069480BEFFD4F2274F85F64 /* zhao_lin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD5E4D9A99268B2CC9BD3E98 /* zhao_lin.jpg */; };
+		D191F058AE4052B49D584250 /* fighter-gaius-guard.png in Resources */ = {isa = PBXBuildFile; fileRef = 95791D216A14D586A8C3EBCB /* fighter-gaius-guard.png */; };
+		D6B31241412E599B7ACF3640 /* fighter-nefru-heavy.png in Resources */ = {isa = PBXBuildFile; fileRef = EA09FC3C7F6B45041B3CA3A1 /* fighter-nefru-heavy.png */; };
+		D857FF403C90AFAC34407E10 /* fighter-gaius-hit.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C042541DE0CF2A77D7E73DC /* fighter-gaius-hit.png */; };
 		D8FAF550398A9538265F6907 /* ControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018E67A0B6B531769B4CB19 /* ControllerInput.swift */; };
 		DA615692609348A9E3FD570B /* arsames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90B3D7BD1545E16BA65A3141 /* arsames.jpg */; };
+		DB1E4D4841DF6EFDD51E8A2C /* fighter-nefru-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 6906ABBCDBF39E2DDDD108FA /* fighter-nefru-light.png */; };
+		DB67B1A8E76F7EC1D12B8560 /* fighter-marcus_varro-light2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CFBF2EBE3490D989A65F5E5 /* fighter-marcus_varro-light2.png */; };
 		DBEC03BA289D564153ED7A4C /* meritamun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A851E86B04AA6FFB50D9CCD2 /* meritamun.jpg */; };
+		DD58B1DC3BAA037A9F1C70AE /* fighter-gaius-air.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B7F1BF4589798105FCBAA80 /* fighter-gaius-air.png */; };
 		DD624417C821DEB8740B98B2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A2D0DA03C5DC3DE3C949C /* Theme.swift */; };
 		DE391735CBA0896FE32932CD /* bardiya.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5D6A6793191B4C5F3EE5F84 /* bardiya.jpg */; };
 		DF1482B94DBC3783467AD210 /* marcus_varro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C16CDB38BBEA0B9EF21A28F /* marcus_varro.jpg */; };
+		E321E8E29202B125F33E6DE4 /* fighter-wei_jian-guard.png in Resources */ = {isa = PBXBuildFile; fileRef = 4021124DAE22D095B69F9EEC /* fighter-wei_jian-guard.png */; };
 		E461BF995E024BBD9D95C337 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CC9201D0DD5064FAB108C229 /* OFL.txt */; };
 		E54169EF55C241F455103792 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A41E7E586441C335547E4 /* HUD.swift */; };
 		E5749422FF117B97F5F8A39C /* wei_jian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B697D61254EEEAD49DF2DF4 /* wei_jian.jpg */; };
+		E57AB809A750C1C792F7145B /* fighter-gaius-light2.png in Resources */ = {isa = PBXBuildFile; fileRef = E2377510023742B3F455E542 /* fighter-gaius-light2.png */; };
+		E686E21876228A119FBC5927 /* fighter-wei_jian-super.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBA1833E7014AD774A65193 /* fighter-wei_jian-super.png */; };
 		E7BD246C9B43043049987DE4 /* StageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BB24123BAB38C829C83597 /* StageNode.swift */; };
+		E96F4E158D021E26B2F8ED2B /* fighter-nefru-guard.png in Resources */ = {isa = PBXBuildFile; fileRef = 784E569B62B3104EFC06AB8E /* fighter-nefru-guard.png */; };
 		EC3B9A8B2B40E9CE58094B15 /* ui-tap.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1B3D386DE659EF3DC220B0F5 /* ui-tap.m4a */; };
+		EE417375EA01E77F21F52FBB /* forum-far.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93AC65F51E22A9444E5C9676 /* forum-far.jpg */; };
 		EECF31DAA0E663C1452EABFC /* far-beacon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 418A1B09EACD5873B2849BA8 /* far-beacon.jpg */; };
+		EEF8F45B5597DD7B1814DEEF /* fighter-nefru-light3.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D805CE271C8C3C27F5F174 /* fighter-nefru-light3.png */; };
 		F09E9E6558A54C076A081C9E /* ui-error.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E8CC19C8F2EF7192065B5A8B /* ui-error.m4a */; };
+		F1368174C8C9AF1AF4DD8801 /* fighter-wei_jian-air.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F0F16EB337FE4E447CFEE71 /* fighter-wei_jian-air.png */; };
 		F190F63B34F732428283355B /* EBGaramond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 656DF0BD227019626EA77FCE /* EBGaramond.ttf */; };
+		F1D156A5913C3E413F503D5E /* fighter-marcus_varro-ko.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBABDE831A818A913A48C24 /* fighter-marcus_varro-ko.png */; };
 		F5B8C8E9CD06A29C4591C701 /* sfx-armor.wav in Resources */ = {isa = PBXBuildFile; fileRef = CB5D2D5A109B3A3AE5F2E7CE /* sfx-armor.wav */; };
+		F7F45CCA52C36D9E70487790 /* fighter-wei_jian-heavy.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F9BAED37DD0C3BE74E01C3 /* fighter-wei_jian-heavy.png */; };
 		F83BAFCAF4A910773545323D /* AetheriaClashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1835944CC459DF763124AFF /* AetheriaClashApp.swift */; };
+		FA6325D8727BAF7616D70EAC /* fighter-gaius-super.png in Resources */ = {isa = PBXBuildFile; fileRef = 7736C3948DC0F35E95F5D405 /* fighter-gaius-super.png */; };
+		FAE0275E504F852159CB39D0 /* fighter-gaius-heavy.png in Resources */ = {isa = PBXBuildFile; fileRef = DEB5CBC110267405C132E1F2 /* fighter-gaius-heavy.png */; };
+		FB41DF02BFAC03551B0994F1 /* fighter-gaius-dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 356479800642FD845597D58D /* fighter-gaius-dash.png */; };
 		FB7643FBBAD079B189616023 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA76BAA3CE5FFAABA78F37 /* Pose.swift */; };
+		FC64F3B7D1C6D580E2E00DEB /* fighter-marcus_varro-jump.png in Resources */ = {isa = PBXBuildFile; fileRef = 820AF20A5D541B4635124AA1 /* fighter-marcus_varro-jump.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,98 +182,170 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		058A31DC4D82BB14403DEE74 /* fighter-wei_jian-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-light.png"; sourceTree = "<group>"; };
 		06BB24123BAB38C829C83597 /* StageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageNode.swift; sourceTree = "<group>"; };
+		0A14ED9587011DF5E2E4C7E0 /* fighter-nefru-air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-air.png"; sourceTree = "<group>"; };
 		0C16CDB38BBEA0B9EF21A28F /* marcus_varro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marcus_varro.jpg; sourceTree = "<group>"; };
 		0EC9858D3CB358A4066272D1 /* sfx-hit-heavy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-hit-heavy.wav"; sourceTree = "<group>"; };
+		121843E29C678EA410D9B80D /* fighter-nefru-ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-ko.png"; sourceTree = "<group>"; };
+		124ED1BDEF5AB73D81F6DBB7 /* fighter-nefru-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-dash.png"; sourceTree = "<group>"; };
 		1298787E2CC0495E32F6822A /* MenuViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViews.swift; sourceTree = "<group>"; };
+		1A275B85C28D164FADF173DF /* fighter-marcus_varro-walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-walk.png"; sourceTree = "<group>"; };
 		1B3D386DE659EF3DC220B0F5 /* ui-tap.m4a */ = {isa = PBXFileReference; path = "ui-tap.m4a"; sourceTree = "<group>"; };
 		1B6228CC23206E7EB264AF21 /* FighterRig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterRig.swift; sourceTree = "<group>"; };
+		1B7F1BF4589798105FCBAA80 /* fighter-gaius-air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-air.png"; sourceTree = "<group>"; };
+		1DAA84CCA639CD2DE7493650 /* fighter-wei_jian-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-jump.png"; sourceTree = "<group>"; };
 		2024DDE2A04AF0CDA77B0BD0 /* music-kingdom-han.m4a */ = {isa = PBXFileReference; path = "music-kingdom-han.m4a"; sourceTree = "<group>"; };
 		2081CE7AD8A431A9575AA473 /* atossa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = atossa.jpg; sourceTree = "<group>"; };
+		21F8B8FAF0AD5FCB34036B6C /* fighter-marcus_varro-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-dash.png"; sourceTree = "<group>"; };
+		23ABCD5DE028F27AC33ADCA2 /* fighter-marcus_varro-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-light.png"; sourceTree = "<group>"; };
 		24B5FE6AACE0B93873A3C581 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		25C0AE1734EE94483C101F25 /* sfx-jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-jump.wav"; sourceTree = "<group>"; };
+		260AF9F10F83BA2624B55171 /* fighter-gaius-special.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-special.png"; sourceTree = "<group>"; };
 		261C9CAD3FA1B6C6447687E2 /* FightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightView.swift; sourceTree = "<group>"; };
 		27EB2F74786E86ABA2F099E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B5F6756DBE59A9C26AE0F6A /* fighter-gaius-throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-throw.png"; sourceTree = "<group>"; };
 		2B697D61254EEEAD49DF2DF4 /* wei_jian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wei_jian.jpg; sourceTree = "<group>"; };
 		2C6C87B6C42C636CE8687992 /* tahmina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tahmina.jpg; sourceTree = "<group>"; };
+		2D3F29E832AB9F1335F7E8BC /* greatWall-far.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "greatWall-far.jpg"; sourceTree = "<group>"; };
+		2D928130EB0FF8F8E049276D /* fighter-wei_jian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fighter-wei_jian.json"; sourceTree = "<group>"; };
+		2EBA1833E7014AD774A65193 /* fighter-wei_jian-super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-super.png"; sourceTree = "<group>"; };
 		3073B24EA2A7038ED6D04093 /* SelectViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViews.swift; sourceTree = "<group>"; };
 		3200E5D0D856D2EFA6BBB307 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		356479800642FD845597D58D /* fighter-gaius-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-dash.png"; sourceTree = "<group>"; };
+		36B4BAC8E461F29D383BE59D /* fighter-nefru-walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-walk.png"; sourceTree = "<group>"; };
 		397B5F4A4493017C8F37AB30 /* nefru.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nefru.jpg; sourceTree = "<group>"; };
+		399C89DCA5E3F40C38B9EF20 /* fighter-marcus_varro.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fighter-marcus_varro.json"; sourceTree = "<group>"; };
 		39A81DFEBD87D41CF649C926 /* sfx-counter.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-counter.wav"; sourceTree = "<group>"; };
 		3D97CFC21FD548D9D8E6F17A /* aeterna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aeterna.jpg; sourceTree = "<group>"; };
+		3E0DA44EAD80A08AE4E7D245 /* persepolis-far.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "persepolis-far.jpg"; sourceTree = "<group>"; };
 		3F448C0491C0586E3FA3B464 /* sfx-whoosh-light.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-whoosh-light.wav"; sourceTree = "<group>"; };
+		4021124DAE22D095B69F9EEC /* fighter-wei_jian-guard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-guard.png"; sourceTree = "<group>"; };
 		40828C3CC4737707DA4D574D /* sfx-hit-crushing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-hit-crushing.wav"; sourceTree = "<group>"; };
 		418A1B09EACD5873B2849BA8 /* far-beacon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "far-beacon.jpg"; sourceTree = "<group>"; };
+		4192B762CBFC7B68819C8721 /* fighter-nefru.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fighter-nefru.json"; sourceTree = "<group>"; };
+		4255A5FA8AC8C5215C096B12 /* fighter-wei_jian-special.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-special.png"; sourceTree = "<group>"; };
+		4332FD1D57C0760144ADE617 /* fighter-gaius-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-light3.png"; sourceTree = "<group>"; };
+		4420596673BF9BF3DBF2AEAC /* fighter-gaius-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-light.png"; sourceTree = "<group>"; };
+		45A6D3AF6C395C9AF42F7E57 /* fighter-marcus_varro-victory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-victory.png"; sourceTree = "<group>"; };
 		47479AB1002319E930EA0BC8 /* mist-thins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mist-thins.jpg"; sourceTree = "<group>"; };
 		47BA9AE8FF2646025427F67A /* AetheriaClashUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AetheriaClashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4905AB24FA2FD739067F2683 /* fighter-wei_jian-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-light3.png"; sourceTree = "<group>"; };
+		49D805CE271C8C3C27F5F174 /* fighter-nefru-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-light3.png"; sourceTree = "<group>"; };
+		4ABBED14BEF6EDB2F9EF3985 /* fighter-nefru-throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-throw.png"; sourceTree = "<group>"; };
+		4CFBF2EBE3490D989A65F5E5 /* fighter-marcus_varro-light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-light2.png"; sourceTree = "<group>"; };
 		4F9A41E7E586441C335547E4 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		508AA1AC25B90FA628B32451 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		50A50A100008F5A4E8051B58 /* fighter-wei_jian-light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-light2.png"; sourceTree = "<group>"; };
 		50E9B0A5D01CA41B799B5F30 /* founding-han.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "founding-han.jpg"; sourceTree = "<group>"; };
 		54CF1693DDAE015F20C69B07 /* music-march.m4a */ = {isa = PBXFileReference; path = "music-march.m4a"; sourceTree = "<group>"; };
+		559E2ECA4131AA2986854CD9 /* fighter-marcus_varro-special.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-special.png"; sourceTree = "<group>"; };
+		55B461E6C22758BFF64D72D2 /* fighter-marcus_varro-hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-hit.png"; sourceTree = "<group>"; };
+		573FB85D2074284DB5732EE5 /* fighter-wei_jian-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-dash.png"; sourceTree = "<group>"; };
+		5C042541DE0CF2A77D7E73DC /* fighter-gaius-hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-hit.png"; sourceTree = "<group>"; };
 		5EFC68FCC2D95A989C1D16AD /* Cinzel-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cinzel-Black.ttf"; sourceTree = "<group>"; };
 		5FAFAF46C77B2FFD3C0298D8 /* FightScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightScene.swift; sourceTree = "<group>"; };
 		617EED33D16DBEAC9BFD5B4D /* FighterNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterNode.swift; sourceTree = "<group>"; };
 		656DF0BD227019626EA77FCE /* EBGaramond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EBGaramond.ttf; sourceTree = "<group>"; };
 		65E10630EF7100DCF7F8797B /* music-kingdom-persia.m4a */ = {isa = PBXFileReference; path = "music-kingdom-persia.m4a"; sourceTree = "<group>"; };
+		6906ABBCDBF39E2DDDD108FA /* fighter-nefru-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-light.png"; sourceTree = "<group>"; };
+		69F9BAED37DD0C3BE74E01C3 /* fighter-wei_jian-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-heavy.png"; sourceTree = "<group>"; };
 		6DCC1A99EBEF3F365476F04F /* sfx-seal.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-seal.wav"; sourceTree = "<group>"; };
 		7268C8CB7DF98DE12E9184F1 /* sfx-dust.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-dust.wav"; sourceTree = "<group>"; };
+		7288403E1C635C64A81123DF /* fighter-marcus_varro-idle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-idle.png"; sourceTree = "<group>"; };
 		73CEB8C4FD17600429E5CBD3 /* sfx-ko.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-ko.wav"; sourceTree = "<group>"; };
 		769606E56B88A3C596FE5186 /* ArtLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtLibrary.swift; sourceTree = "<group>"; };
+		7736C3948DC0F35E95F5D405 /* fighter-gaius-super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-super.png"; sourceTree = "<group>"; };
+		784E569B62B3104EFC06AB8E /* fighter-nefru-guard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-guard.png"; sourceTree = "<group>"; };
 		7C95936DE1CF1762607D64AF /* AetheriaClash.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AetheriaClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EEBFAEC4F94F4F0EDAFBFEE /* ArcadeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeViews.swift; sourceTree = "<group>"; };
 		7FE1413CE0E25A35A7928ABE /* founding-rome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "founding-rome.jpg"; sourceTree = "<group>"; };
+		80764EB9034ADE3406C5F624 /* fighter-nefru-hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-hit.png"; sourceTree = "<group>"; };
+		820AF20A5D541B4635124AA1 /* fighter-marcus_varro-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-jump.png"; sourceTree = "<group>"; };
+		82A42E446D730D830FA8FF68 /* fighter-nefru-super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-super.png"; sourceTree = "<group>"; };
+		862E3E15FB87F2ED3E430E0B /* fighter-marcus_varro-air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-air.png"; sourceTree = "<group>"; };
 		862F6BC7340224972A009E2F /* sfx-land.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-land.wav"; sourceTree = "<group>"; };
 		87DEFFF21206949BEE098AD8 /* sfx-hit-medium.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-hit-medium.wav"; sourceTree = "<group>"; };
 		8B1A1D1ADADE4DB47BFCF2DC /* music-kingdom-egypt.m4a */ = {isa = PBXFileReference; path = "music-kingdom-egypt.m4a"; sourceTree = "<group>"; };
+		8B8C355F30CF9626EAD59142 /* fighter-gaius-ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-ko.png"; sourceTree = "<group>"; };
 		8E6A2D0DA03C5DC3DE3C949C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		8F8EB9EF907BDF0FC0A3AC44 /* fighter-wei_jian-victory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-victory.png"; sourceTree = "<group>"; };
+		8FA18D75FBAF0EEA62A832EE /* fighter-marcus_varro-super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-super.png"; sourceTree = "<group>"; };
+		9075F9B3F1210DBE0F74B890 /* fighter-wei_jian-throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-throw.png"; sourceTree = "<group>"; };
 		90B3D7BD1545E16BA65A3141 /* arsames.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = arsames.jpg; sourceTree = "<group>"; };
 		912E6A8616D71C45B9FA81E6 /* FightCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FightCore; path = Packages/FightCore; sourceTree = SOURCE_ROOT; };
 		917F5AD36F016BD40E1BB03F /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		933413ED7FFE9391DFF33EB4 /* sfx-whoosh-heavy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-whoosh-heavy.wav"; sourceTree = "<group>"; };
+		93AC65F51E22A9444E5C9676 /* forum-far.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "forum-far.jpg"; sourceTree = "<group>"; };
+		95791D216A14D586A8C3EBCB /* fighter-gaius-guard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-guard.png"; sourceTree = "<group>"; };
 		98D2953C5C3CC38BB4C83CEC /* livia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = livia.jpg; sourceTree = "<group>"; };
 		990E4894384BD061A3B0B1F6 /* legion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = legion.jpg; sourceTree = "<group>"; };
 		9AF32B8CFF80C7EACC7F5CB9 /* khepri.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = khepri.jpg; sourceTree = "<group>"; };
+		9AFA13F64320E0E48F7F772C /* fighter-wei_jian-hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-hit.png"; sourceTree = "<group>"; };
+		9F0F16EB337FE4E447CFEE71 /* fighter-wei_jian-air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-air.png"; sourceTree = "<group>"; };
+		A1AD5F75A37E5D6D175B3CCE /* fighter-gaius-victory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-victory.png"; sourceTree = "<group>"; };
 		A4AA76BAA3CE5FFAABA78F37 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		A5D6A6793191B4C5F3EE5F84 /* bardiya.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bardiya.jpg; sourceTree = "<group>"; };
 		A851E86B04AA6FFB50D9CCD2 /* meritamun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meritamun.jpg; sourceTree = "<group>"; };
 		ACC951961036880B8F3A8177 /* HeroLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLook.swift; sourceTree = "<group>"; };
 		AD5E4D9A99268B2CC9BD3E98 /* zhao_lin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zhao_lin.jpg; sourceTree = "<group>"; };
 		AD9AAE4ED7D778AE9BC52CAC /* sfx-orb.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-orb.wav"; sourceTree = "<group>"; };
+		AFBABDE831A818A913A48C24 /* fighter-marcus_varro-ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-ko.png"; sourceTree = "<group>"; };
 		B0D8022EC658FCEFE6746DAE /* music-title.m4a */ = {isa = PBXFileReference; path = "music-title.m4a"; sourceTree = "<group>"; };
 		B3D5904154516C5F29B8DD3B /* sfx-gong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-gong.wav"; sourceTree = "<group>"; };
 		B4233AFFD4411BE89E159116 /* sfx-horn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-horn.wav"; sourceTree = "<group>"; };
+		B49B3DD5C913236D0922B059 /* fighter-gaius.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fighter-gaius.json"; sourceTree = "<group>"; };
 		B7566BFB53C93E82FC094C00 /* sfx-victory.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-victory.wav"; sourceTree = "<group>"; };
 		B8FA4FA3856A47AC84AB7639 /* music-kingdom-rome.m4a */ = {isa = PBXFileReference; path = "music-kingdom-rome.m4a"; sourceTree = "<group>"; };
+		B9A8D6BA91C866997162A46E /* fighter-marcus_varro-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-heavy.png"; sourceTree = "<group>"; };
 		BA961408F3272B05EDFA751A /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		BF8075B5FFF49118DD491DB0 /* fighter-marcus_varro-guard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-guard.png"; sourceTree = "<group>"; };
 		C118EA09C07566F6EB9917E9 /* white-wind.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "white-wind.jpg"; sourceTree = "<group>"; };
 		C2A2E45055A88D50172CFF67 /* TouchControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchControls.swift; sourceTree = "<group>"; };
+		C3570022378BE02551707861 /* fighter-nefru-idle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-idle.png"; sourceTree = "<group>"; };
+		C3C3EACD51ABB5438490EFA2 /* fighter-marcus_varro-throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-throw.png"; sourceTree = "<group>"; };
 		C53076DB2B99DA5D1C55ABF1 /* ui-empire-chosen.m4a */ = {isa = PBXFileReference; path = "ui-empire-chosen.m4a"; sourceTree = "<group>"; };
+		C56DFE2529F7A9DC566B218E /* nile-far.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nile-far.jpg"; sourceTree = "<group>"; };
 		C61493146209DFA1A4178D28 /* sfx-grab.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-grab.wav"; sourceTree = "<group>"; };
 		C6B6719B26250CAAB62062B4 /* sfx-gallop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-gallop.wav"; sourceTree = "<group>"; };
 		C9581E74C8DC64ED81DB7846 /* founding-egypt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "founding-egypt.jpg"; sourceTree = "<group>"; };
 		C9745E4C59EB191AF1140FC7 /* gaius.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gaius.jpg; sourceTree = "<group>"; };
+		CA0510E89AEF29A884DF4A85 /* fighter-wei_jian-idle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-idle.png"; sourceTree = "<group>"; };
 		CB5D2D5A109B3A3AE5F2E7CE /* sfx-armor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-armor.wav"; sourceTree = "<group>"; };
+		CC13F397E4821919B93067CE /* fighter-nefru-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-jump.png"; sourceTree = "<group>"; };
 		CC59A70691BCAEA2075654B5 /* sfx-super.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-super.wav"; sourceTree = "<group>"; };
 		CC9201D0DD5064FAB108C229 /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		CCF01CCE19B51815CB903317 /* fighter-nefru-light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-light2.png"; sourceTree = "<group>"; };
 		CF49F1603A0A7A0D7B93FE9A /* sfx-crossbow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-crossbow.wav"; sourceTree = "<group>"; };
+		CFF100BC605B0E6F7E5CEA7F /* fighter-gaius-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-jump.png"; sourceTree = "<group>"; };
 		D018E67A0B6B531769B4CB19 /* ControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerInput.swift; sourceTree = "<group>"; };
 		D0FE09A4E54C4E8A7CB26562 /* PaintedParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintedParts.swift; sourceTree = "<group>"; };
 		D1F42A422D6A947B4C0C8AAD /* Effects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effects.swift; sourceTree = "<group>"; };
 		D2C9A4344DDB69ADD1E37606 /* ui-reward.m4a */ = {isa = PBXFileReference; path = "ui-reward.m4a"; sourceTree = "<group>"; };
+		D31899493A645CDFF388D98A /* fighter-gaius-walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-walk.png"; sourceTree = "<group>"; };
 		D633D82BA9C941A7949608A9 /* commanders.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = commanders.jpg; sourceTree = "<group>"; };
+		DA93526D252915E360C97327 /* fighter-gaius-idle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-idle.png"; sourceTree = "<group>"; };
+		DEB5CBC110267405C132E1F2 /* fighter-gaius-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-heavy.png"; sourceTree = "<group>"; };
 		E0BD2E402C3A9E38276E142D /* sfx-dash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-dash.wav"; sourceTree = "<group>"; };
 		E16E4847EB5A5187587EEFD7 /* SpriteBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteBody.swift; sourceTree = "<group>"; };
 		E1835944CC459DF763124AFF /* AetheriaClashApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AetheriaClashApp.swift; sourceTree = "<group>"; };
+		E2377510023742B3F455E542 /* fighter-gaius-light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-light2.png"; sourceTree = "<group>"; };
+		E2DAACEDEB284BA1F431C38B /* fighter-wei_jian-ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-ko.png"; sourceTree = "<group>"; };
 		E8B56B4FC066C96DA9A67CF9 /* sfx-block.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-block.wav"; sourceTree = "<group>"; };
 		E8CC19C8F2EF7192065B5A8B /* ui-error.m4a */ = {isa = PBXFileReference; path = "ui-error.m4a"; sourceTree = "<group>"; };
 		E9770600351013A79882E9E0 /* AetheriaClashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AetheriaClashUITests.swift; sourceTree = "<group>"; };
+		EA09FC3C7F6B45041B3CA3A1 /* fighter-nefru-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-heavy.png"; sourceTree = "<group>"; };
+		EB7F28D28436307B6581FEB4 /* fighter-marcus_varro-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-light3.png"; sourceTree = "<group>"; };
+		EC34AFD899E400EDBFB72434 /* fighter-nefru-victory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-victory.png"; sourceTree = "<group>"; };
 		EDDFACE6F46CBFFE4ED814D3 /* sfx-bow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-bow.wav"; sourceTree = "<group>"; };
 		EE1F12D12FF1D565AA71A4CC /* InfoViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViews.swift; sourceTree = "<group>"; };
+		EED3FAE8CC4D97D903F9A76A /* fighter-wei_jian-walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-walk.png"; sourceTree = "<group>"; };
 		F1C51F93A9C0D4A3E02B1E4C /* mei_lin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mei_lin.jpg; sourceTree = "<group>"; };
 		F1C858B2A1F6B05C13987C2B /* sfx-heal.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-heal.wav"; sourceTree = "<group>"; };
 		F3F11640E996BCDA6AC09538 /* sfx-hit-light.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-hit-light.wav"; sourceTree = "<group>"; };
 		F4D1816A5447C9D1F10E556A /* founding-persia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "founding-persia.jpg"; sourceTree = "<group>"; };
 		F9095A945E9613D2D1676BDC /* Cinzel-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cinzel-Bold.ttf"; sourceTree = "<group>"; };
+		FC50B30747984878F300A093 /* fighter-nefru-special.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-special.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +386,17 @@
 				3200E5D0D856D2EFA6BBB307 /* Profile.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		15BAEB9E4B4E071D5E30A769 /* Stages */ = {
+			isa = PBXGroup;
+			children = (
+				93AC65F51E22A9444E5C9676 /* forum-far.jpg */,
+				2D3F29E832AB9F1335F7E8BC /* greatWall-far.jpg */,
+				C56DFE2529F7A9DC566B218E /* nile-far.jpg */,
+				3E0DA44EAD80A08AE4E7D245 /* persepolis-far.jpg */,
+			);
+			path = Stages;
 			sourceTree = "<group>";
 		};
 		2BF3A39EC65EBE358AC452A6 /* Portraits */ = {
@@ -299,6 +454,81 @@
 				C118EA09C07566F6EB9917E9 /* white-wind.jpg */,
 			);
 			path = Backdrops;
+			sourceTree = "<group>";
+		};
+		66D669F8036872B0CFA88BF8 /* Fighters */ = {
+			isa = PBXGroup;
+			children = (
+				1B7F1BF4589798105FCBAA80 /* fighter-gaius-air.png */,
+				356479800642FD845597D58D /* fighter-gaius-dash.png */,
+				95791D216A14D586A8C3EBCB /* fighter-gaius-guard.png */,
+				DEB5CBC110267405C132E1F2 /* fighter-gaius-heavy.png */,
+				5C042541DE0CF2A77D7E73DC /* fighter-gaius-hit.png */,
+				DA93526D252915E360C97327 /* fighter-gaius-idle.png */,
+				CFF100BC605B0E6F7E5CEA7F /* fighter-gaius-jump.png */,
+				8B8C355F30CF9626EAD59142 /* fighter-gaius-ko.png */,
+				4420596673BF9BF3DBF2AEAC /* fighter-gaius-light.png */,
+				E2377510023742B3F455E542 /* fighter-gaius-light2.png */,
+				4332FD1D57C0760144ADE617 /* fighter-gaius-light3.png */,
+				260AF9F10F83BA2624B55171 /* fighter-gaius-special.png */,
+				7736C3948DC0F35E95F5D405 /* fighter-gaius-super.png */,
+				2B5F6756DBE59A9C26AE0F6A /* fighter-gaius-throw.png */,
+				A1AD5F75A37E5D6D175B3CCE /* fighter-gaius-victory.png */,
+				D31899493A645CDFF388D98A /* fighter-gaius-walk.png */,
+				B49B3DD5C913236D0922B059 /* fighter-gaius.json */,
+				862E3E15FB87F2ED3E430E0B /* fighter-marcus_varro-air.png */,
+				21F8B8FAF0AD5FCB34036B6C /* fighter-marcus_varro-dash.png */,
+				BF8075B5FFF49118DD491DB0 /* fighter-marcus_varro-guard.png */,
+				B9A8D6BA91C866997162A46E /* fighter-marcus_varro-heavy.png */,
+				55B461E6C22758BFF64D72D2 /* fighter-marcus_varro-hit.png */,
+				7288403E1C635C64A81123DF /* fighter-marcus_varro-idle.png */,
+				820AF20A5D541B4635124AA1 /* fighter-marcus_varro-jump.png */,
+				AFBABDE831A818A913A48C24 /* fighter-marcus_varro-ko.png */,
+				23ABCD5DE028F27AC33ADCA2 /* fighter-marcus_varro-light.png */,
+				4CFBF2EBE3490D989A65F5E5 /* fighter-marcus_varro-light2.png */,
+				EB7F28D28436307B6581FEB4 /* fighter-marcus_varro-light3.png */,
+				559E2ECA4131AA2986854CD9 /* fighter-marcus_varro-special.png */,
+				8FA18D75FBAF0EEA62A832EE /* fighter-marcus_varro-super.png */,
+				C3C3EACD51ABB5438490EFA2 /* fighter-marcus_varro-throw.png */,
+				45A6D3AF6C395C9AF42F7E57 /* fighter-marcus_varro-victory.png */,
+				1A275B85C28D164FADF173DF /* fighter-marcus_varro-walk.png */,
+				399C89DCA5E3F40C38B9EF20 /* fighter-marcus_varro.json */,
+				0A14ED9587011DF5E2E4C7E0 /* fighter-nefru-air.png */,
+				124ED1BDEF5AB73D81F6DBB7 /* fighter-nefru-dash.png */,
+				784E569B62B3104EFC06AB8E /* fighter-nefru-guard.png */,
+				EA09FC3C7F6B45041B3CA3A1 /* fighter-nefru-heavy.png */,
+				80764EB9034ADE3406C5F624 /* fighter-nefru-hit.png */,
+				C3570022378BE02551707861 /* fighter-nefru-idle.png */,
+				CC13F397E4821919B93067CE /* fighter-nefru-jump.png */,
+				121843E29C678EA410D9B80D /* fighter-nefru-ko.png */,
+				6906ABBCDBF39E2DDDD108FA /* fighter-nefru-light.png */,
+				CCF01CCE19B51815CB903317 /* fighter-nefru-light2.png */,
+				49D805CE271C8C3C27F5F174 /* fighter-nefru-light3.png */,
+				FC50B30747984878F300A093 /* fighter-nefru-special.png */,
+				82A42E446D730D830FA8FF68 /* fighter-nefru-super.png */,
+				4ABBED14BEF6EDB2F9EF3985 /* fighter-nefru-throw.png */,
+				EC34AFD899E400EDBFB72434 /* fighter-nefru-victory.png */,
+				36B4BAC8E461F29D383BE59D /* fighter-nefru-walk.png */,
+				4192B762CBFC7B68819C8721 /* fighter-nefru.json */,
+				9F0F16EB337FE4E447CFEE71 /* fighter-wei_jian-air.png */,
+				573FB85D2074284DB5732EE5 /* fighter-wei_jian-dash.png */,
+				4021124DAE22D095B69F9EEC /* fighter-wei_jian-guard.png */,
+				69F9BAED37DD0C3BE74E01C3 /* fighter-wei_jian-heavy.png */,
+				9AFA13F64320E0E48F7F772C /* fighter-wei_jian-hit.png */,
+				CA0510E89AEF29A884DF4A85 /* fighter-wei_jian-idle.png */,
+				1DAA84CCA639CD2DE7493650 /* fighter-wei_jian-jump.png */,
+				E2DAACEDEB284BA1F431C38B /* fighter-wei_jian-ko.png */,
+				058A31DC4D82BB14403DEE74 /* fighter-wei_jian-light.png */,
+				50A50A100008F5A4E8051B58 /* fighter-wei_jian-light2.png */,
+				4905AB24FA2FD739067F2683 /* fighter-wei_jian-light3.png */,
+				4255A5FA8AC8C5215C096B12 /* fighter-wei_jian-special.png */,
+				2EBA1833E7014AD774A65193 /* fighter-wei_jian-super.png */,
+				9075F9B3F1210DBE0F74B890 /* fighter-wei_jian-throw.png */,
+				8F8EB9EF907BDF0FC0A3AC44 /* fighter-wei_jian-victory.png */,
+				EED3FAE8CC4D97D903F9A76A /* fighter-wei_jian-walk.png */,
+				2D928130EB0FF8F8E049276D /* fighter-wei_jian.json */,
+			);
+			path = Fighters;
 			sourceTree = "<group>";
 		};
 		7D29ACA3FF01E979B28EC31E /* UI */ = {
@@ -420,8 +650,10 @@
 				27EB2F74786E86ABA2F099E8 /* Assets.xcassets */,
 				E1709B92FB2BEAC32F6F2DD8 /* Audio */,
 				5C2A0A469D43423D2D05F879 /* Backdrops */,
+				66D669F8036872B0CFA88BF8 /* Fighters */,
 				D84B4D018F467A397819B25E /* Fonts */,
 				2BF3A39EC65EBE358AC452A6 /* Portraits */,
+				15BAEB9E4B4E071D5E30A769 /* Stages */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -527,11 +759,81 @@
 				DE391735CBA0896FE32932CD /* bardiya.jpg in Resources */,
 				2E103BE83684C3B4F8FD92E3 /* commanders.jpg in Resources */,
 				EECF31DAA0E663C1452EABFC /* far-beacon.jpg in Resources */,
+				DD58B1DC3BAA037A9F1C70AE /* fighter-gaius-air.png in Resources */,
+				FB41DF02BFAC03551B0994F1 /* fighter-gaius-dash.png in Resources */,
+				D191F058AE4052B49D584250 /* fighter-gaius-guard.png in Resources */,
+				FAE0275E504F852159CB39D0 /* fighter-gaius-heavy.png in Resources */,
+				D857FF403C90AFAC34407E10 /* fighter-gaius-hit.png in Resources */,
+				66E2B34C72B216A5D7E784D5 /* fighter-gaius-idle.png in Resources */,
+				04700889BF53A83629C0B1D0 /* fighter-gaius-jump.png in Resources */,
+				261258F38F4B2D2C840F9A0D /* fighter-gaius-ko.png in Resources */,
+				2FD9AD301D137A50B9A2360B /* fighter-gaius-light.png in Resources */,
+				E57AB809A750C1C792F7145B /* fighter-gaius-light2.png in Resources */,
+				CB10045C10BC136E4C9B57A3 /* fighter-gaius-light3.png in Resources */,
+				AB711B55271C875E81930DBB /* fighter-gaius-special.png in Resources */,
+				FA6325D8727BAF7616D70EAC /* fighter-gaius-super.png in Resources */,
+				86DD12ACC298C1F043B409CA /* fighter-gaius-throw.png in Resources */,
+				B13B60F00C6D70AE2C1E6BD6 /* fighter-gaius-victory.png in Resources */,
+				101747E2DD91D46C7D87B719 /* fighter-gaius-walk.png in Resources */,
+				93E1F7F772F5EC1330351C83 /* fighter-gaius.json in Resources */,
+				2184B3A5EDCCEA5074EF496B /* fighter-marcus_varro-air.png in Resources */,
+				4BB77019C894ACA28D8304D1 /* fighter-marcus_varro-dash.png in Resources */,
+				A2D045833CF52BECE72DFC96 /* fighter-marcus_varro-guard.png in Resources */,
+				3424962741B54F8DB94208EC /* fighter-marcus_varro-heavy.png in Resources */,
+				42EAFA71B605161020C161BF /* fighter-marcus_varro-hit.png in Resources */,
+				01E246F1B537F4B65FF9CFC2 /* fighter-marcus_varro-idle.png in Resources */,
+				FC64F3B7D1C6D580E2E00DEB /* fighter-marcus_varro-jump.png in Resources */,
+				F1D156A5913C3E413F503D5E /* fighter-marcus_varro-ko.png in Resources */,
+				7CD2D472DE71D1DFA8998D40 /* fighter-marcus_varro-light.png in Resources */,
+				DB67B1A8E76F7EC1D12B8560 /* fighter-marcus_varro-light2.png in Resources */,
+				183A36CCC1B20D549274DBCC /* fighter-marcus_varro-light3.png in Resources */,
+				512989BD908D00F0978AEAA4 /* fighter-marcus_varro-special.png in Resources */,
+				9A2F1E0666C0CBE8BBD3F14F /* fighter-marcus_varro-super.png in Resources */,
+				B848BEE8E2CD3536ABC618B0 /* fighter-marcus_varro-throw.png in Resources */,
+				39DEE7F16F0E8ADBEC1A9C64 /* fighter-marcus_varro-victory.png in Resources */,
+				47D005583980DEE8FAD1FED5 /* fighter-marcus_varro-walk.png in Resources */,
+				192527DDFF84217663725BF1 /* fighter-marcus_varro.json in Resources */,
+				8EAE60659E3A14C464412E52 /* fighter-nefru-air.png in Resources */,
+				1BC657AABC4B6E393376B1CC /* fighter-nefru-dash.png in Resources */,
+				E96F4E158D021E26B2F8ED2B /* fighter-nefru-guard.png in Resources */,
+				D6B31241412E599B7ACF3640 /* fighter-nefru-heavy.png in Resources */,
+				B39D9E594F51AF008FAE9DE3 /* fighter-nefru-hit.png in Resources */,
+				46F6AD49618981B877458B34 /* fighter-nefru-idle.png in Resources */,
+				3DE463EC07BAA4A84C6B979B /* fighter-nefru-jump.png in Resources */,
+				7DA0B562483DCF13F816C6EC /* fighter-nefru-ko.png in Resources */,
+				DB1E4D4841DF6EFDD51E8A2C /* fighter-nefru-light.png in Resources */,
+				5BE60200AB5986E0B4C6858A /* fighter-nefru-light2.png in Resources */,
+				EEF8F45B5597DD7B1814DEEF /* fighter-nefru-light3.png in Resources */,
+				67D538F32620564CD038648C /* fighter-nefru-special.png in Resources */,
+				8947E8B368D1152AF7CB9FBE /* fighter-nefru-super.png in Resources */,
+				5A15E78FF8C1A962A135FF67 /* fighter-nefru-throw.png in Resources */,
+				86EA3630982D090C773D06D2 /* fighter-nefru-victory.png in Resources */,
+				3207BE8B592161A72E35D6D0 /* fighter-nefru-walk.png in Resources */,
+				209D49A75E7509CAA15F9452 /* fighter-nefru.json in Resources */,
+				F1368174C8C9AF1AF4DD8801 /* fighter-wei_jian-air.png in Resources */,
+				CBBACF0FECA2C7B0B43C0A19 /* fighter-wei_jian-dash.png in Resources */,
+				E321E8E29202B125F33E6DE4 /* fighter-wei_jian-guard.png in Resources */,
+				F7F45CCA52C36D9E70487790 /* fighter-wei_jian-heavy.png in Resources */,
+				61358D77EAC70EB90AC2597A /* fighter-wei_jian-hit.png in Resources */,
+				5FC3602D9EBF8399A3F3DD31 /* fighter-wei_jian-idle.png in Resources */,
+				58464E2E25ADFD9DC1181BAC /* fighter-wei_jian-jump.png in Resources */,
+				6871A06F8AA0142CE9C3568D /* fighter-wei_jian-ko.png in Resources */,
+				B158AE008A627D1B64C5F2A0 /* fighter-wei_jian-light.png in Resources */,
+				3EC02EC6CAF2F64B9DD94B05 /* fighter-wei_jian-light2.png in Resources */,
+				295987297339FD65F9B0FF9C /* fighter-wei_jian-light3.png in Resources */,
+				1FD6DCFAC205CCD74589B39A /* fighter-wei_jian-special.png in Resources */,
+				E686E21876228A119FBC5927 /* fighter-wei_jian-super.png in Resources */,
+				C2AC7F2EFD22605383E2EB76 /* fighter-wei_jian-throw.png in Resources */,
+				46F6AD7561E70692FDFDC0D6 /* fighter-wei_jian-victory.png in Resources */,
+				4022E8C19F5ABFE924C7DAE9 /* fighter-wei_jian-walk.png in Resources */,
+				A187DF35FE9DBF3A9E438BA2 /* fighter-wei_jian.json in Resources */,
+				EE417375EA01E77F21F52FBB /* forum-far.jpg in Resources */,
 				5CF8AAB5834BFA3B4FC1BF67 /* founding-egypt.jpg in Resources */,
 				C3D30AE3B488DB6ADEC2F3F4 /* founding-han.jpg in Resources */,
 				BAA3BC1FD8D3E376F2E55873 /* founding-persia.jpg in Resources */,
 				CA9A600F28C53EF14496A1DD /* founding-rome.jpg in Resources */,
 				CD6988A457B4EDFB3752678B /* gaius.jpg in Resources */,
+				4B3AA9C7820EFDF8A60B6739 /* greatWall-far.jpg in Resources */,
 				7C015340D0FD64674AF8C563 /* khepri.jpg in Resources */,
 				7374A7CACABD7CC3FE9F5D13 /* legion.jpg in Resources */,
 				81C5C664A9249A40F73B9D20 /* livia.jpg in Resources */,
@@ -546,6 +848,8 @@
 				8FCD7DBE53B3C6F96D6FF543 /* music-march.m4a in Resources */,
 				45FA407955A34C3A23F8C83C /* music-title.m4a in Resources */,
 				64849D97433CA90837FC2BC7 /* nefru.jpg in Resources */,
+				9552369E19CE077F82DC1216 /* nile-far.jpg in Resources */,
+				B44EA91D1627ABAAF6E1EF0F /* persepolis-far.jpg in Resources */,
 				F5B8C8E9CD06A29C4591C701 /* sfx-armor.wav in Resources */,
 				52541DC247C09B957B76794B /* sfx-block.wav in Resources */,
 				2DB77A716369EAA8DBD82043 /* sfx-bow.wav in Resources */,
@@ -648,7 +952,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thinkhale.aetheria.clash;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinkhale.aetheriaclash;
 				PRODUCT_NAME = AetheriaClash;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
@@ -738,7 +1042,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thinkhale.aetheria.clash;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinkhale.aetheriaclash;
 				PRODUCT_NAME = AetheriaClash;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
@@ -819,7 +1123,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thinkhale.aetheria.clash.uitests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinkhale.aetheriaclash.uitests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AetheriaClash;
@@ -837,7 +1141,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thinkhale.aetheria.clash.uitests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinkhale.aetheriaclash.uitests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AetheriaClash;

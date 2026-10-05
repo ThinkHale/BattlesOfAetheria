@@ -1,0 +1,18 @@
+{
+ "idle":    {"action": "Combat_Stance", "frames": 10, "loop": true},
+ "walk":    {"action": "Walk_Fight_Forward", "frames": 10, "loop": true},
+ "dash":    {"action": "ForwardLeft_Run_Fight", "frames": 7, "loop": true},
+ "guard":   {"action": "Sword_Parry", "frames": 6, "loop": false, "range": [0, 20]},
+ "jump":    {"action": "Regular_Jump", "frames": 10, "loop": false, "lock_rise": true},
+ "light":   {"action": "Right_Hand_Sword_Slash", "frames": 8, "loop": false},
+ "light2":  {"action": "Thrust_Slash", "frames": 10, "loop": false},
+ "light3":  {"action": "Charged_Upward_Slash", "frames": 10, "loop": false},
+ "heavy":   {"action": "Sword_Judgment", "frames": 12, "loop": false},
+ "air":     {"action": "Basic_Jump", "frames": 10, "loop": false, "range": [30, 110], "lock_rise": true},
+ "throw":   {"action": "Shield_Push_Left", "frames": 9, "loop": false},
+ "special": {"action": "Charged_Slash", "frames": 10, "loop": false},
+ "super":   {"action": "Double_Combo_Attack", "frames": 12, "loop": false},
+ "hit":     {"action": "Hit_Reaction_1", "frames": 6, "loop": false},
+ "ko":      {"action": "Knock_Down_1", "frames": 10, "loop": false},
+ "victory": {"action": "Sword_Shout", "frames": 12, "loop": true}
+}

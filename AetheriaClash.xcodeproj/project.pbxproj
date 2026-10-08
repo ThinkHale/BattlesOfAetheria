@@ -191,11 +191,11 @@
 		124ED1BDEF5AB73D81F6DBB7 /* fighter-nefru-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-dash.png"; sourceTree = "<group>"; };
 		1298787E2CC0495E32F6822A /* MenuViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViews.swift; sourceTree = "<group>"; };
 		1A275B85C28D164FADF173DF /* fighter-marcus_varro-walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-walk.png"; sourceTree = "<group>"; };
-		1B3D386DE659EF3DC220B0F5 /* ui-tap.m4a */ = {isa = PBXFileReference; path = "ui-tap.m4a"; sourceTree = "<group>"; };
+		1B3D386DE659EF3DC220B0F5 /* ui-tap.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ui-tap.m4a"; sourceTree = "<group>"; };
 		1B6228CC23206E7EB264AF21 /* FighterRig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterRig.swift; sourceTree = "<group>"; };
 		1B7F1BF4589798105FCBAA80 /* fighter-gaius-air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-air.png"; sourceTree = "<group>"; };
 		1DAA84CCA639CD2DE7493650 /* fighter-wei_jian-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-jump.png"; sourceTree = "<group>"; };
-		2024DDE2A04AF0CDA77B0BD0 /* music-kingdom-han.m4a */ = {isa = PBXFileReference; path = "music-kingdom-han.m4a"; sourceTree = "<group>"; };
+		2024DDE2A04AF0CDA77B0BD0 /* music-kingdom-han.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "music-kingdom-han.m4a"; sourceTree = "<group>"; };
 		2081CE7AD8A431A9575AA473 /* atossa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = atossa.jpg; sourceTree = "<group>"; };
 		21F8B8FAF0AD5FCB34036B6C /* fighter-marcus_varro-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-dash.png"; sourceTree = "<group>"; };
 		23ABCD5DE028F27AC33ADCA2 /* fighter-marcus_varro-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-light.png"; sourceTree = "<group>"; };
@@ -229,16 +229,16 @@
 		4420596673BF9BF3DBF2AEAC /* fighter-gaius-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-light.png"; sourceTree = "<group>"; };
 		45A6D3AF6C395C9AF42F7E57 /* fighter-marcus_varro-victory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-victory.png"; sourceTree = "<group>"; };
 		47479AB1002319E930EA0BC8 /* mist-thins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mist-thins.jpg"; sourceTree = "<group>"; };
-		47BA9AE8FF2646025427F67A /* AetheriaClashUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AetheriaClashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BA9AE8FF2646025427F67A /* AetheriaClashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AetheriaClashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4905AB24FA2FD739067F2683 /* fighter-wei_jian-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-light3.png"; sourceTree = "<group>"; };
 		49D805CE271C8C3C27F5F174 /* fighter-nefru-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-light3.png"; sourceTree = "<group>"; };
 		4ABBED14BEF6EDB2F9EF3985 /* fighter-nefru-throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-throw.png"; sourceTree = "<group>"; };
 		4CFBF2EBE3490D989A65F5E5 /* fighter-marcus_varro-light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-light2.png"; sourceTree = "<group>"; };
 		4F9A41E7E586441C335547E4 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
-		508AA1AC25B90FA628B32451 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		508AA1AC25B90FA628B32451 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		50A50A100008F5A4E8051B58 /* fighter-wei_jian-light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-light2.png"; sourceTree = "<group>"; };
 		50E9B0A5D01CA41B799B5F30 /* founding-han.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "founding-han.jpg"; sourceTree = "<group>"; };
-		54CF1693DDAE015F20C69B07 /* music-march.m4a */ = {isa = PBXFileReference; path = "music-march.m4a"; sourceTree = "<group>"; };
+		54CF1693DDAE015F20C69B07 /* music-march.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "music-march.m4a"; sourceTree = "<group>"; };
 		559E2ECA4131AA2986854CD9 /* fighter-marcus_varro-special.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-special.png"; sourceTree = "<group>"; };
 		55B461E6C22758BFF64D72D2 /* fighter-marcus_varro-hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-hit.png"; sourceTree = "<group>"; };
 		573FB85D2074284DB5732EE5 /* fighter-wei_jian-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-dash.png"; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 		5FAFAF46C77B2FFD3C0298D8 /* FightScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightScene.swift; sourceTree = "<group>"; };
 		617EED33D16DBEAC9BFD5B4D /* FighterNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterNode.swift; sourceTree = "<group>"; };
 		656DF0BD227019626EA77FCE /* EBGaramond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EBGaramond.ttf; sourceTree = "<group>"; };
-		65E10630EF7100DCF7F8797B /* music-kingdom-persia.m4a */ = {isa = PBXFileReference; path = "music-kingdom-persia.m4a"; sourceTree = "<group>"; };
+		65E10630EF7100DCF7F8797B /* music-kingdom-persia.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "music-kingdom-persia.m4a"; sourceTree = "<group>"; };
 		6906ABBCDBF39E2DDDD108FA /* fighter-nefru-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-light.png"; sourceTree = "<group>"; };
 		69F9BAED37DD0C3BE74E01C3 /* fighter-wei_jian-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-heavy.png"; sourceTree = "<group>"; };
 		6DCC1A99EBEF3F365476F04F /* sfx-seal.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-seal.wav"; sourceTree = "<group>"; };
@@ -257,7 +257,7 @@
 		769606E56B88A3C596FE5186 /* ArtLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtLibrary.swift; sourceTree = "<group>"; };
 		7736C3948DC0F35E95F5D405 /* fighter-gaius-super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-super.png"; sourceTree = "<group>"; };
 		784E569B62B3104EFC06AB8E /* fighter-nefru-guard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-guard.png"; sourceTree = "<group>"; };
-		7C95936DE1CF1762607D64AF /* AetheriaClash.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AetheriaClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C95936DE1CF1762607D64AF /* AetheriaClash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AetheriaClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EEBFAEC4F94F4F0EDAFBFEE /* ArcadeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeViews.swift; sourceTree = "<group>"; };
 		7FE1413CE0E25A35A7928ABE /* founding-rome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "founding-rome.jpg"; sourceTree = "<group>"; };
 		80764EB9034ADE3406C5F624 /* fighter-nefru-hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-hit.png"; sourceTree = "<group>"; };
@@ -266,7 +266,7 @@
 		862E3E15FB87F2ED3E430E0B /* fighter-marcus_varro-air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-air.png"; sourceTree = "<group>"; };
 		862F6BC7340224972A009E2F /* sfx-land.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-land.wav"; sourceTree = "<group>"; };
 		87DEFFF21206949BEE098AD8 /* sfx-hit-medium.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-hit-medium.wav"; sourceTree = "<group>"; };
-		8B1A1D1ADADE4DB47BFCF2DC /* music-kingdom-egypt.m4a */ = {isa = PBXFileReference; path = "music-kingdom-egypt.m4a"; sourceTree = "<group>"; };
+		8B1A1D1ADADE4DB47BFCF2DC /* music-kingdom-egypt.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "music-kingdom-egypt.m4a"; sourceTree = "<group>"; };
 		8B8C355F30CF9626EAD59142 /* fighter-gaius-ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-ko.png"; sourceTree = "<group>"; };
 		8E6A2D0DA03C5DC3DE3C949C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		8F8EB9EF907BDF0FC0A3AC44 /* fighter-wei_jian-victory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-victory.png"; sourceTree = "<group>"; };
@@ -291,12 +291,12 @@
 		AD5E4D9A99268B2CC9BD3E98 /* zhao_lin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zhao_lin.jpg; sourceTree = "<group>"; };
 		AD9AAE4ED7D778AE9BC52CAC /* sfx-orb.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-orb.wav"; sourceTree = "<group>"; };
 		AFBABDE831A818A913A48C24 /* fighter-marcus_varro-ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-ko.png"; sourceTree = "<group>"; };
-		B0D8022EC658FCEFE6746DAE /* music-title.m4a */ = {isa = PBXFileReference; path = "music-title.m4a"; sourceTree = "<group>"; };
+		B0D8022EC658FCEFE6746DAE /* music-title.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "music-title.m4a"; sourceTree = "<group>"; };
 		B3D5904154516C5F29B8DD3B /* sfx-gong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-gong.wav"; sourceTree = "<group>"; };
 		B4233AFFD4411BE89E159116 /* sfx-horn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-horn.wav"; sourceTree = "<group>"; };
 		B49B3DD5C913236D0922B059 /* fighter-gaius.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fighter-gaius.json"; sourceTree = "<group>"; };
 		B7566BFB53C93E82FC094C00 /* sfx-victory.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-victory.wav"; sourceTree = "<group>"; };
-		B8FA4FA3856A47AC84AB7639 /* music-kingdom-rome.m4a */ = {isa = PBXFileReference; path = "music-kingdom-rome.m4a"; sourceTree = "<group>"; };
+		B8FA4FA3856A47AC84AB7639 /* music-kingdom-rome.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "music-kingdom-rome.m4a"; sourceTree = "<group>"; };
 		B9A8D6BA91C866997162A46E /* fighter-marcus_varro-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-heavy.png"; sourceTree = "<group>"; };
 		BA961408F3272B05EDFA751A /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		BF8075B5FFF49118DD491DB0 /* fighter-marcus_varro-guard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-guard.png"; sourceTree = "<group>"; };
@@ -304,7 +304,7 @@
 		C2A2E45055A88D50172CFF67 /* TouchControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchControls.swift; sourceTree = "<group>"; };
 		C3570022378BE02551707861 /* fighter-nefru-idle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-idle.png"; sourceTree = "<group>"; };
 		C3C3EACD51ABB5438490EFA2 /* fighter-marcus_varro-throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-throw.png"; sourceTree = "<group>"; };
-		C53076DB2B99DA5D1C55ABF1 /* ui-empire-chosen.m4a */ = {isa = PBXFileReference; path = "ui-empire-chosen.m4a"; sourceTree = "<group>"; };
+		C53076DB2B99DA5D1C55ABF1 /* ui-empire-chosen.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ui-empire-chosen.m4a"; sourceTree = "<group>"; };
 		C56DFE2529F7A9DC566B218E /* nile-far.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nile-far.jpg"; sourceTree = "<group>"; };
 		C61493146209DFA1A4178D28 /* sfx-grab.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-grab.wav"; sourceTree = "<group>"; };
 		C6B6719B26250CAAB62062B4 /* sfx-gallop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-gallop.wav"; sourceTree = "<group>"; };
@@ -321,7 +321,7 @@
 		D018E67A0B6B531769B4CB19 /* ControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerInput.swift; sourceTree = "<group>"; };
 		D0FE09A4E54C4E8A7CB26562 /* PaintedParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintedParts.swift; sourceTree = "<group>"; };
 		D1F42A422D6A947B4C0C8AAD /* Effects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effects.swift; sourceTree = "<group>"; };
-		D2C9A4344DDB69ADD1E37606 /* ui-reward.m4a */ = {isa = PBXFileReference; path = "ui-reward.m4a"; sourceTree = "<group>"; };
+		D2C9A4344DDB69ADD1E37606 /* ui-reward.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ui-reward.m4a"; sourceTree = "<group>"; };
 		D31899493A645CDFF388D98A /* fighter-gaius-walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-walk.png"; sourceTree = "<group>"; };
 		D633D82BA9C941A7949608A9 /* commanders.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = commanders.jpg; sourceTree = "<group>"; };
 		DA93526D252915E360C97327 /* fighter-gaius-idle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-idle.png"; sourceTree = "<group>"; };
@@ -332,7 +332,7 @@
 		E2377510023742B3F455E542 /* fighter-gaius-light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-light2.png"; sourceTree = "<group>"; };
 		E2DAACEDEB284BA1F431C38B /* fighter-wei_jian-ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-ko.png"; sourceTree = "<group>"; };
 		E8B56B4FC066C96DA9A67CF9 /* sfx-block.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-block.wav"; sourceTree = "<group>"; };
-		E8CC19C8F2EF7192065B5A8B /* ui-error.m4a */ = {isa = PBXFileReference; path = "ui-error.m4a"; sourceTree = "<group>"; };
+		E8CC19C8F2EF7192065B5A8B /* ui-error.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ui-error.m4a"; sourceTree = "<group>"; };
 		E9770600351013A79882E9E0 /* AetheriaClashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AetheriaClashUITests.swift; sourceTree = "<group>"; };
 		EA09FC3C7F6B45041B3CA3A1 /* fighter-nefru-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-heavy.png"; sourceTree = "<group>"; };
 		EB7F28D28436307B6581FEB4 /* fighter-marcus_varro-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-light3.png"; sourceTree = "<group>"; };
@@ -706,7 +706,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					5085C3092AE57CD28E80A2D6 = {
 						DevelopmentTeam = MZ3635323W;
@@ -947,6 +947,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -966,6 +967,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1023,6 +1025,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1037,6 +1040,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1056,6 +1060,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1106,6 +1111,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;

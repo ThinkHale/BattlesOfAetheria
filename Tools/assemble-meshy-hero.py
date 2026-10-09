@@ -3,9 +3,13 @@
 # skirt (default 0.65): how much of a flared skirt or coat follows the pelvis instead of the thighs; 0 for a short
 # kilt over bare, muscular thighs (their skin sits far enough from the bone to be mistaken for skirt).
 # meshy_dir holds: anims/batch*_result_animation_glb_url.glb (rigged mesh + clips), or instead rigged.blend from
-# Tools/retarget-mixamo-hero.py; cape/, gladius/ (the sword) or spear/, sheath/ and, for shield fighters, shield/
-# (each with model_urls_glb.glb). The rig has no finger bones, so fists are shaped into the rest mesh.
-import bpy, bmesh, sys, glob, math, numpy as np
+# Tools/retarget-mixamo-hero.py; and optional props, each <slot>/model_urls_glb.glb: gladius (any sword), spear,
+# staff, fan, sistrum, crossbow, bow, quiver, shield, sheath, cape. The rig has no finger bones, so fists are shaped
+# into the rest mesh. An optional meshy_dir/props.json overrides each slot's size and grip, e.g.
+#   {"spear": {"length": 2.0, "grip": 0.3}, "staff": {"length": 1.65, "grip": 0.42, "hand": "Right"},
+#    "shield": {"height": 0.8}, "sheath": {"length": 0.4}, "skirt": 0.9, "robe": true}
+# "oriented": true (set for Tools/build-weapon.py props) skips the guess at which end is the tip.
+import bpy, bmesh, sys, glob, json, math, numpy as np
 from mathutils import Vector, Matrix
 
 argv = sys.argv[sys.argv.index('--') + 1:]
@@ -18,7 +22,11 @@ BOW_LEN = 1.25
 import os
 has = lambda n: os.path.exists(f'{D}/{n}/model_urls_glb.glb')
 HAS_SHIELD = has('shield')
-SKIRT_PELVIS = float(argv[4]) if len(argv) > 4 else 0.65
+CFG = json.load(open(f'{D}/props.json')) if os.path.exists(f'{D}/props.json') else {}
+SKIRT_PELVIS = float(argv[4]) if len(argv) > 4 else CFG.get('skirt', 0.65)
+SHIELD_H = CFG.get('shield', {}).get('height', SHIELD_H)
+SHEATH_LEN = CFG.get('sheath', {}).get('length', SHEATH_LEN)
+BOW_LEN = CFG.get('bow', {}).get('length', BOW_LEN)
 
 bpy.ops.wm.read_factory_settings(use_empty=True)
 batches = sorted(glob.glob(f'{D}/anims/batch*_result_animation_glb_url.glb'))
@@ -139,15 +147,68 @@ def attach(ob, bone, world):
     ob.parent = rig; ob.parent_type = 'BONE'; ob.parent_bone = bone; bpy.context.view_layer.update(); ob.matrix_world = world
 
 
-for kind, length, grip in (('gladius', GLADIUS_LEN, 0.13), ('spear', SPEAR_LEN, SPEAR_GRIP)):
+def fit_in_hand(bone, clips, targets):
+    """One fixed rotation (prop axes -> hand-bone axes) that best matches, over sampled frames of the clips, each
+    prop axis to a world direction (Wahba's problem, solved by SVD). targets(frame) -> [(prop_axis, world_dir, weight)].
+    Returns the prop axes in the rest pose (world), as a 3x3 numpy array."""
+    rig.data.pose_position = 'POSE'
+    bone_rest = (rig.matrix_world.to_3x3() @ rig.data.bones[bone].matrix_local.to_3x3()).normalized()
+    A, Bv = [], []
+    for act_name, wgt in clips:
+        if act_name not in bpy.data.actions: continue
+        act = bpy.data.actions[act_name]; rig.animation_data.action = act; rig.animation_data.action_slot = act.slots[0]
+        f0, f1 = map(int, act.frame_range)
+        for f in range(f0, f1 + 1, max(1, (f1 - f0) // 10)):
+            bpy.context.scene.frame_set(f); bpy.context.view_layer.update()
+            mi = (rig.matrix_world.to_3x3() @ rig.pose.bones[bone].matrix.to_3x3()).normalized().inverted()
+            for ax, wd, k_ in targets():
+                A.append(np.array(ax) * wgt * k_); Bv.append(np.array(mi @ Vector(wd)) * wgt * k_)
+    Hm = np.array(Bv).T @ np.array(A); U_, _, Vt = np.linalg.svd(Hm)
+    Rl = U_ @ np.diag([1, 1, np.sign(np.linalg.det(U_ @ Vt))]) @ Vt
+    rig.animation_data.action = None; rig.data.pose_position = 'REST'; bpy.context.view_layer.update()
+    return np.array(bone_rest) @ Rl
+
+
+HELD = (('gladius', GLADIUS_LEN, 0.13, 'Right'), ('spear', SPEAR_LEN, SPEAR_GRIP, 'Right'), ('staff', 1.65, 0.42, 'Right'),
+        ('fan', 0.32, 0.0, 'Right'), ('sistrum', 0.36, 0.25, 'Left'))
+for kind, length, grip, hand in HELD:
     if not has(kind): continue
+    cf = CFG.get(kind, {}); length, grip, hand = cf.get('length', length), cf.get('grip', grip), cf.get('hand', hand)
     # Tip +X, edges along Z, pommel (butt) at -X; the grip centre is ~13% in from a sword's pommel end.
-    g = load(kind); orient_long(g, True); gp = pts(g); L = np.ptp(gp[:, 0])
-    gx = gp[:, 0].min() + grip * L; hilt = gp[np.abs(gp[:, 0] - gx) < 0.05 * L]     # centre on the grip (a khopesh curves)
+    g = load(kind)
+    if not cf.get('oriented'): orient_long(g, True)
+    gp = pts(g); L = gp[:, 0].max() - min(0.0, gp[:, 0].min()) if cf.get('oriented') else np.ptp(gp[:, 0])
+    x0 = min(0.0, gp[:, 0].min()) if cf.get('oriented') else gp[:, 0].min()
+    gx = x0 + grip * L; hilt = gp[np.abs(gp[:, 0] - gx) < 0.05 * L]       # centre on the grip (a khopesh curves)
+    if not len(hilt): hilt = gp[np.argsort(np.abs(gp[:, 0] - gx))[:20]]
     g.data.transform(Matrix.Translation((-gx, -np.median(hilt[:, 1]), -np.median(hilt[:, 2]))))
     g.data.transform(Matrix.Scale(length / L, 4))
-    c, u, t, w = grips['Right']
-    attach(g, 'RightHand', frame(w, u.cross(w), u, c))       # blade out of the thumb side, edges along the fingers
+    c, u, t, w = grips[hand]
+    if cf.get('upright'):
+        # A staff or standard: one fixed grip that keeps it upright with its decorated face (XZ) toward the side
+        # camera over the stance and walk clips; attacks then swing it from there.
+        Rw = fit_in_hand(f'{hand}Hand', cf['upright'], lambda: [((1, 0, 0), (0, 0, 1), 1.0), ((0, 1, 0), (-1, 0, 0), 0.4)])
+        attach(g, f'{hand}Hand', frame(Vector(Rw[:, 0]), Vector(Rw[:, 1]), Vector(Rw[:, 2]), c))
+    else:
+        attach(g, f'{hand}Hand', frame(w, u.cross(w), u, c))     # out of the thumb side, edges along the fingers
+    print(kind, 'in the', hand.lower(), 'hand, %.2f m' % length, '(fitted upright)' if cf.get('upright') else '')
+
+
+if has('crossbow'):
+    # Crossbow (Tools/build-weapon.py: stock along +X, top +Z): the left fist holds the fore-stock and the bow-aiming
+    # clips drive it, so point it along the aiming arm (spine to left hand) with its top up; the butt comes back to the
+    # right shoulder where the draw hand sits.
+    cf = CFG.get('crossbow', {}); length, grip = cf.get('length', 0.85), cf.get('grip', 0.62)
+    x_ = load('crossbow'); xp = pts(x_); L = xp[:, 0].max()
+    x_.data.transform(Matrix.Translation((-grip * L, 0, 0))); x_.data.transform(Matrix.Scale(length / L, 4))
+    def aim_targets():
+        d = (rig.matrix_world @ rig.pose.bones['LeftHand'].head) - (rig.matrix_world @ rig.pose.bones['Spine'].head)
+        return [((1, 0, 0), tuple(d.normalized()), 1.0), ((0, 0, 1), (0, 0, 1), 0.6)]
+    Rw = fit_in_hand('LeftHand', [(n, 1) for n in ('Archery_Aim_with_Lateral_Scan', 'Walk_Forward_with_Bow_Aimed', 'Archery_Shot',
+                                                  'Archery_Shot_1')], aim_targets)
+    c, u, t, w = grips['Left']
+    attach(x_, 'LeftHand', frame(Vector(Rw[:, 0]), Vector(Rw[:, 1]), Vector(Rw[:, 2]), c))
+    print('crossbow in the left hand, %.2f m' % length)
 
 if HAS_SHIELD:
     # Scutum: face toward -Y, tall along Z. Upright on the left fist, face out from the back of the hand.
@@ -178,7 +239,9 @@ if HAS_SHIELD:
 
 if has('sheath'):
     # Sheath: generated tip -X, mouth +X, suspension ring +Z. Hangs on his left hip (right-handed draw), angled back.
-    sh = load('sheath'); orient_long(sh, False); hp = pts(sh); L = np.ptp(hp[:, 0])
+    sh = load('sheath')
+    if not CFG.get('sheath', {}).get('oriented'): orient_long(sh, False)
+    hp = pts(sh); L = np.ptp(hp[:, 0])
     sh.data.transform(Matrix.Translation((-hp[:, 0].max(), -np.median(hp[:, 1]), -np.median(hp[:, 2]))))
     sh.data.transform(Matrix.Scale(SHEATH_LEN / L, 4))
     hips_z = bone_head('Hips')[2]; belt_z = hips_z + 0.06
@@ -286,7 +349,7 @@ if has('bow'):
 if has('quiver'):
     q = load('quiver'); orient_long(q, True); qp = pts(q); Lq = np.ptp(qp[:, 0])
     q.data.transform(Matrix.Translation((-qp[:, 0].min(), -np.median(qp[:, 1]), -np.median(qp[:, 2]))))   # mouth at origin
-    q.data.transform(Matrix.Scale(0.62 / Lq, 4))
+    q.data.transform(Matrix.Scale(CFG.get('quiver', {}).get('length', 0.62) / Lq, 4))
     neck_z = bone_head('neck')[2]
     back = co[(np.abs(co[:, 2] - (neck_z - 0.2)) < 0.04) & (np.abs(co[:, 0]) < 0.15)]
     mouth = Vector((-0.10, float(back[:, 1].max()) + 0.05, neck_z - 0.02))     # behind the right shoulder (her right is -X)
@@ -300,8 +363,42 @@ def seg(p, a, b):
     ab = b - a; tt = np.clip(((p - a) @ ab) / (ab @ ab), 0, 1); return np.linalg.norm(p - (a + tt[:, None] * ab), axis=1)
 
 
-dist = np.minimum(*[seg(co, bone_head(s + 'UpLeg'), bone_head(s + 'Leg')) for s in ('Left', 'Right')])
 knee_z = bone_head('LeftLeg')[2]; hips_z = bone_head('Hips')[2]
+ROBE = CFG.get('robe')
+if ROBE:
+    # A long robe: below the waist, blend from the pelvis (at the belt) to the legs (at the hem), each side of the robe
+    # following its own leg and the middle following both. A wide stance then flares the robe like a bell, where the
+    # skirt pass below (pelvis above the knee, shins below) folds it into a shelf. Feet keep their own weights.
+    hem_z, follow = ROBE.get('hem', 0.08), ROBE.get('follow', 0.65)
+    leg_names = [f'{s_}{b_}' for s_ in ('Left', 'Right') for b_ in ('UpLeg', 'Leg')]
+    lower = {gi[n] for n in ['Hips', 'Spine02'] + leg_names if n in gi}
+    for n in leg_names + ['Hips']:
+        if n not in gi: body.vertex_groups.new(name=n); gi[n] = body.vertex_groups[n].index
+    belt_z = hips_z + 0.04
+    # A floor-length gown also covers the foot bones: take foot-weighted vertices too, except the feet themselves
+    # (within 7 cm of the heel-to-toe line).
+    feet = {gi[n] for n in ('LeftFoot', 'RightFoot', 'LeftToeBase', 'RightToeBase') if n in gi}
+    foot_d = np.minimum(*[seg(co, bone_head(s_ + 'Foot'), bone_head(s_ + 'ToeBase')) for s_ in ('Left', 'Right')])
+    gown = np.isin(dom, list(lower)) | (np.isin(dom, list(feet)) & (foot_d > 0.07) & (co[:, 2] > 0.02))
+    sel = np.where((co[:, 2] > hem_z) & (co[:, 2] < belt_z) & gown)[0]
+    cx = float(np.median(co[sel, 0])) if len(sel) else 0.0
+    half = 0.5 * abs(bone_head('LeftUpLeg')[0] - bone_head('RightUpLeg')[0]) + 0.02
+    for vi in sel:
+        x, z = co[vi, 0] - cx, co[vi, 2]
+        t = np.clip((belt_z - z) / (belt_z - hem_z), 0, 1)                   # 0 at the belt, 1 at the hem
+        legw = follow * t ** 0.8
+        sl = np.clip(0.5 + 0.5 * x / half, 0, 1); sl = sl * sl * (3 - 2 * sl)   # +X is her left
+        up = np.clip((z - (knee_z - 0.08)) / 0.16, 0, 1)                      # thigh above the knee, shin below
+        wts = {'Hips': 1 - legw}
+        for side, share in (('Left', sl), ('Right', 1 - sl)):
+            wts[side + 'UpLeg'] = legw * share * up; wts[side + 'Leg'] = legw * share * (1 - up)
+        v = body.data.vertices[int(vi)]
+        for g_ in list(v.groups): body.vertex_groups[g_.group].remove([int(vi)])
+        for n, wv in wts.items():
+            if wv > 1e-4: body.vertex_groups[n].add([int(vi)], float(wv), 'REPLACE')
+    print('robe vertices reweighted: %d (hem %.2f m, follows the legs %.0f%% at the hem)' % (len(sel), hem_z, 100 * follow))
+    SKIRT_PELVIS = 0.0
+dist = np.minimum(*[seg(co, bone_head(s + 'UpLeg'), bone_head(s + 'Leg')) for s in ('Left', 'Right')])
 zone = (co[:, 2] > knee_z) & (co[:, 2] < hips_z + 0.05)
 alpha = np.clip((dist - 0.085) / 0.05, 0, 1) * SKIRT_PELVIS * zone
 lg = {gi[n] for n in ('LeftUpLeg', 'RightUpLeg', 'LeftLeg', 'RightLeg') if n in gi}

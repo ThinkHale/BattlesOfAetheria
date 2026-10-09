@@ -1,12 +1,21 @@
 # Blender: turn a Mixamo-rigged hero (e.g. a Tripo body rigged in Mixamo, no clips) into the rigged.blend that
 # assemble-meshy-hero.py reads, animated with Meshy clips we already own (retargeted from other heroes' downloads).
-#   blender -b --factory-startup -P Tools/retarget-mixamo-hero.py -- mixamo.fbx out/rigged.blend height_m clips.glb [...]
+#   blender -b --factory-startup -P Tools/retarget-mixamo-hero.py -- mixamo.fbx out/rigged.blend height_m [--maps dir] [--legs k] clips.glb [...]
 # Bones are renamed to Meshy's names and the finger bones folded into the hands (the assembly bakes fists), so the
 # rest of the pipeline treats the hero like a Meshy one. Clip names repeated across files keep the first copy.
-import bpy, sys, re, math
-from mathutils import Vector, Matrix
+# --maps: the Tripo export's texture folder (Color / Normal / *_metallic / *_roughness), for a body uploaded to Mixamo
+# without textures (Tools/mixamo-prep.py); otherwise the textures embedded in the Mixamo FBX are used.
+# --legs k: swing the thighs only k of the way (e.g. 0.6) for a floor-length gown, which a deep lunge would stretch
+# into a shelf; the shins keep the clip's world angle, so the feet simply land closer together.
+import bpy, sys, re, math, os
+from mathutils import Vector, Matrix, Quaternion
 
 argv = sys.argv[sys.argv.index('--') + 1:]
+MAPS, LEGS = None, 1.0
+if '--maps' in argv:
+    i = argv.index('--maps'); MAPS = argv[i + 1]; del argv[i:i + 2]
+if '--legs' in argv:
+    i = argv.index('--legs'); LEGS = float(argv[i + 1]); del argv[i:i + 2]
 fbx, out, HEIGHT, sources = argv[0], argv[1], float(argv[2]), argv[3:]
 
 MIXAMO_TO_MESHY = {'Spine': 'Spine02', 'Spine1': 'Spine01', 'Spine2': 'Spine', 'Neck': 'neck', 'HeadTop_End': 'head_end'}
@@ -39,8 +48,20 @@ if rig.animation_data:
 # Tripo materials arrive miswired: fully metallic, the albedo also used as alpha (and as the normal map when there
 # is no real one), a PBR map on Specular (which is why the model looks dull and dark in Mixamo). The textures
 # themselves are unchanged; rewire them by their original file names (Color / Normal / *_metallic / *_roughness).
+ROLES = ('normal', 'metal', 'rough')
+fname = lambda img: img.filepath_raw.replace('\\', '/').split('/')[-1].lower()
+if MAPS:
+    loaded = [bpy.data.images.load(os.path.join(MAPS, f)) for f in sorted(os.listdir(MAPS)) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+    for img in loaded: img.pack()
+    base_img = next(img for img in loaded if not any(r in fname(img) for r in ROLES))
+    m = bpy.data.materials.new('body'); body.data.materials.clear(); body.data.materials.append(m)
+    images = loaded
+else:
+    m = body.data.materials[0]; images = list(bpy.data.images)
 for m in body.data.materials:
     nt = m.node_tree; bsdf = next(n for n in nt.nodes if n.type == 'BSDF_PRINCIPLED')
+    if MAPS:
+        base = nt.nodes.new('ShaderNodeTexImage'); base.image = base_img; nt.links.new(base.outputs['Color'], bsdf.inputs['Base Color'])
     base = bsdf.inputs['Base Color'].links[0].from_node
     for l in list(nt.links):
         if l.to_node == bsdf and l.to_socket.name != 'Base Color' or l.to_node.type == 'NORMAL_MAP': nt.links.remove(l)
@@ -51,11 +72,10 @@ for m in body.data.materials:
     for n in [n for n in nt.nodes if n.type == 'TEX_IMAGE' and n != base]: nt.nodes.remove(n)   # (bpy wrappers: ==, not is)
     # Wire maps by file name; some arrive in the FBX with no node at all (Kepri's metallic map).
     roles = {}
-    for img in bpy.data.images:
-        f = img.filepath_raw.replace('\\', '/').split('/')[-1].lower()
+    for img in images:
         if img.filepath_raw == base_file or not img.size[0]: continue
-        for role in ('normal', 'metal', 'rough'):
-            if role in f: roles.setdefault(role, img)
+        for role in ROLES:
+            if role in fname(img): roles.setdefault(role, img)
     for role, img in roles.items():
         img.colorspace_settings.name = 'Non-Color'
         n = nt.nodes.new('ShaderNodeTexImage'); n.image = img
@@ -163,6 +183,8 @@ for path in sources:
                 base = (P[parent.name] @ t_rel[n]) if parent else t_rel[n]
                 if n in align:
                     d = (sw @ src.pose.bones[n].matrix).to_3x3().normalized() @ s_rest[n].transposed()   # world delta
+                    if LEGS != 1.0 and n.endswith('UpLeg'):
+                        d = Quaternion().slerp(d.to_quaternion(), LEGS).to_matrix()
                     R = d @ align[n] @ t_rest[n].to_3x3()
                     if parent:
                         basis = (base.to_3x3().normalized().inverted() @ R).to_4x4()

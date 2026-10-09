@@ -35,14 +35,30 @@ Work happens in `art-inbox/3d/<hero>/` (git-ignored apart from `strips.json`).
 ### A body made elsewhere and rigged in Mixamo (Atossa, Kepri)
 
 Tripo bodies are rigged in Mixamo with no clips (Mixamo has no spear or sword-only sets). Instead the Meshy clips
-already downloaded for other heroes are retargeted onto the Mixamo skeleton, so no credits are spent:
+already downloaded for other heroes are retargeted onto the Mixamo skeleton, so no credits are spent.
 
-1. `blender -b -P Tools/retarget-mixamo-hero.py -- mixamo.fbx meshy/rigged.blend 1.78 <other heroes' meshy/anims/batch*.glb>`
+In Tripo Studio: Image tool, T Pose template plus `art-inbox/3d/<hero>/inputs/body-front.png` (Nano Banana, free), then
+Generate 3D (HD Model, 4K PBR texture, quad, 50k), then Export FBX with the Mixamo preset at 4K. For Mixamo,
+`blender -b -P Tools/mixamo-prep.py -- tripo.fbx upload.fbx` writes a texture-free copy (about 3 MB instead of 40-80).
+Place the groin marker at about 45% of body height and the knees at about 27% (measure from the feet to the chin, not
+to a hat), and download FBX Binary with Pose "Original Pose": "T-pose" re-poses the legs and drags long robes below
+the floor. Then:
+
+1. `blender -b -P Tools/retarget-mixamo-hero.py -- mixamo.fbx meshy/rigged.blend 1.78 [--maps tripo/<export>.fbm] <other heroes' meshy/anims/batch*.glb>`
    makes the standing T-pose the rest pose, renames bones to Meshy's, folds the fingers into the hands and rewires
    Tripo's material by texture file name (its FBX imports fully metallic, with the albedo also used as alpha or a
    normal map and the PBR maps miswired, which is why it looks dull in Mixamo; the textures themselves are untouched).
-2. A missing weapon can be built: `blender -b -P Tools/build-weapon.py -- spear meshy/spear/model_urls_glb.glb 1.7`
-   or `-- khopesh meshy/gladius/model_urls_glb.glb 0.6`.
+   `--maps` takes them from the Tripo export instead, for a body uploaded without textures. `--legs 0.6` narrows
+   every stance for a floor-length gown (Livia, Meritamun), which a deep lunge would stretch. The height is the full
+   figure including any hat: raise it for a tall hat or plume so the body matches the others (head joint near 1.56 m).
+2. Weapons are built procedurally: `blender -b -P Tools/build-weapon.py -- <kind> meshy/<slot>/model_urls_glb.glb [length]`.
+   Kinds: spear, immortal (pomegranate-butt spear), khopesh, akinaka, scabbard, sunstaff, standard (eagle), sistrum,
+   fan, crossbow, bow (recurve), shield (wicker). Flat details (eagle, banner, fan leaf, sun disc) lie in the XZ plane,
+   which faces the side-on camera. Slots: gladius, spear, staff, fan (right hand), sistrum (left hand), crossbow (left
+   hand, pointed along the aiming arm), bow, quiver, shield, sheath. `meshy/props.json` sets each slot's length and
+   grip, `"oriented": true` for builder props, `"upright": [[clip, weight], ...]` to fit a staff upright over those
+   clips, and `"robe": {"hem": m, "follow": 0-1}` for long robes (the robe blends from the pelvis at the belt to the
+   legs at the hem, left and right halves following their own leg, instead of the knee-length skirt pass).
 3. Assemble and render as above (`assemble-meshy-hero.py` reads `rigged.blend` when there are no anim batches).
    Pass a fifth argument of `0` for a short kilt over bare thighs: the default skirt pass (0.65) moves anything far
    from the thigh bone onto the pelvis and tears muscular thighs.
@@ -61,6 +77,11 @@ Check in the simulator with
 | wei_jian | 89,21,9,147,466,219,240,199,102,86,220,127,238,179,190,41 |
 | atossa | none bought: retargeted from the four heroes above (see `art-inbox/3d/atossa/strips.json`) |
 | khepri | none bought: retargeted (see `art-inbox/3d/khepri/strips.json`); assembled with skirt 0 |
+| zhao_lin, tahmina | Nefru's archery set (the crossbow rides the bow arm) |
+| bardiya, arsames, livia | the sword sets (Gaius, Marcus, Wei Jian) |
+| meritamun, mei_lin | six spell clips bought on Nefru's rig (`art-inbox/3d/spells`): 134, 136, 126, 132, 135, 129 |
+
+Every Mixamo hero carries all 46 retargeted clips; each hero's `strips.json` picks 16.
 
 ## An arena
 

@@ -19,4 +19,5 @@ art-inbox/**/*.log
 art-inbox/3d/**
 !art-inbox/3d/**/
 !art-inbox/3d/**/strips.json
+!art-inbox/3d/**/props.json
 !art-inbox/3d/arenas/pieces.tsv

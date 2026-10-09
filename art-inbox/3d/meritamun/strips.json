@@ -1,0 +1,18 @@
+{
+ "idle": {"action": "mage_soell_cast_5", "frames": 10, "loop": true, "range": [0, 60]},
+ "walk": {"action": "Walk_Fight_Forward", "frames": 10, "loop": true},
+ "dash": {"action": "Back_Jump", "frames": 7, "loop": false},
+ "guard": {"action": "Sword_Parry", "frames": 6, "loop": false, "range": [0, 20]},
+ "jump": {"action": "Regular_Jump", "frames": 10, "loop": false, "lock_rise": true},
+ "light": {"action": "mage_soell_cast_7", "frames": 8, "loop": false},
+ "light2": {"action": "Right_Hand_Sword_Slash", "frames": 8, "loop": false},
+ "light3": {"action": "Thrust_Slash", "frames": 10, "loop": false},
+ "heavy": {"action": "mage_soell_cast_6", "frames": 10, "loop": false},
+ "air": {"action": "Basic_Jump", "frames": 10, "loop": false, "range": [30, 110], "lock_rise": true},
+ "throw": {"action": "Shield_Push_Left", "frames": 9, "loop": false},
+ "special": {"action": "Charged_Spell_Cast_1", "frames": 12, "loop": false},
+ "super": {"action": "mage_soell_cast", "frames": 12, "loop": false},
+ "hit": {"action": "Hit_Reaction_1", "frames": 6, "loop": false},
+ "ko": {"action": "Knock_Down_1", "frames": 10, "loop": false},
+ "victory": {"action": "Formal_Bow", "frames": 12, "loop": false}
+}

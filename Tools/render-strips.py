@@ -3,6 +3,7 @@
 # spec.json maps game strip names to {"action": <Blender action name>, "frames": n, "loop": bool, "range": [a, b]?}.
 # Writes out_dir/fighter-<hero>-<strip>.png (frames side by side, transparent) and out_dir/fighter-<hero>.json.
 import bpy, sys, os, json, math
+import numpy as np
 from mathutils import Vector
 
 argv = sys.argv[sys.argv.index('--') + 1:]
@@ -18,6 +19,10 @@ FRAME = 512                     # px per frame, square
 ORTHO = 2.6                     # metres across a frame
 GROUND = 0.90                   # feet line, as a fraction of frame height from the top
 PX_PER_M = FRAME / ORTHO
+BELOW = (1 - GROUND) * ORTHO    # metres of frame under the feet
+# A strip whose figure or weapon would be clipped (a lance, a long fall) gets a wider and/or taller frame at the
+# same pixels per metre; fighter-<hero>.json carries each strip's size and feet line, which SpriteBody honours.
+MARGIN = 0.05
 
 # ---- look: transparent background, neutral studio light (the stage supplies colour and shadow) ----
 sc.render.engine = 'BLENDER_EEVEE'
@@ -85,26 +90,42 @@ for strip, s in spec.items():
     rig.data.pose_position = 'REST'; bpy.context.view_layer.update()
     rest_hips = rig.matrix_world @ rig.pose.bones[hips].head
     rig.data.pose_position = 'POSE'
-    for f in picks:
-        sc.frame_set(f)
+
+    def follow(f):
         # Keep him in place: the fight engine moves him, so the camera follows his hips sideways (and, for jumps,
         # cancels any rise above standing height, since the engine lifts him too).
+        sc.frame_set(f)
         hp = rig.matrix_world @ rig.pose.bones[hips].head
-        cam.location.y = hp.y - rest_hips.y
-        cam.location.z = centre_z + (max(0.0, hp.z - rest_hips.z) if s.get('lock_rise') else 0.0)
+        return hp.y - rest_hips.y, (max(0.0, hp.z - rest_hips.z) if s.get('lock_rise') else 0.0)
+
+    # Frame size: the standard square unless something in these frames reaches past it.
+    half, top = ORTHO / 2, GROUND * ORTHO
+    shown = [o for o in bpy.data.objects if o.type == 'MESH' and not o.hide_render]
+    for f in picks:
+        cy, cz = follow(f); dg = bpy.context.evaluated_depsgraph_get()
+        for o in shown:
+            ev = o.evaluated_get(dg); m = ev.to_mesh(); co = np.empty(len(m.vertices) * 3); m.vertices.foreach_get('co', co)
+            ev.to_mesh_clear(); co = co.reshape(-1, 3) @ np.array(o.matrix_world.to_3x3()).T + np.array(o.matrix_world.translation)
+            half = max(half, float(np.abs(co[:, 1] - cy).max()) + MARGIN); top = max(top, float((co[:, 2] - cz).max()) + MARGIN)
+    fw, fh = int(math.ceil(half * PX_PER_M - 1e-6)) * 2, int(math.ceil((top + BELOW) * PX_PER_M - 1e-6))
+    sc.render.resolution_x, sc.render.resolution_y = fw, fh
+    cam.data.ortho_scale = max(fw, fh) / PX_PER_M
+    for f in picks:
+        cy, cz = follow(f)
+        cam.location.y = cy
+        cam.location.z = (fh / PX_PER_M) / 2 - BELOW + cz
         path = f'{out}/_tmp_{strip}_{len(frames):02d}.png'; sc.render.filepath = path
         bpy.ops.render.render(write_still=True); frames.append(path)
     # Paste the frames side by side.
-    W = FRAME * n; px = [0.0] * (W * FRAME * 4)
-    import numpy as np
-    canvas = np.zeros((FRAME, W, 4), np.float32)
+    W = fw * n
+    canvas = np.zeros((fh, W, 4), np.float32)
     for k, p in enumerate(frames):
-        im = bpy.data.images.load(p); buf = np.empty(FRAME * FRAME * 4, np.float32); im.pixels.foreach_get(buf)
-        canvas[:, k * FRAME:(k + 1) * FRAME] = buf.reshape(FRAME, FRAME, 4); bpy.data.images.remove(im); os.remove(p)
-    img = bpy.data.images.new(f'fighter-{hero}-{strip}', W, FRAME, alpha=True)
+        im = bpy.data.images.load(p); buf = np.empty(fw * fh * 4, np.float32); im.pixels.foreach_get(buf)
+        canvas[:, k * fw:(k + 1) * fw] = buf.reshape(fh, fw, 4); bpy.data.images.remove(im); os.remove(p)
+    img = bpy.data.images.new(f'fighter-{hero}-{strip}', W, fh, alpha=True)
     img.pixels.foreach_set(canvas.ravel()); img.filepath_raw = f'{out}/fighter-{hero}-{strip}.png'; img.file_format = 'PNG'; img.save()
     fps = n / (max(1, b - a) / 30.0)
-    sheet[strip] = dict(frames=n, width=FRAME, height=FRAME, anchor=[0.5, GROUND], loop=bool(s['loop']),
+    sheet[strip] = dict(frames=n, width=fw, height=fh, anchor=[0.5, round(1 - BELOW * PX_PER_M / fh, 4)], loop=bool(s['loop']),
                         figureHeight=round(1.8 * PX_PER_M, 1), fps=round(fps, 2))
     print('strip', strip, n, 'frames from', act.name, '%.0f-%.0f' % (a, b), flush=True)
 json.dump(sheet, open(f'{out}/fighter-{hero}.json', 'w'), indent=1)

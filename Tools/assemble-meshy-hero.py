@@ -1,7 +1,9 @@
 # Blender: assemble a game-ready hero from Meshy outputs (rigged + animated character, separate cape and gear).
-#   blender -b --factory-startup -P Tools/assemble-meshy-hero.py -- meshy_dir out.blend [Name] [blade_len_m]
-# meshy_dir holds: anims/batch*_result_animation_glb_url.glb (rigged mesh + clips), cape/, gladius/ (the sword),
-# sheath/ and, for shield fighters, shield/
+#   blender -b --factory-startup -P Tools/assemble-meshy-hero.py -- meshy_dir out.blend [Name] [weapon_len_m] [skirt]
+# skirt (default 0.65): how much of a flared skirt or coat follows the pelvis instead of the thighs; 0 for a short
+# kilt over bare, muscular thighs (their skin sits far enough from the bone to be mistaken for skirt).
+# meshy_dir holds: anims/batch*_result_animation_glb_url.glb (rigged mesh + clips), or instead rigged.blend from
+# Tools/retarget-mixamo-hero.py; cape/, gladius/ (the sword) or spear/, sheath/ and, for shield fighters, shield/
 # (each with model_urls_glb.glb). The rig has no finger bones, so fists are shaped into the rest mesh.
 import bpy, bmesh, sys, glob, math, numpy as np
 from mathutils import Vector, Matrix
@@ -11,15 +13,17 @@ D, out = argv[:2]
 NAME = argv[2] if len(argv) > 2 else 'Gaius'
 SHIELD_H, GLADIUS_LEN = 0.85, float(argv[3]) if len(argv) > 3 else 0.66
 SHEATH_LEN = GLADIUS_LEN * 0.85
+SPEAR_LEN, SPEAR_GRIP = (float(argv[3]) if len(argv) > 3 else 1.7), 0.3   # held 30% of the way up from the butt
 BOW_LEN = 1.25
 import os
 has = lambda n: os.path.exists(f'{D}/{n}/model_urls_glb.glb')
 HAS_SHIELD = has('shield')
-SKIRT_PELVIS = 0.65
+SKIRT_PELVIS = float(argv[4]) if len(argv) > 4 else 0.65
 
 bpy.ops.wm.read_factory_settings(use_empty=True)
 batches = sorted(glob.glob(f'{D}/anims/batch*_result_animation_glb_url.glb'))
-bpy.ops.import_scene.gltf(filepath=batches[0])
+if batches: bpy.ops.import_scene.gltf(filepath=batches[0])
+else: bpy.ops.wm.open_mainfile(filepath=f'{D}/rigged.blend')      # a Mixamo rig already carrying retargeted clips
 rig = next(o for o in bpy.context.scene.objects if o.type == 'ARMATURE')
 body = next(o for o in bpy.context.scene.objects if o.type == 'MESH' and len(o.data.vertices) > 1000)
 rig.name, body.name = f'{NAME}_rig', NAME
@@ -135,11 +139,13 @@ def attach(ob, bone, world):
     ob.parent = rig; ob.parent_type = 'BONE'; ob.parent_bone = bone; bpy.context.view_layer.update(); ob.matrix_world = world
 
 
-if has('gladius'):
-    # Sword: tip +X, edges along Z, pommel at -X; the grip centre is ~13% in from the pommel end.
-    g = load('gladius'); orient_long(g, True); gp = pts(g); L = np.ptp(gp[:, 0])
-    g.data.transform(Matrix.Translation((-(gp[:, 0].min() + 0.13 * L), -np.median(gp[:, 1]), -np.median(gp[:, 2]))))
-    g.data.transform(Matrix.Scale(GLADIUS_LEN / L, 4))
+for kind, length, grip in (('gladius', GLADIUS_LEN, 0.13), ('spear', SPEAR_LEN, SPEAR_GRIP)):
+    if not has(kind): continue
+    # Tip +X, edges along Z, pommel (butt) at -X; the grip centre is ~13% in from a sword's pommel end.
+    g = load(kind); orient_long(g, True); gp = pts(g); L = np.ptp(gp[:, 0])
+    gx = gp[:, 0].min() + grip * L; hilt = gp[np.abs(gp[:, 0] - gx) < 0.05 * L]     # centre on the grip (a khopesh curves)
+    g.data.transform(Matrix.Translation((-gx, -np.median(hilt[:, 1]), -np.median(hilt[:, 2]))))
+    g.data.transform(Matrix.Scale(length / L, 4))
     c, u, t, w = grips['Right']
     attach(g, 'RightHand', frame(w, u.cross(w), u, c))       # blade out of the thumb side, edges along the fingers
 

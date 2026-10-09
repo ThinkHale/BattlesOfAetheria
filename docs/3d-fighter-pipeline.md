@@ -32,6 +32,24 @@ Work happens in `art-inbox/3d/<hero>/` (git-ignored apart from `strips.json`).
 6. **Install:** `python3 Tools/install-fighter-strips.py strips <hero_id>` (palette-compresses
    into `App/Resources/Fighters`), then `xcodegen generate`.
 
+### A body made elsewhere and rigged in Mixamo (Atossa, Kepri)
+
+Tripo bodies are rigged in Mixamo with no clips (Mixamo has no spear or sword-only sets). Instead the Meshy clips
+already downloaded for other heroes are retargeted onto the Mixamo skeleton, so no credits are spent:
+
+1. `blender -b -P Tools/retarget-mixamo-hero.py -- mixamo.fbx meshy/rigged.blend 1.78 <other heroes' meshy/anims/batch*.glb>`
+   makes the standing T-pose the rest pose, renames bones to Meshy's, folds the fingers into the hands and rewires
+   Tripo's material by texture file name (its FBX imports fully metallic, with the albedo also used as alpha or a
+   normal map and the PBR maps miswired, which is why it looks dull in Mixamo; the textures themselves are untouched).
+2. A missing weapon can be built: `blender -b -P Tools/build-weapon.py -- spear meshy/spear/model_urls_glb.glb 1.7`
+   or `-- khopesh meshy/gladius/model_urls_glb.glb 0.6`.
+3. Assemble and render as above (`assemble-meshy-hero.py` reads `rigged.blend` when there are no anim batches).
+   Pass a fifth argument of `0` for a short kilt over bare thighs: the default skirt pass (0.65) moves anything far
+   from the thigh bone onto the pelvis and tears muscular thighs.
+
+`render-strips.py` widens or heightens a strip's frame, at the same pixels per metre, when a weapon or a fall would
+be clipped; `fighter-<hero>.json` records each strip's size and feet line.
+
 Check in the simulator with
 `SIMCTL_CHILD_AETHERIA_START=fight:<hero>:<hero>:<stage>:demo xcrun simctl launch <device> com.thinkhale.aetheriaclash`.
 
@@ -41,6 +59,8 @@ Check in the simulator with
 | marcus_varro | 89,21,9,147,466,219,240,221,102,86,220,242,92,179,190,101 |
 | nefru | 231,228,468,150,466,225,206,207,215,86,220,224,222,179,190,412 |
 | wei_jian | 89,21,9,147,466,219,240,199,102,86,220,127,238,179,190,41 |
+| atossa | none bought: retargeted from the four heroes above (see `art-inbox/3d/atossa/strips.json`) |
+| khepri | none bought: retargeted (see `art-inbox/3d/khepri/strips.json`); assembled with skirt 0 |
 
 ## An arena
 

@@ -30,6 +30,11 @@ public enum Difficulty: Int, CaseIterable, Codable, Sendable, Identifiable {
     var throwBreakChance: Double { [0.05, 0.25, 0.5, 0.75][rawValue] }
     var aggression: Double { [0.35, 0.5, 0.6, 0.7][rawValue] }
     var superChance: Double { [0.25, 0.6, 0.9, 1.0][rawValue] }
+    /// How often a counter stance answers a blow it sees coming instead of guarding.
+    var counterChance: Double { [0.06, 0.15, 0.25, 0.32][rawValue] }
+    /// Chance per tick, while zoning, of sending a projectile: gentler on the easier settings, where a stream of
+    /// projectiles is the hardest thing for a new player to get through.
+    var zoneRate: Double { [0.015, 0.025, 0.04, 0.05][rawValue] }
 }
 
 /// A computer opponent. It sees its enemy's moves only after a reaction delay,
@@ -164,7 +169,11 @@ public struct CPU: Sendable {
         }
         if threatened {
             let key = seenFoe.actionStart &+ (incoming ? 7919 : 0)
-            if guardDecision?.key != key { guardDecision = (key, rng.chance(difficulty.guardChance)) }
+            if guardDecision?.key != key {
+                guardDecision = (key, rng.chance(difficulty.guardChance))
+                // A counter stance (Shield Wall) catches a blow it sees coming rather than blocking it.
+                if !incoming, me.hero.special == .counter, rng.chance(difficulty.counterChance) { return [.special] }
+            }
             if guardDecision?.guardIt == true { holdGuardTicks = 10; return [.guardButton] }
         }
         if holdGuardTicks > 0 { holdGuardTicks -= 1; return [.guardButton] }
@@ -182,6 +191,22 @@ public struct CPU: Sendable {
 
         // Use a full meter.
         if me.meter >= 100, distance < superRange(me), rng.chance(difficulty.superChance * 0.03) { return [.superArt] }
+
+        // Specials that are neither projectiles nor finishers, used when they make sense.
+        switch me.hero.special {
+        case .imperialResolve:
+            // Steady herself (heal and empower) with room to do it: at range, or with the enemy down.
+            let room = distance > 230 || foe.action == .knockdown || foe.action == .getUp
+            if room, me.condition(.empowered) == 0, rng.chance(me.healthFraction < 0.6 ? 0.03 : 0.012) { return [.special] }
+        case .counter:
+            // Set the stance against an enemy walking or dashing into reach.
+            let closing = (foe.position.x - me.position.x) * foe.velocity.x < 0
+            if closing, distance < 150, rng.chance(difficulty.counterChance * 0.06) { return [.special] }
+        case .partingShot:
+            // An escape with an arrow in it: leap back from an enemy who has closed in.
+            if distance < 140, rng.chance(0.012 + 0.01 * Double(difficulty.rawValue)) { return [.special] }
+        default: break
+        }
 
         // An archer pressed close slips away; one being approached backs off
         // before it gets that far.
@@ -218,7 +243,7 @@ public struct CPU: Sendable {
             if me.position.x * me.facing < -Match.stageHalfWidth + 80 { plan = .pressure; return [] }
             return walk(back)
         case .zone:
-            if specialIsRanged(me), rng.chance(0.045), !match.projectiles.contains(where: { $0.owner == i && $0.spec.priority > 0 }) {
+            if specialIsRanged(me), rng.chance(difficulty.zoneRate), !match.projectiles.contains(where: { $0.owner == i && $0.spec.priority > 0 }) {
                 return [.special]
             }
             if distance < 220 { return walk(back) }
@@ -267,7 +292,7 @@ public struct CPU: Sendable {
 
     private func useSpecialAsFinisher(_ me: Fighter) -> Bool {
         switch me.hero.special {
-        case .imperialResolve, .counter, .partingShot, .stratagem, .eyeOfHorus, .sunlitVolley: false
+        case .imperialResolve, .counter, .stratagem, .eyeOfHorus, .sunlitVolley: false
         default: true
         }
     }

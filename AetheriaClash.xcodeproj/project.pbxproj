@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00B1143C7502A84AF9F9C909 /* fighter-meritamun-super.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AAE0267C0E413726E781CF1 /* fighter-meritamun-super.png */; };
 		01E246F1B537F4B65FF9CFC2 /* fighter-marcus_varro-idle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7288403E1C635C64A81123DF /* fighter-marcus_varro-idle.png */; };
+		01FAEC382CACCA8E657610D3 /* vo-female-hurt-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B73F5B3B6E01560785F47AF /* vo-female-hurt-3.wav */; };
 		04700889BF53A83629C0B1D0 /* fighter-gaius-jump.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF100BC605B0E6F7E5CEA7F /* fighter-gaius-jump.png */; };
 		05389B90AE9422D15F49EE78 /* fighter-livia-idle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C80DE141E0FE940D4A729B7 /* fighter-livia-idle.png */; };
 		0539A10F6F3AA903DBC7BF03 /* fighter-atossa-special.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C470CC8829673515EC57A2D /* fighter-atossa-special.png */; };
@@ -20,6 +21,10 @@
 		0AD7BAE59A34581DB309F51F /* fighter-tahmina-ko.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5E8A7CCAD1C7A0C7302083 /* fighter-tahmina-ko.png */; };
 		0BEF277291CA68A2E5236544 /* fighter-zhao_lin-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 5168C75B80AA5622ABA988B2 /* fighter-zhao_lin-light.png */; };
 		0C129A6A16904D6031E07391 /* fighter-mei_lin-super.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFD81637FBB834C9F598795 /* fighter-mei_lin-super.png */; };
+		0C1816D7423EC0F0DA656858 /* vo-final-round.wav in Resources */ = {isa = PBXBuildFile; fileRef = 12645EFC64445CDF8F805BD7 /* vo-final-round.wav */; };
+		0CA2DD82A1145E5EF874216D /* vo-male-hurt-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 19723361E9536D1813DAE183 /* vo-male-hurt-2.wav */; };
+		0CBEDD3CE4A0E197BB99D465 /* vo-female-hurt-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B89E3AB425F0BFB487EA693A /* vo-female-hurt-1.wav */; };
+		0DBFA067CEB6D3731D66123C /* vo-male-attack-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 68C0E33AD06CC416278BD5B4 /* vo-male-attack-1.wav */; };
 		0ECFA59AFD996A29FB93D80A /* fighter-mei_lin-idle.png in Resources */ = {isa = PBXBuildFile; fileRef = 351B0FE1A3457FEA6C1D8B72 /* fighter-mei_lin-idle.png */; };
 		101747E2DD91D46C7D87B719 /* fighter-gaius-walk.png in Resources */ = {isa = PBXBuildFile; fileRef = D31899493A645CDFF388D98A /* fighter-gaius-walk.png */; };
 		1055AADC563FD7CA1920D54B /* sfx-super.wav in Resources */ = {isa = PBXBuildFile; fileRef = CC59A70691BCAEA2075654B5 /* sfx-super.wav */; };
@@ -57,6 +62,7 @@
 		25D3D70BEF763003D0E8FF2C /* sfx-land.wav in Resources */ = {isa = PBXBuildFile; fileRef = 862F6BC7340224972A009E2F /* sfx-land.wav */; };
 		261258F38F4B2D2C840F9A0D /* fighter-gaius-ko.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C355F30CF9626EAD59142 /* fighter-gaius-ko.png */; };
 		2640642A975EF7BC8C0026FB /* fighter-mei_lin-guard.png in Resources */ = {isa = PBXBuildFile; fileRef = 707A44D4F079C84A3B0FF07B /* fighter-mei_lin-guard.png */; };
+		2657BB594B6AFF018F4266B7 /* vo-perfect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49A77C1F00F1FB0F8B2551C6 /* vo-perfect.wav */; };
 		272264D79BE86B24E8DAF4C7 /* fighter-zhao_lin-super.png in Resources */ = {isa = PBXBuildFile; fileRef = BB728A2E6ED249A99435F7B9 /* fighter-zhao_lin-super.png */; };
 		2809A3AD7DD78148E831D88B /* fighter-arsames-special.png in Resources */ = {isa = PBXBuildFile; fileRef = D77E223F1F6BDCDCD7E69C21 /* fighter-arsames-special.png */; };
 		282E6B888020B787BC9D3EEE /* fighter-livia-light3.png in Resources */ = {isa = PBXBuildFile; fileRef = EB769DB8C51E23B524292547 /* fighter-livia-light3.png */; };
@@ -74,6 +80,7 @@
 		33415020C577367E8193CD39 /* fighter-bardiya-super.png in Resources */ = {isa = PBXBuildFile; fileRef = A09E6B0734E9BA0356D88057 /* fighter-bardiya-super.png */; };
 		3424962741B54F8DB94208EC /* fighter-marcus_varro-heavy.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A8D6BA91C866997162A46E /* fighter-marcus_varro-heavy.png */; };
 		343AE4FAB9BFCE435A512537 /* fighter-atossa-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A9D05EF346614AD323882F1 /* fighter-atossa-light.png */; };
+		34E16317C5FF86A052842C93 /* vo-male-attack-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 06D47C02D88E00EA85982773 /* vo-male-attack-2.wav */; };
 		3766B90B26454AFE2ED48540 /* fighter-livia-special.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE1886F1C4923DBB4953AB1 /* fighter-livia-special.png */; };
 		3912C87D86FA26C83C4D5D60 /* fighter-tahmina-hit.png in Resources */ = {isa = PBXBuildFile; fileRef = F59749B474D1661283ECEFB8 /* fighter-tahmina-hit.png */; };
 		395923E2EF995EB6696FBECF /* fighter-bardiya-air.png in Resources */ = {isa = PBXBuildFile; fileRef = 587A29B3B1351D295337D1C4 /* fighter-bardiya-air.png */; };
@@ -108,6 +115,7 @@
 		512989BD908D00F0978AEAA4 /* fighter-marcus_varro-special.png in Resources */ = {isa = PBXBuildFile; fileRef = 559E2ECA4131AA2986854CD9 /* fighter-marcus_varro-special.png */; };
 		5204BD1ADCAFD589F2FC7416 /* sfx-hit-medium.wav in Resources */ = {isa = PBXBuildFile; fileRef = 87DEFFF21206949BEE098AD8 /* sfx-hit-medium.wav */; };
 		52541DC247C09B957B76794B /* sfx-block.wav in Resources */ = {isa = PBXBuildFile; fileRef = E8B56B4FC066C96DA9A67CF9 /* sfx-block.wav */; };
+		530BE2D7EC85655920436B16 /* vo-male-hurt-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E47428E117CA733B1C1BE24D /* vo-male-hurt-1.wav */; };
 		5403639444F7D208AFDC464D /* SpriteBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E4847EB5A5187587EEFD7 /* SpriteBody.swift */; };
 		5521213969267C6DDDC80AE9 /* sfx-seal.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6DCC1A99EBEF3F365476F04F /* sfx-seal.wav */; };
 		56924B23A15587BCE5435F4F /* fighter-livia-walk.png in Resources */ = {isa = PBXBuildFile; fileRef = F0EF5428CE492C86D69DF519 /* fighter-livia-walk.png */; };
@@ -135,10 +143,12 @@
 		66E2B34C72B216A5D7E784D5 /* fighter-gaius-idle.png in Resources */ = {isa = PBXBuildFile; fileRef = DA93526D252915E360C97327 /* fighter-gaius-idle.png */; };
 		67D538F32620564CD038648C /* fighter-nefru-special.png in Resources */ = {isa = PBXBuildFile; fileRef = FC50B30747984878F300A093 /* fighter-nefru-special.png */; };
 		6871A06F8AA0142CE9C3568D /* fighter-wei_jian-ko.png in Resources */ = {isa = PBXBuildFile; fileRef = E2DAACEDEB284BA1F431C38B /* fighter-wei_jian-ko.png */; };
+		69E5659E21329AD5CDC3B2F3 /* vo-round-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = D882F912BD220D57132A2BBE /* vo-round-3.wav */; };
 		6A0DF600FFE3DF10B95FB320 /* sfx-crossbow.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF49F1603A0A7A0D7B93FE9A /* sfx-crossbow.wav */; };
 		6A3FE6656BF0E6702B1FE020 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B5FE6AACE0B93873A3C581 /* AudioManager.swift */; };
 		6BE0D50E36A58C05EBA2F98D /* fighter-khepri-air.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C19897CBF2E7CAEAF3A6C4 /* fighter-khepri-air.png */; };
 		6C5DEC5FC1355C7C2B9ECDA4 /* fighter-tahmina-light2.png in Resources */ = {isa = PBXBuildFile; fileRef = 604921384AE7D8C54512BD40 /* fighter-tahmina-light2.png */; };
+		6DF2E668E77D9FE4347EB4A1 /* vo-round-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1D37AF71C4B027E838259FE1 /* vo-round-2.wav */; };
 		6E23896D407B101C354BD3A2 /* sfx-whoosh-heavy.wav in Resources */ = {isa = PBXBuildFile; fileRef = 933413ED7FFE9391DFF33EB4 /* sfx-whoosh-heavy.wav */; };
 		6F0A535BB3D2BAA795ED2B74 /* fighter-tahmina-dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D4BFE0AA9994D59E858BF09 /* fighter-tahmina-dash.png */; };
 		6F8D97FDB13E684683D0FA43 /* fighter-livia-victory.png in Resources */ = {isa = PBXBuildFile; fileRef = 89B824DD80D98B22172CBE1B /* fighter-livia-victory.png */; };
@@ -150,6 +160,8 @@
 		7609169FAEC98F51E76C0E07 /* fighter-bardiya-hit.png in Resources */ = {isa = PBXBuildFile; fileRef = 495187386D63ACD43AE3D468 /* fighter-bardiya-hit.png */; };
 		76F62E84E72BD7A42FDDB40F /* fighter-tahmina-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D97C8D9773C789545202FEF /* fighter-tahmina-light.png */; };
 		77AFF411A43224D0C1539C96 /* fighter-arsames-super.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE9E5842372CA1686E0061E /* fighter-arsames-super.png */; };
+		790CF0F88A726F7969CCEE9A /* vo-male-ko.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FA0BC1DF5206DA858521DB8 /* vo-male-ko.wav */; };
+		7AB081688D3AC0FAEE427F56 /* vo-female-attack-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE4AA868A643EAE7DCEE2F80 /* vo-female-attack-1.wav */; };
 		7BFF19B3489F185A09906B02 /* fighter-tahmina-special.png in Resources */ = {isa = PBXBuildFile; fileRef = 80ACFB81F9BDE4297391A05E /* fighter-tahmina-special.png */; };
 		7C015340D0FD64674AF8C563 /* khepri.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9AF32B8CFF80C7EACC7F5CB9 /* khepri.jpg */; };
 		7CD2D472DE71D1DFA8998D40 /* fighter-marcus_varro-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ABCD5DE028F27AC33ADCA2 /* fighter-marcus_varro-light.png */; };
@@ -164,6 +176,7 @@
 		82D04AC160BCDD8DC94CE736 /* sfx-hit-light.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3F11640E996BCDA6AC09538 /* sfx-hit-light.wav */; };
 		834A475B5F1B69CD2E19D041 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F5AD36F016BD40E1BB03F /* Haptics.swift */; };
 		84005046CDAB16B9586DDC6F /* fighter-tahmina-walk.png in Resources */ = {isa = PBXBuildFile; fileRef = F55CBFC5BE2810EC3DDD287E /* fighter-tahmina-walk.png */; };
+		84B2DD98AE92C837B445BFF2 /* vo-ko.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED134D6464D85EE96E5CA914 /* vo-ko.wav */; };
 		8509E9C643540AF6CD2D1589 /* fighter-khepri.json in Resources */ = {isa = PBXBuildFile; fileRef = D10F7ECEBFFB17AF4CEF4901 /* fighter-khepri.json */; };
 		85308B82E0DE20E512D1B03C /* fighter-livia-light2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A09E4322D8DC2F76324A096 /* fighter-livia-light2.png */; };
 		86937CD394C148A0C64D7841 /* fighter-bardiya-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C0CD0A125D21AB1EEDE89 /* fighter-bardiya-light.png */; };
@@ -173,7 +186,9 @@
 		88B3B7ADCDF6D9E8252D95D6 /* sfx-heal.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1C858B2A1F6B05C13987C2B /* sfx-heal.wav */; };
 		88B6750923CCA47A42D5D0A8 /* fighter-zhao_lin-light3.png in Resources */ = {isa = PBXBuildFile; fileRef = F97C656A3DD7A9EF8C1A6DF5 /* fighter-zhao_lin-light3.png */; };
 		8947E8B368D1152AF7CB9FBE /* fighter-nefru-super.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A42E446D730D830FA8FF68 /* fighter-nefru-super.png */; };
+		89A203E248B05D4210F26725 /* vo-fight.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8FABA9D6B06353CAA8D2B4F9 /* vo-fight.wav */; };
 		89AB4268D2A8644174F9BC46 /* fighter-arsames-idle.png in Resources */ = {isa = PBXBuildFile; fileRef = F4130845232F2D77610C0CB2 /* fighter-arsames-idle.png */; };
+		89E57B8D7D611EB6DC179B7C /* vo-female-hurt-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 707949C5CD6F8B0D4137F4C3 /* vo-female-hurt-2.wav */; };
 		8A29A831035C6F6E04D6784E /* fighter-meritamun-guard.png in Resources */ = {isa = PBXBuildFile; fileRef = D7BF67BEC48E15D4FA6927D2 /* fighter-meritamun-guard.png */; };
 		8C59FC709AABE673002FC2C9 /* fighter-mei_lin-heavy.png in Resources */ = {isa = PBXBuildFile; fileRef = 26124CB7202499602C9246AD /* fighter-mei_lin-heavy.png */; };
 		8CD4A5AC913468B5943E0CA1 /* fighter-meritamun-heavy.png in Resources */ = {isa = PBXBuildFile; fileRef = B3952D21D077B9831EB5AD32 /* fighter-meritamun-heavy.png */; };
@@ -181,6 +196,7 @@
 		8EAE60659E3A14C464412E52 /* fighter-nefru-air.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A14ED9587011DF5E2E4C7E0 /* fighter-nefru-air.png */; };
 		8EEE71D4AF7450CB6876F7A8 /* fighter-mei_lin-hit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8314D33D0EF6628E66F5846D /* fighter-mei_lin-hit.png */; };
 		8FCD7DBE53B3C6F96D6FF543 /* music-march.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 54CF1693DDAE015F20C69B07 /* music-march.m4a */; };
+		93909565E10D5BDC9B046F1F /* vo-female-ko.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA7461552E9F34B80AD279AF /* vo-female-ko.wav */; };
 		93E1F7F772F5EC1330351C83 /* fighter-gaius.json in Resources */ = {isa = PBXBuildFile; fileRef = B49B3DD5C913236D0922B059 /* fighter-gaius.json */; };
 		94AF52D0ABD36712DEAC6C53 /* music-kingdom-egypt.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8B1A1D1ADADE4DB47BFCF2DC /* music-kingdom-egypt.m4a */; };
 		95055264D47A9A8778162AF2 /* MenuViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298787E2CC0495E32F6822A /* MenuViews.swift */; };
@@ -193,6 +209,7 @@
 		99EE3ADE70887022E1CB0FA1 /* fighter-meritamun-ko.png in Resources */ = {isa = PBXBuildFile; fileRef = 26537DAF1E2FEAD046EB6399 /* fighter-meritamun-ko.png */; };
 		9A2F1E0666C0CBE8BBD3F14F /* fighter-marcus_varro-super.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA18D75FBAF0EEA62A832EE /* fighter-marcus_varro-super.png */; };
 		9A4C944ECD87179B14C92C71 /* ArcadeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEBFAEC4F94F4F0EDAFBFEE /* ArcadeViews.swift */; };
+		9B684D7F9CA2AC0AF18D0A93 /* vo-round-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CB263D68D9C4675751B8BEE7 /* vo-round-1.wav */; };
 		9B84E19B1105347DC64FAAA0 /* fighter-zhao_lin.json in Resources */ = {isa = PBXBuildFile; fileRef = 083ABBF04513509D632BF77F /* fighter-zhao_lin.json */; };
 		9D411436BDD2C159CE79EDF2 /* sfx-victory.wav in Resources */ = {isa = PBXBuildFile; fileRef = B7566BFB53C93E82FC094C00 /* sfx-victory.wav */; };
 		9D45FF5C5F9EC672ED19277F /* aeterna.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D97CFC21FD548D9D8E6F17A /* aeterna.jpg */; };
@@ -228,6 +245,7 @@
 		B44EA91D1627ABAAF6E1EF0F /* persepolis-far.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E0DA44EAD80A08AE4E7D245 /* persepolis-far.jpg */; };
 		B5102A7F13F267C2DCF8D45D /* fighter-khepri-idle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D453C380B78C4110205B95F /* fighter-khepri-idle.png */; };
 		B60E8F5E4BE55E946C808248 /* fighter-arsames-ko.png in Resources */ = {isa = PBXBuildFile; fileRef = 280EACB52027ADE928C3A9AF /* fighter-arsames-ko.png */; };
+		B7B761DB7BD68EB9EAF4FBB6 /* vo-male-attack-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 856F4EAAAEBC82D56A16D8AE /* vo-male-attack-3.wav */; };
 		B7F1A60487FA11D14B8A3A22 /* fighter-khepri-light3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0513D8BFE6973E7185B3E92F /* fighter-khepri-light3.png */; };
 		B848BEE8E2CD3536ABC618B0 /* fighter-marcus_varro-throw.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C3EACD51ABB5438490EFA2 /* fighter-marcus_varro-throw.png */; };
 		B88F9595B42B115918C42644 /* music-kingdom-persia.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 65E10630EF7100DCF7F8797B /* music-kingdom-persia.m4a */; };
@@ -237,6 +255,7 @@
 		C04A6E7055DCDD783AD5AEDF /* fighter-mei_lin-air.png in Resources */ = {isa = PBXBuildFile; fileRef = 577D6C39DFAE71185823F804 /* fighter-mei_lin-air.png */; };
 		C070792113F19A872A055605 /* SelectViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3073B24EA2A7038ED6D04093 /* SelectViews.swift */; };
 		C135258D3D67E0A200914C1C /* fighter-mei_lin-light3.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA9E52F40925B6A57981EDF /* fighter-mei_lin-light3.png */; };
+		C226BE68BA7B78F81EE4E4F3 /* vo-male-hurt-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9D5811D8F553985B7C2A4635 /* vo-male-hurt-3.wav */; };
 		C23631158974AA3685D88B0E /* fighter-atossa-jump.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BD43E56A726138D3911434 /* fighter-atossa-jump.png */; };
 		C2AC7F2EFD22605383E2EB76 /* fighter-wei_jian-throw.png in Resources */ = {isa = PBXBuildFile; fileRef = 9075F9B3F1210DBE0F74B890 /* fighter-wei_jian-throw.png */; };
 		C2F0E3FDEFA1BE7E6B7C680B /* fighter-zhao_lin-dash.png in Resources */ = {isa = PBXBuildFile; fileRef = F7E6D42E7B275C1BEDF5061D /* fighter-zhao_lin-dash.png */; };
@@ -286,6 +305,7 @@
 		E461BF995E024BBD9D95C337 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CC9201D0DD5064FAB108C229 /* OFL.txt */; };
 		E54169EF55C241F455103792 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9A41E7E586441C335547E4 /* HUD.swift */; };
 		E5749422FF117B97F5F8A39C /* wei_jian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B697D61254EEEAD49DF2DF4 /* wei_jian.jpg */; };
+		E577B5848D868D63E04ABBBF /* vo-female-attack-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E95BC8A437DD8F5845773D42 /* vo-female-attack-2.wav */; };
 		E57AB809A750C1C792F7145B /* fighter-gaius-light2.png in Resources */ = {isa = PBXBuildFile; fileRef = E2377510023742B3F455E542 /* fighter-gaius-light2.png */; };
 		E593F5EE373BD7ECDA342068 /* fighter-khepri-light2.png in Resources */ = {isa = PBXBuildFile; fileRef = 792BC78A148C684CA6B34403 /* fighter-khepri-light2.png */; };
 		E686E21876228A119FBC5927 /* fighter-wei_jian-super.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBA1833E7014AD774A65193 /* fighter-wei_jian-super.png */; };
@@ -296,8 +316,10 @@
 		E96F4E158D021E26B2F8ED2B /* fighter-nefru-guard.png in Resources */ = {isa = PBXBuildFile; fileRef = 784E569B62B3104EFC06AB8E /* fighter-nefru-guard.png */; };
 		E979455EAE51F306C206C8BA /* fighter-zhao_lin-special.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F6E8C7DCFBBD09CBCAFE4 /* fighter-zhao_lin-special.png */; };
 		EAEDDC59E142A2FF86A7675E /* fighter-atossa-throw.png in Resources */ = {isa = PBXBuildFile; fileRef = D826E53F439A928B3C7CC590 /* fighter-atossa-throw.png */; };
+		EB496919D90E87435B0E730A /* sfx-bodyfall.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42F5B5A6FBFC54A785B92285 /* sfx-bodyfall.wav */; };
 		EC3B9A8B2B40E9CE58094B15 /* ui-tap.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1B3D386DE659EF3DC220B0F5 /* ui-tap.m4a */; };
 		EE417375EA01E77F21F52FBB /* forum-far.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93AC65F51E22A9444E5C9676 /* forum-far.jpg */; };
+		EEC6ABAD90454880CC4D84D5 /* sfx-swing-thrust.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB50AF8F93F7CC8558B45415 /* sfx-swing-thrust.wav */; };
 		EECF31DAA0E663C1452EABFC /* far-beacon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 418A1B09EACD5873B2849BA8 /* far-beacon.jpg */; };
 		EEF8F45B5597DD7B1814DEEF /* fighter-nefru-light3.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D805CE271C8C3C27F5F174 /* fighter-nefru-light3.png */; };
 		EFBA91FC02CCF09967ECE960 /* fighter-zhao_lin-victory.png in Resources */ = {isa = PBXBuildFile; fileRef = 10969920CF076999A6367DAA /* fighter-zhao_lin-victory.png */; };
@@ -308,6 +330,7 @@
 		F1D156A5913C3E413F503D5E /* fighter-marcus_varro-ko.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBABDE831A818A913A48C24 /* fighter-marcus_varro-ko.png */; };
 		F5B3C28A4D3AA9E08A205C82 /* fighter-mei_lin-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B41492C5B5DF359D9FE58E /* fighter-mei_lin-light.png */; };
 		F5B8C8E9CD06A29C4591C701 /* sfx-armor.wav in Resources */ = {isa = PBXBuildFile; fileRef = CB5D2D5A109B3A3AE5F2E7CE /* sfx-armor.wav */; };
+		F5E2AF332D540E5AB52FF7E4 /* vo-female-attack-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 004E29FCAA64E61343F7EA10 /* vo-female-attack-3.wav */; };
 		F6F0D9FDEF8653BAB5E800C5 /* fighter-meritamun-special.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C13FBB75BB4FE32AEB43F0 /* fighter-meritamun-special.png */; };
 		F711D81AEB7E713E010618FD /* fighter-mei_lin-victory.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EAA8EDE8D7DCC91CB69215 /* fighter-mei_lin-victory.png */; };
 		F7F45CCA52C36D9E70487790 /* fighter-wei_jian-heavy.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F9BAED37DD0C3BE74E01C3 /* fighter-wei_jian-heavy.png */; };
@@ -336,15 +359,18 @@
 
 /* Begin PBXFileReference section */
 		0007DE14C22105D283ABA7DA /* fighter-atossa-super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-atossa-super.png"; sourceTree = "<group>"; };
+		004E29FCAA64E61343F7EA10 /* vo-female-attack-3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-female-attack-3.wav"; sourceTree = "<group>"; };
 		0315D7E97AD46AF523E20E6D /* fighter-bardiya-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-bardiya-light3.png"; sourceTree = "<group>"; };
 		03CA1CE73531E6C47C510773 /* fighter-livia-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-livia-light.png"; sourceTree = "<group>"; };
 		0513D8BFE6973E7185B3E92F /* fighter-khepri-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-khepri-light3.png"; sourceTree = "<group>"; };
 		058A31DC4D82BB14403DEE74 /* fighter-wei_jian-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-light.png"; sourceTree = "<group>"; };
 		06BB24123BAB38C829C83597 /* StageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageNode.swift; sourceTree = "<group>"; };
 		06C7A2CD637F098D2FD77622 /* fighter-arsames-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-arsames-dash.png"; sourceTree = "<group>"; };
+		06D47C02D88E00EA85982773 /* vo-male-attack-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-male-attack-2.wav"; sourceTree = "<group>"; };
 		083ABBF04513509D632BF77F /* fighter-zhao_lin.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fighter-zhao_lin.json"; sourceTree = "<group>"; };
 		0A14ED9587011DF5E2E4C7E0 /* fighter-nefru-air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-air.png"; sourceTree = "<group>"; };
 		0AE1886F1C4923DBB4953AB1 /* fighter-livia-special.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-livia-special.png"; sourceTree = "<group>"; };
+		0B73F5B3B6E01560785F47AF /* vo-female-hurt-3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-female-hurt-3.wav"; sourceTree = "<group>"; };
 		0C16CDB38BBEA0B9EF21A28F /* marcus_varro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marcus_varro.jpg; sourceTree = "<group>"; };
 		0C470CC8829673515EC57A2D /* fighter-atossa-special.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-atossa-special.png"; sourceTree = "<group>"; };
 		0EC9858D3CB358A4066272D1 /* sfx-hit-heavy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-hit-heavy.wav"; sourceTree = "<group>"; };
@@ -352,16 +378,20 @@
 		10969920CF076999A6367DAA /* fighter-zhao_lin-victory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-zhao_lin-victory.png"; sourceTree = "<group>"; };
 		121843E29C678EA410D9B80D /* fighter-nefru-ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-ko.png"; sourceTree = "<group>"; };
 		124ED1BDEF5AB73D81F6DBB7 /* fighter-nefru-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-dash.png"; sourceTree = "<group>"; };
+		12645EFC64445CDF8F805BD7 /* vo-final-round.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-final-round.wav"; sourceTree = "<group>"; };
 		1298787E2CC0495E32F6822A /* MenuViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViews.swift; sourceTree = "<group>"; };
 		1890A588739E310D9B03555E /* fighter-atossa-light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-atossa-light2.png"; sourceTree = "<group>"; };
+		19723361E9536D1813DAE183 /* vo-male-hurt-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-male-hurt-2.wav"; sourceTree = "<group>"; };
 		1A0DE59954EC0FF1BD57FDF9 /* fighter-atossa-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-atossa-heavy.png"; sourceTree = "<group>"; };
 		1A275B85C28D164FADF173DF /* fighter-marcus_varro-walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-walk.png"; sourceTree = "<group>"; };
 		1B3D386DE659EF3DC220B0F5 /* ui-tap.m4a */ = {isa = PBXFileReference; path = "ui-tap.m4a"; sourceTree = "<group>"; };
 		1B6228CC23206E7EB264AF21 /* FighterRig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterRig.swift; sourceTree = "<group>"; };
 		1B7F1BF4589798105FCBAA80 /* fighter-gaius-air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-air.png"; sourceTree = "<group>"; };
+		1D37AF71C4B027E838259FE1 /* vo-round-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-round-2.wav"; sourceTree = "<group>"; };
 		1D97C8D9773C789545202FEF /* fighter-tahmina-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-tahmina-light.png"; sourceTree = "<group>"; };
 		1DAA84CCA639CD2DE7493650 /* fighter-wei_jian-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-jump.png"; sourceTree = "<group>"; };
 		1E4FB2992386E310CBD7670D /* fighter-arsames-walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-arsames-walk.png"; sourceTree = "<group>"; };
+		1FA0BC1DF5206DA858521DB8 /* vo-male-ko.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-male-ko.wav"; sourceTree = "<group>"; };
 		2024DDE2A04AF0CDA77B0BD0 /* music-kingdom-han.m4a */ = {isa = PBXFileReference; path = "music-kingdom-han.m4a"; sourceTree = "<group>"; };
 		2081CE7AD8A431A9575AA473 /* atossa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = atossa.jpg; sourceTree = "<group>"; };
 		21F8B8FAF0AD5FCB34036B6C /* fighter-marcus_varro-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-dash.png"; sourceTree = "<group>"; };
@@ -410,6 +440,7 @@
 		4192B762CBFC7B68819C8721 /* fighter-nefru.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fighter-nefru.json"; sourceTree = "<group>"; };
 		4255A5FA8AC8C5215C096B12 /* fighter-wei_jian-special.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-special.png"; sourceTree = "<group>"; };
 		426A88ADCFDB49FE28B3CB9D /* fighter-arsames-hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-arsames-hit.png"; sourceTree = "<group>"; };
+		42F5B5A6FBFC54A785B92285 /* sfx-bodyfall.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-bodyfall.wav"; sourceTree = "<group>"; };
 		4332FD1D57C0760144ADE617 /* fighter-gaius-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-light3.png"; sourceTree = "<group>"; };
 		4420596673BF9BF3DBF2AEAC /* fighter-gaius-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-light.png"; sourceTree = "<group>"; };
 		44FA077DDC1212A024436ED3 /* fighter-tahmina-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-tahmina-heavy.png"; sourceTree = "<group>"; };
@@ -418,6 +449,7 @@
 		47BA9AE8FF2646025427F67A /* AetheriaClashUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AetheriaClashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4905AB24FA2FD739067F2683 /* fighter-wei_jian-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-light3.png"; sourceTree = "<group>"; };
 		495187386D63ACD43AE3D468 /* fighter-bardiya-hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-bardiya-hit.png"; sourceTree = "<group>"; };
+		49A77C1F00F1FB0F8B2551C6 /* vo-perfect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-perfect.wav"; sourceTree = "<group>"; };
 		49D805CE271C8C3C27F5F174 /* fighter-nefru-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-light3.png"; sourceTree = "<group>"; };
 		4ABBED14BEF6EDB2F9EF3985 /* fighter-nefru-throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-throw.png"; sourceTree = "<group>"; };
 		4CFBF2EBE3490D989A65F5E5 /* fighter-marcus_varro-light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-light2.png"; sourceTree = "<group>"; };
@@ -454,12 +486,14 @@
 		656DF0BD227019626EA77FCE /* EBGaramond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EBGaramond.ttf; sourceTree = "<group>"; };
 		65E10630EF7100DCF7F8797B /* music-kingdom-persia.m4a */ = {isa = PBXFileReference; path = "music-kingdom-persia.m4a"; sourceTree = "<group>"; };
 		687C2D14C6A69546EB779310 /* fighter-mei_lin-throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-mei_lin-throw.png"; sourceTree = "<group>"; };
+		68C0E33AD06CC416278BD5B4 /* vo-male-attack-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-male-attack-1.wav"; sourceTree = "<group>"; };
 		6906ABBCDBF39E2DDDD108FA /* fighter-nefru-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-light.png"; sourceTree = "<group>"; };
 		69C253C745C35FD178D646FB /* fighter-livia-ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-livia-ko.png"; sourceTree = "<group>"; };
 		69F9BAED37DD0C3BE74E01C3 /* fighter-wei_jian-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-heavy.png"; sourceTree = "<group>"; };
 		6A9D05EF346614AD323882F1 /* fighter-atossa-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-atossa-light.png"; sourceTree = "<group>"; };
 		6DCC1A99EBEF3F365476F04F /* sfx-seal.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-seal.wav"; sourceTree = "<group>"; };
 		6F7152025EEAFFB3D63DFBAA /* fighter-bardiya-victory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-bardiya-victory.png"; sourceTree = "<group>"; };
+		707949C5CD6F8B0D4137F4C3 /* vo-female-hurt-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-female-hurt-2.wav"; sourceTree = "<group>"; };
 		707A44D4F079C84A3B0FF07B /* fighter-mei_lin-guard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-mei_lin-guard.png"; sourceTree = "<group>"; };
 		72009CD0BB3099905C1F345D /* fighter-khepri-throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-khepri-throw.png"; sourceTree = "<group>"; };
 		7268C8CB7DF98DE12E9184F1 /* sfx-dust.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-dust.wav"; sourceTree = "<group>"; };
@@ -486,6 +520,7 @@
 		820AF20A5D541B4635124AA1 /* fighter-marcus_varro-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-jump.png"; sourceTree = "<group>"; };
 		82A42E446D730D830FA8FF68 /* fighter-nefru-super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-super.png"; sourceTree = "<group>"; };
 		8314D33D0EF6628E66F5846D /* fighter-mei_lin-hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-mei_lin-hit.png"; sourceTree = "<group>"; };
+		856F4EAAAEBC82D56A16D8AE /* vo-male-attack-3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-male-attack-3.wav"; sourceTree = "<group>"; };
 		857600E6BF8AB7BF98573B5B /* fighter-mei_lin-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-mei_lin-dash.png"; sourceTree = "<group>"; };
 		862E3E15FB87F2ED3E430E0B /* fighter-marcus_varro-air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-air.png"; sourceTree = "<group>"; };
 		862F6BC7340224972A009E2F /* sfx-land.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-land.wav"; sourceTree = "<group>"; };
@@ -505,6 +540,7 @@
 		8EB1A11102ABBB9720B61450 /* fighter-bardiya.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fighter-bardiya.json"; sourceTree = "<group>"; };
 		8F8EB9EF907BDF0FC0A3AC44 /* fighter-wei_jian-victory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-victory.png"; sourceTree = "<group>"; };
 		8FA18D75FBAF0EEA62A832EE /* fighter-marcus_varro-super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-super.png"; sourceTree = "<group>"; };
+		8FABA9D6B06353CAA8D2B4F9 /* vo-fight.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-fight.wav"; sourceTree = "<group>"; };
 		9015516791E937F346466B3A /* fighter-arsames-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-arsames-jump.png"; sourceTree = "<group>"; };
 		902E1A66B0DBA182F398E471 /* fighter-livia-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-livia-jump.png"; sourceTree = "<group>"; };
 		9075F9B3F1210DBE0F74B890 /* fighter-wei_jian-throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-throw.png"; sourceTree = "<group>"; };
@@ -526,6 +562,7 @@
 		9C80DE141E0FE940D4A729B7 /* fighter-livia-idle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-livia-idle.png"; sourceTree = "<group>"; };
 		9CEF7584EBC563C013C79D8B /* fighter-meritamun-throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-meritamun-throw.png"; sourceTree = "<group>"; };
 		9D453C380B78C4110205B95F /* fighter-khepri-idle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-khepri-idle.png"; sourceTree = "<group>"; };
+		9D5811D8F553985B7C2A4635 /* vo-male-hurt-3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-male-hurt-3.wav"; sourceTree = "<group>"; };
 		9F0F16EB337FE4E447CFEE71 /* fighter-wei_jian-air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-air.png"; sourceTree = "<group>"; };
 		A09E6B0734E9BA0356D88057 /* fighter-bardiya-super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-bardiya-super.png"; sourceTree = "<group>"; };
 		A0CE60F4C98916D078C4AEF5 /* fighter-mei_lin-light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-mei_lin-light2.png"; sourceTree = "<group>"; };
@@ -545,6 +582,7 @@
 		ACC951961036880B8F3A8177 /* HeroLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLook.swift; sourceTree = "<group>"; };
 		AD5E4D9A99268B2CC9BD3E98 /* zhao_lin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zhao_lin.jpg; sourceTree = "<group>"; };
 		AD9AAE4ED7D778AE9BC52CAC /* sfx-orb.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-orb.wav"; sourceTree = "<group>"; };
+		AE4AA868A643EAE7DCEE2F80 /* vo-female-attack-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-female-attack-1.wav"; sourceTree = "<group>"; };
 		AFBABDE831A818A913A48C24 /* fighter-marcus_varro-ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-ko.png"; sourceTree = "<group>"; };
 		B0D8022EC658FCEFE6746DAE /* music-title.m4a */ = {isa = PBXFileReference; path = "music-title.m4a"; sourceTree = "<group>"; };
 		B131C2602DD7D7303707FE85 /* fighter-livia-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-livia-heavy.png"; sourceTree = "<group>"; };
@@ -557,12 +595,14 @@
 		B7566BFB53C93E82FC094C00 /* sfx-victory.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-victory.wav"; sourceTree = "<group>"; };
 		B7BD43E56A726138D3911434 /* fighter-atossa-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-atossa-jump.png"; sourceTree = "<group>"; };
 		B86C725A20C48195EA305418 /* fighter-khepri-guard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-khepri-guard.png"; sourceTree = "<group>"; };
+		B89E3AB425F0BFB487EA693A /* vo-female-hurt-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-female-hurt-1.wav"; sourceTree = "<group>"; };
 		B8FA4FA3856A47AC84AB7639 /* music-kingdom-rome.m4a */ = {isa = PBXFileReference; path = "music-kingdom-rome.m4a"; sourceTree = "<group>"; };
 		B9A46AA858A0FD09276B30F8 /* fighter-tahmina-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-tahmina-jump.png"; sourceTree = "<group>"; };
 		B9A8D6BA91C866997162A46E /* fighter-marcus_varro-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-heavy.png"; sourceTree = "<group>"; };
 		BA8D02A356EFE2A4071A0217 /* fighter-bardiya-walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-bardiya-walk.png"; sourceTree = "<group>"; };
 		BA961408F3272B05EDFA751A /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		BAE9E5842372CA1686E0061E /* fighter-arsames-super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-arsames-super.png"; sourceTree = "<group>"; };
+		BB50AF8F93F7CC8558B45415 /* sfx-swing-thrust.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-swing-thrust.wav"; sourceTree = "<group>"; };
 		BB728A2E6ED249A99435F7B9 /* fighter-zhao_lin-super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-zhao_lin-super.png"; sourceTree = "<group>"; };
 		BE5E8A7CCAD1C7A0C7302083 /* fighter-tahmina-ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-tahmina-ko.png"; sourceTree = "<group>"; };
 		BF8075B5FFF49118DD491DB0 /* fighter-marcus_varro-guard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-guard.png"; sourceTree = "<group>"; };
@@ -580,6 +620,7 @@
 		C9745E4C59EB191AF1140FC7 /* gaius.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gaius.jpg; sourceTree = "<group>"; };
 		CA0510E89AEF29A884DF4A85 /* fighter-wei_jian-idle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-idle.png"; sourceTree = "<group>"; };
 		CAC6608A595C538AA98C6929 /* fighter-khepri-special.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-khepri-special.png"; sourceTree = "<group>"; };
+		CB263D68D9C4675751B8BEE7 /* vo-round-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-round-1.wav"; sourceTree = "<group>"; };
 		CB5D2D5A109B3A3AE5F2E7CE /* sfx-armor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-armor.wav"; sourceTree = "<group>"; };
 		CC13F397E4821919B93067CE /* fighter-nefru-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-jump.png"; sourceTree = "<group>"; };
 		CC59A70691BCAEA2075654B5 /* sfx-super.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-super.wav"; sourceTree = "<group>"; };
@@ -601,8 +642,10 @@
 		D7BF67BEC48E15D4FA6927D2 /* fighter-meritamun-guard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-meritamun-guard.png"; sourceTree = "<group>"; };
 		D7CBAD738DDF29F52D8545B2 /* fighter-meritamun-light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-meritamun-light2.png"; sourceTree = "<group>"; };
 		D826E53F439A928B3C7CC590 /* fighter-atossa-throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-atossa-throw.png"; sourceTree = "<group>"; };
+		D882F912BD220D57132A2BBE /* vo-round-3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-round-3.wav"; sourceTree = "<group>"; };
 		D948903E8A568D8035143C55 /* fighter-zhao_lin-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-zhao_lin-jump.png"; sourceTree = "<group>"; };
 		DA5B6FAEAC12493E0C7051D4 /* fighter-arsames-throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-arsames-throw.png"; sourceTree = "<group>"; };
+		DA7461552E9F34B80AD279AF /* vo-female-ko.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-female-ko.wav"; sourceTree = "<group>"; };
 		DA93526D252915E360C97327 /* fighter-gaius-idle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-idle.png"; sourceTree = "<group>"; };
 		DBA593D411A9D842D67F48F2 /* fighter-livia-air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-livia-air.png"; sourceTree = "<group>"; };
 		DBFD81637FBB834C9F598795 /* fighter-mei_lin-super.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-mei_lin-super.png"; sourceTree = "<group>"; };
@@ -615,6 +658,7 @@
 		E1835944CC459DF763124AFF /* AetheriaClashApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AetheriaClashApp.swift; sourceTree = "<group>"; };
 		E2377510023742B3F455E542 /* fighter-gaius-light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-gaius-light2.png"; sourceTree = "<group>"; };
 		E2DAACEDEB284BA1F431C38B /* fighter-wei_jian-ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-ko.png"; sourceTree = "<group>"; };
+		E47428E117CA733B1C1BE24D /* vo-male-hurt-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-male-hurt-1.wav"; sourceTree = "<group>"; };
 		E4F2F3F3B56D9D2846656F70 /* fighter-zhao_lin-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-zhao_lin-heavy.png"; sourceTree = "<group>"; };
 		E525EBB7A4DA8BF7776337B3 /* fighter-livia-hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-livia-hit.png"; sourceTree = "<group>"; };
 		E594AD816A0258FE2659A802 /* fighter-tahmina.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fighter-tahmina.json"; sourceTree = "<group>"; };
@@ -624,11 +668,13 @@
 		E8B56B4FC066C96DA9A67CF9 /* sfx-block.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-block.wav"; sourceTree = "<group>"; };
 		E8CC19C8F2EF7192065B5A8B /* ui-error.m4a */ = {isa = PBXFileReference; path = "ui-error.m4a"; sourceTree = "<group>"; };
 		E905D6E89C5E9636ED0A9EF0 /* fighter-bardiya-ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-bardiya-ko.png"; sourceTree = "<group>"; };
+		E95BC8A437DD8F5845773D42 /* vo-female-attack-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-female-attack-2.wav"; sourceTree = "<group>"; };
 		E9770600351013A79882E9E0 /* AetheriaClashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AetheriaClashUITests.swift; sourceTree = "<group>"; };
 		EA09FC3C7F6B45041B3CA3A1 /* fighter-nefru-heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-heavy.png"; sourceTree = "<group>"; };
 		EB769DB8C51E23B524292547 /* fighter-livia-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-livia-light3.png"; sourceTree = "<group>"; };
 		EB7F28D28436307B6581FEB4 /* fighter-marcus_varro-light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-marcus_varro-light3.png"; sourceTree = "<group>"; };
 		EC34AFD899E400EDBFB72434 /* fighter-nefru-victory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-nefru-victory.png"; sourceTree = "<group>"; };
+		ED134D6464D85EE96E5CA914 /* vo-ko.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "vo-ko.wav"; sourceTree = "<group>"; };
 		EDDFACE6F46CBFFE4ED814D3 /* sfx-bow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "sfx-bow.wav"; sourceTree = "<group>"; };
 		EE1F12D12FF1D565AA71A4CC /* InfoViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViews.swift; sourceTree = "<group>"; };
 		EED3FAE8CC4D97D903F9A76A /* fighter-wei_jian-walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fighter-wei_jian-walk.png"; sourceTree = "<group>"; };
@@ -1072,6 +1118,7 @@
 				B0D8022EC658FCEFE6746DAE /* music-title.m4a */,
 				CB5D2D5A109B3A3AE5F2E7CE /* sfx-armor.wav */,
 				E8B56B4FC066C96DA9A67CF9 /* sfx-block.wav */,
+				42F5B5A6FBFC54A785B92285 /* sfx-bodyfall.wav */,
 				EDDFACE6F46CBFFE4ED814D3 /* sfx-bow.wav */,
 				39A81DFEBD87D41CF649C926 /* sfx-counter.wav */,
 				CF49F1603A0A7A0D7B93FE9A /* sfx-crossbow.wav */,
@@ -1092,6 +1139,7 @@
 				AD9AAE4ED7D778AE9BC52CAC /* sfx-orb.wav */,
 				6DCC1A99EBEF3F365476F04F /* sfx-seal.wav */,
 				CC59A70691BCAEA2075654B5 /* sfx-super.wav */,
+				BB50AF8F93F7CC8558B45415 /* sfx-swing-thrust.wav */,
 				B7566BFB53C93E82FC094C00 /* sfx-victory.wav */,
 				933413ED7FFE9391DFF33EB4 /* sfx-whoosh-heavy.wav */,
 				3F448C0491C0586E3FA3B464 /* sfx-whoosh-light.wav */,
@@ -1099,6 +1147,27 @@
 				E8CC19C8F2EF7192065B5A8B /* ui-error.m4a */,
 				D2C9A4344DDB69ADD1E37606 /* ui-reward.m4a */,
 				1B3D386DE659EF3DC220B0F5 /* ui-tap.m4a */,
+				AE4AA868A643EAE7DCEE2F80 /* vo-female-attack-1.wav */,
+				E95BC8A437DD8F5845773D42 /* vo-female-attack-2.wav */,
+				004E29FCAA64E61343F7EA10 /* vo-female-attack-3.wav */,
+				B89E3AB425F0BFB487EA693A /* vo-female-hurt-1.wav */,
+				707949C5CD6F8B0D4137F4C3 /* vo-female-hurt-2.wav */,
+				0B73F5B3B6E01560785F47AF /* vo-female-hurt-3.wav */,
+				DA7461552E9F34B80AD279AF /* vo-female-ko.wav */,
+				8FABA9D6B06353CAA8D2B4F9 /* vo-fight.wav */,
+				12645EFC64445CDF8F805BD7 /* vo-final-round.wav */,
+				ED134D6464D85EE96E5CA914 /* vo-ko.wav */,
+				68C0E33AD06CC416278BD5B4 /* vo-male-attack-1.wav */,
+				06D47C02D88E00EA85982773 /* vo-male-attack-2.wav */,
+				856F4EAAAEBC82D56A16D8AE /* vo-male-attack-3.wav */,
+				E47428E117CA733B1C1BE24D /* vo-male-hurt-1.wav */,
+				19723361E9536D1813DAE183 /* vo-male-hurt-2.wav */,
+				9D5811D8F553985B7C2A4635 /* vo-male-hurt-3.wav */,
+				1FA0BC1DF5206DA858521DB8 /* vo-male-ko.wav */,
+				49A77C1F00F1FB0F8B2551C6 /* vo-perfect.wav */,
+				CB263D68D9C4675751B8BEE7 /* vo-round-1.wav */,
+				1D37AF71C4B027E838259FE1 /* vo-round-2.wav */,
+				D882F912BD220D57132A2BBE /* vo-round-3.wav */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -1464,6 +1533,7 @@
 				B44EA91D1627ABAAF6E1EF0F /* persepolis-far.jpg in Resources */,
 				F5B8C8E9CD06A29C4591C701 /* sfx-armor.wav in Resources */,
 				52541DC247C09B957B76794B /* sfx-block.wav in Resources */,
+				EB496919D90E87435B0E730A /* sfx-bodyfall.wav in Resources */,
 				2DB77A716369EAA8DBD82043 /* sfx-bow.wav in Resources */,
 				64F431D4E69E265DD19E5EB5 /* sfx-counter.wav in Resources */,
 				6A0DF600FFE3DF10B95FB320 /* sfx-crossbow.wav in Resources */,
@@ -1484,6 +1554,7 @@
 				448E311AA6B53F7E832C377E /* sfx-orb.wav in Resources */,
 				5521213969267C6DDDC80AE9 /* sfx-seal.wav in Resources */,
 				1055AADC563FD7CA1920D54B /* sfx-super.wav in Resources */,
+				EEC6ABAD90454880CC4D84D5 /* sfx-swing-thrust.wav in Resources */,
 				9D411436BDD2C159CE79EDF2 /* sfx-victory.wav in Resources */,
 				6E23896D407B101C354BD3A2 /* sfx-whoosh-heavy.wav in Resources */,
 				1D53A8357413CF783BDFD514 /* sfx-whoosh-light.wav in Resources */,
@@ -1492,6 +1563,27 @@
 				F09E9E6558A54C076A081C9E /* ui-error.m4a in Resources */,
 				6195F4C1F45037C959EB93AB /* ui-reward.m4a in Resources */,
 				EC3B9A8B2B40E9CE58094B15 /* ui-tap.m4a in Resources */,
+				7AB081688D3AC0FAEE427F56 /* vo-female-attack-1.wav in Resources */,
+				E577B5848D868D63E04ABBBF /* vo-female-attack-2.wav in Resources */,
+				F5E2AF332D540E5AB52FF7E4 /* vo-female-attack-3.wav in Resources */,
+				0CBEDD3CE4A0E197BB99D465 /* vo-female-hurt-1.wav in Resources */,
+				89E57B8D7D611EB6DC179B7C /* vo-female-hurt-2.wav in Resources */,
+				01FAEC382CACCA8E657610D3 /* vo-female-hurt-3.wav in Resources */,
+				93909565E10D5BDC9B046F1F /* vo-female-ko.wav in Resources */,
+				89A203E248B05D4210F26725 /* vo-fight.wav in Resources */,
+				0C1816D7423EC0F0DA656858 /* vo-final-round.wav in Resources */,
+				84B2DD98AE92C837B445BFF2 /* vo-ko.wav in Resources */,
+				0DBFA067CEB6D3731D66123C /* vo-male-attack-1.wav in Resources */,
+				34E16317C5FF86A052842C93 /* vo-male-attack-2.wav in Resources */,
+				B7B761DB7BD68EB9EAF4FBB6 /* vo-male-attack-3.wav in Resources */,
+				530BE2D7EC85655920436B16 /* vo-male-hurt-1.wav in Resources */,
+				0CA2DD82A1145E5EF874216D /* vo-male-hurt-2.wav in Resources */,
+				C226BE68BA7B78F81EE4E4F3 /* vo-male-hurt-3.wav in Resources */,
+				790CF0F88A726F7969CCEE9A /* vo-male-ko.wav in Resources */,
+				2657BB594B6AFF018F4266B7 /* vo-perfect.wav in Resources */,
+				9B684D7F9CA2AC0AF18D0A93 /* vo-round-1.wav in Resources */,
+				6DF2E668E77D9FE4347EB4A1 /* vo-round-2.wav in Resources */,
+				69E5659E21329AD5CDC3B2F3 /* vo-round-3.wav in Resources */,
 				E5749422FF117B97F5F8A39C /* wei_jian.jpg in Resources */,
 				7CED67C96A3A93F5C56A8E17 /* white-wind.jpg in Resources */,
 				D069480BEFFD4F2274F85F64 /* zhao_lin.jpg in Resources */,

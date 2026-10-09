@@ -2,7 +2,9 @@
 // files: run `swift Tools/make-sfx.swift` from the repo root. The palette
 // follows Aetheria Rising's audio brief: wood, bronze, skin drums, bowstrings
 // and horn, nothing electronic. A recorded file dropped in with the same name
-// replaces a synthesized one.
+// replaces a synthesized one: list its name (e.g. sfx-hit-light) in
+// Tools/recorded-sounds.txt and this script leaves it alone. Afterwards run
+// Tools/level-sfx.py, which sets each sound's loudness for phone speakers.
 import Foundation
 
 let rate = 44_100.0
@@ -262,7 +264,12 @@ do {
     sounds["victory"] = victory
 }
 
-for (name, sound) in sounds.sorted(by: { $0.key < $1.key }) {
+// Recorded replacements are never overwritten.
+let recorded = Set(((try? String(contentsOfFile: "Tools/recorded-sounds.txt", encoding: .utf8)) ?? "")
+    .split(whereSeparator: \.isNewline).map { $0.trimmingCharacters(in: .whitespaces) }.filter { !$0.isEmpty && !$0.hasPrefix("#") })
+var written = 0
+for (name, sound) in sounds.sorted(by: { $0.key < $1.key }) where !recorded.contains("sfx-\(name)") {
     try sound.write("sfx-\(name)")
+    written += 1
 }
-print("Wrote \(sounds.count) sounds to App/Resources/Audio")
+print("Wrote \(written) sounds to App/Resources/Audio (\(sounds.count - written) recorded ones left alone)")

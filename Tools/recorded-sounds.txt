@@ -1,0 +1,17 @@
+# Sound effects in App/Resources/Audio that are recordings, one name per line (e.g. sfx-hit-light).
+# Tools/make-sfx.swift never overwrites these. After adding or replacing a recording, run Tools/level-sfx.py.
+sfx-hit-light
+sfx-hit-medium
+sfx-hit-heavy
+sfx-hit-crushing
+sfx-ko
+sfx-whoosh-light
+sfx-whoosh-heavy
+sfx-block
+sfx-counter
+sfx-armor
+sfx-bow
+sfx-crossbow
+sfx-gallop
+sfx-grab
+sfx-super

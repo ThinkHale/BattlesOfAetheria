@@ -1,13 +1,23 @@
 # Blender: render a rigged hero's actions into the sprite strips App/Sources/Game/SpriteBody.swift plays.
-#   blender -b --factory-startup -P Tools/render-strips.py -- hero.blend out_dir hero_id spec.json
+#   blender -b --factory-startup -P Tools/render-strips.py -- hero.blend out_dir hero_id spec.json [--contacts-only sheet.json]
 # spec.json maps game strip names to {"action": <Blender action name>, "frames": n, "loop": bool, "range": [a, b]?}.
 # Writes out_dir/fighter-<hero>-<strip>.png (frames side by side, transparent) and out_dir/fighter-<hero>.json.
+# Each attack strip also records "contact", the frame where the blow lands (the furthest a hand, foot or weapon
+# reaches forward of where it started; full draw for archery), and strips whose clip travels backwards record
+# "backward"; SpriteBody times swings and reverses dashes with them. "pingpong": true in the spec plays a loop forward
+# then back (an idle cut from the middle of a long clip has no seam). --contacts-only updates an installed sheet
+# JSON with those hints (and the fps) without rendering.
 import bpy, sys, os, json, math
 import numpy as np
 from mathutils import Vector
 
 argv = sys.argv[sys.argv.index('--') + 1:]
+CONTACTS_ONLY = None
+if '--contacts-only' in argv:
+    i = argv.index('--contacts-only'); CONTACTS_ONLY = argv[i + 1]; del argv[i:i + 2]
 src, out, hero, spec_path = argv
+ATTACKS = ('light', 'light2', 'light3', 'heavy', 'air', 'throw', 'special', 'super')
+BACKWARD_CLIPS = {'Back_Jump', 'Stand_Dodge'}
 spec = json.load(open(spec_path))
 os.makedirs(out, exist_ok=True)
 bpy.ops.wm.open_mainfile(filepath=src)
@@ -56,7 +66,31 @@ cam.location = Vector((-10, 0, centre_z)); cam.rotation_euler = Vector((1, 0, 0)
 
 ad = rig.animation_data or rig.animation_data_create()
 for t in list(ad.nla_tracks): ad.nla_tracks.remove(t)
-sheet = {}
+sheet = json.load(open(CONTACTS_ONLY)) if CONTACTS_ONLY else {}
+props = [o for o in bpy.data.objects if o.type == 'MESH' and o.parent_type == 'BONE' and not o.hide_render]
+CLIP_FPS = sc.render.fps / sc.render.fps_base     # the rate the clips were imported at
+
+
+def contact_index(strip, s, picks):
+    """The picked frame where the blow lands: the furthest any hand, foot or held prop has moved forward (-Y) of
+    where it started, or for archery the fullest draw. Skips the first frame and the last fifth."""
+    if strip not in ATTACKS: return None
+    samples = []
+    for f in picks:
+        sc.frame_set(f); bpy.context.view_layer.update()
+        hp = rig.matrix_world @ rig.pose.bones[hips].head
+        pos = {b: rig.matrix_world @ rig.pose.bones[b].head for b in ('RightHand', 'LeftHand', 'RightFoot', 'LeftFoot')}
+        fwd = {b: hp.y - v.y for b, v in pos.items()}
+        for o in props:
+            fwd[o.name] = max(hp.y - (o.matrix_world @ Vector(c)).y for c in o.bound_box)
+        samples.append((fwd, (pos['RightHand'] - pos['LeftHand']).length))
+    n = len(picks); cand = range(1, max(2, min(n - 1, int(n * 0.8) + 1)))
+    if any(k in s['action'] for k in ('Archery', 'Shoot')):
+        # The release: the last frame before the draw collapses.
+        return max(cand, key=lambda k: samples[k][1] - samples[k + 1][1] if k + 1 < n else -1)
+    base = samples[0][0]
+    return max(cand, key=lambda k: max(samples[k][0][e] - base[e] for e in base))
+
 from bpy_extras import anim_utils
 for strip, s in spec.items():
     act = bpy.data.actions[s['action']]
@@ -73,7 +107,7 @@ for strip, s in spec.items():
                 m.point_cache.frame_start = a - 40; m.point_cache.frame_end = b + 1
     sc.frame_start, sc.frame_end = a - 40, b + 1
     bpy.ops.ptcache.free_bake_all()
-    if any(m.type == 'CLOTH' for ob in bpy.data.objects for m in ob.modifiers):
+    if not CONTACTS_ONLY and any(m.type == 'CLOTH' for ob in bpy.data.objects for m in ob.modifiers):
         bpy.ops.ptcache.bake_all(bake=True)                  # renders then read the cache instead of re-simulating
     frames = []
     # "aim": turn the whole figure so the bow arm (spine -> left hand) points at the opponent (-Y) at the clip's
@@ -90,6 +124,16 @@ for strip, s in spec.items():
     rig.data.pose_position = 'REST'; bpy.context.view_layer.update()
     rest_hips = rig.matrix_world @ rig.pose.bones[hips].head
     rig.data.pose_position = 'POSE'
+    hints = {'fps': round(n / (max(1, b - a) / CLIP_FPS), 2)}
+    c = contact_index(strip, s, picks)
+    if c is not None: hints['contact'] = c
+    if s.get('backward') or s['action'] in BACKWARD_CLIPS: hints['backward'] = True
+    if s.get('pingpong'): hints['pingpong'] = True
+    if CONTACTS_ONLY:
+        if strip in sheet:
+            sheet[strip].pop('backward', None); sheet[strip].update(hints)
+        print('hints', strip, hints, flush=True)
+        continue
 
     def follow(f):
         # Keep him in place: the fight engine moves him, so the camera follows his hips sideways (and, for jumps,
@@ -124,9 +168,8 @@ for strip, s in spec.items():
         canvas[:, k * fw:(k + 1) * fw] = buf.reshape(fh, fw, 4); bpy.data.images.remove(im); os.remove(p)
     img = bpy.data.images.new(f'fighter-{hero}-{strip}', W, fh, alpha=True)
     img.pixels.foreach_set(canvas.ravel()); img.filepath_raw = f'{out}/fighter-{hero}-{strip}.png'; img.file_format = 'PNG'; img.save()
-    fps = n / (max(1, b - a) / 30.0)
     sheet[strip] = dict(frames=n, width=fw, height=fh, anchor=[0.5, round(1 - BELOW * PX_PER_M / fh, 4)], loop=bool(s['loop']),
-                        figureHeight=round(1.8 * PX_PER_M, 1), fps=round(fps, 2))
+                        figureHeight=round(1.8 * PX_PER_M, 1), **hints)
     print('strip', strip, n, 'frames from', act.name, '%.0f-%.0f' % (a, b), flush=True)
-json.dump(sheet, open(f'{out}/fighter-{hero}.json', 'w'), indent=1)
+json.dump(sheet, open(CONTACTS_ONLY or f'{out}/fighter-{hero}.json', 'w'), indent=1)
 print('DONE', len(sheet), 'strips')

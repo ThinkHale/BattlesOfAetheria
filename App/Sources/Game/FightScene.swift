@@ -52,6 +52,7 @@ final class FightScene: SKScene {
 
     private var lastTime: TimeInterval = 0
     private var accumulator: TimeInterval = 0
+    private var frontFighter = 0
     private var slowMotion = 0
     private var shake: CGFloat = 0
     private var cameraX: CGFloat = 0
@@ -90,6 +91,7 @@ final class FightScene: SKScene {
         // SwiftUI may not have measured the view when the scene was made.
         if view.bounds.width > 0 { size = view.bounds.size }
         addChild(world)
+        SpriteBody.keepOnly(Set(setup.match.heroes))
         stage = StageNode(stage: setup.match.stage)
         world.addChild(stage)
 
@@ -134,6 +136,7 @@ final class FightScene: SKScene {
         updateControlsVisibility()
 
         AudioManager.shared.playMusic(.stage(setup.match.stage))
+        AudioManager.shared.duckMusic(false)      // a rematch keeps the track, which the pause menu left ducked
         handle(match.events)
         renderFrame()
     }
@@ -193,7 +196,9 @@ final class FightScene: SKScene {
             ticks += 1
             stepMatch()
         }
-        if ticks > 0 { renderFrame() }
+        // Draw every display frame, even one without a tick (slow motion runs ticks at 0.4x), so the camera, zoom
+        // and shake stay smooth.
+        renderFrame()
     }
 
     private func gatherInputs() -> [Controls] {
@@ -233,9 +238,26 @@ final class FightScene: SKScene {
         let inputs = gatherInputs()
         match.tick(inputs)
         handle(match.events)
+        swingSounds()
         if match.isOver && !finished {
             resultDelay += 1
             if resultDelay > 150 { finish() }
+        }
+    }
+
+    /// A blow is heard as it swings, two ticks before it can land (the hit sound follows if it connects). Spears,
+    /// lances and the standard thrust; the commander may shout on the big ones.
+    private func swingSounds() {
+        let audio = AudioManager.shared
+        for (i, fighter) in match.fighters.enumerated() {
+            guard case let .attack(slot) = fighter.action else { continue }
+            let move = fighter.moves[slot]
+            guard move.hitbox.width > 0, fighter.frame == max(1, move.firstActive - 2) else { continue }
+            let big = [.heavy, .airHeavy, .light3, .special, .superArt].contains(slot)
+            let thrust = [.spear, .lance, .standard].contains(looks[i].weapon) && [.light1, .light2, .heavy].contains(slot)
+            if thrust, audio.has(.swingThrust) { audio.play(.swingThrust, volume: big ? 1 : 0.8) }
+            else { audio.play(big ? .whooshHeavy : .whooshLight, volume: big ? 0.8 : 0.6) }
+            if big, Double.random(in: 0...1) < 0.5 { audio.playAny(FighterVoice.of(fighter.hero.id).attacks, volume: 0.75) }
         }
     }
 
@@ -258,14 +280,19 @@ final class FightScene: SKScene {
             switch event {
             case let .roundAnnounced(round, final):
                 audio.play(.gong)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) { audio.play(.announce(round: round, final: final)) }
                 hud.announce(final ? "FINAL ROUND" : "ROUND \(round)", sub: setup.match.stage.name, hold: 1.2)
                 zoom = 1.15
             case .fight:
                 audio.play(.horn)
+                audio.play(.voFight)
                 hud.announce("FIGHT!", color: Theme.goldUI, hold: 0.5, size: 72)
             case let .hit(attacker, impact, at, damage, counter, combo):
                 let defender = 1 - attacker
                 audio.play(.hit(impact))
+                if impact >= .medium, Double.random(in: 0...1) < (impact >= .heavy ? 0.7 : 0.35) {
+                    audio.playAny(FighterVoice.of(f(defender).hero.id).hurts, volume: 0.8)
+                }
                 Effects.hitSpark(at: point(at), impact: impact, color: looks[attacker].energy, in: world)
                 fighterNodes[defender].hitFlash(.white, frames: impact >= .heavy ? 4 : 2)
                 addShake(impact)
@@ -287,9 +314,8 @@ final class FightScene: SKScene {
                 fighterNodes[defender].hitFlash(looks[defender].energy, frames: 6)
                 let f = match.fighters[defender]
                 Effects.floatingText("SHIELD WALL", at: CGPoint(x: f.position.x, y: f.position.y + 200), color: looks[defender].energy, in: world, size: 20)
-            case let .whiff(attacker, slot):
-                audio.play(slot == .heavy || slot == .airHeavy ? .whooshHeavy : .whooshLight, volume: 0.7)
-                _ = attacker
+            case .whiff:
+                break          // the swing was heard as it started (see swingSounds)
             case let .special(attacker, name):
                 let f = match.fighters[attacker]
                 Effects.floatingText(name.uppercased(), at: CGPoint(x: f.position.x, y: f.position.y + 220 * f.stature), color: looks[attacker].energy, in: world, size: 18)
@@ -325,7 +351,7 @@ final class FightScene: SKScene {
                 audio.play(.jump, volume: 0.5)
                 Effects.dust(at: CGPoint(x: f(fighter).position.x, y: 0), in: world, amount: 8)
             case let .landed(fighter, hard):
-                audio.play(.land, volume: hard ? 1 : 0.5)
+                if hard, audio.has(.bodyFall) { audio.play(.bodyFall) } else { audio.play(.land, volume: hard ? 1 : 0.5) }
                 Effects.dust(at: CGPoint(x: f(fighter).position.x, y: 0), in: world, amount: hard ? 22 : 8)
                 if hard { addShake(.medium) }
             case let .dashed(fighter, _):
@@ -340,6 +366,8 @@ final class FightScene: SKScene {
                 Effects.floatingText("+\(Int(amount))", at: CGPoint(x: p.x, y: p.y + 160), color: UIColor(hex: 0x9FE3B8), in: world, size: 18)
             case let .ko(loser):
                 audio.play(.ko)
+                audio.play(FighterVoice.of(f(loser).hero.id).knockout, volume: 0.9)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { audio.play(.voKO) }
                 slowMotion = 70
                 zoom = 1.3
                 fighterNodes[loser].hitFlash(.white, frames: 8)
@@ -347,12 +375,16 @@ final class FightScene: SKScene {
                 hud.announce("K.O.", color: UIColor(hex: 0xFF5D4A), hold: 1.4, size: 96)
             case .timeOver:
                 audio.play(.gong)
+                audio.play(.voTime)
                 hud.announce("TIME", hold: 1.2)
             case let .roundWon(winner, perfect):
                 if let winner {
                     let name = setup.match.bosses.contains(winner) ? "The Echo" : match.fighters[winner].hero.name
                     if perfect {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) { [weak self] in self?.hud.announce("PERFECT", sub: "\(name) takes the round", color: Theme.goldUI) }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) { [weak self] in
+                            self?.hud.announce("PERFECT", sub: "\(name) takes the round", color: Theme.goldUI)
+                            audio.play(.voPerfect)
+                        }
                     } else {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) { [weak self] in self?.hud.announce("\(name.uppercased()) WINS", sub: "the round", hold: 1.0, size: 40) }
                     }
@@ -429,11 +461,12 @@ final class FightScene: SKScene {
     // MARK: Drawing
 
     private func renderFrame() {
-        for i in 0..<2 { fighterNodes[i].update(match.fighters[i]) }
-        // Whoever is attacking draws in front.
-        let front = match.fighters[1].action.isAttack && !match.fighters[0].action.isAttack ? 1 : 0
-        fighterNodes[front].zPosition = 12
-        fighterNodes[1 - front].zPosition = 11
+        for i in 0..<2 { fighterNodes[i].update(match.fighters[i], clock: match.frameCount) }
+        // Whoever attacked last draws in front, and stays there until the other one attacks (switching back the
+        // moment an attack ends flickers the overlapping figures).
+        for i in 0..<2 where match.fighters[i].action.isAttack && !match.fighters[1 - i].action.isAttack { frontFighter = i }
+        fighterNodes[frontFighter].zPosition = 12
+        fighterNodes[1 - frontFighter].zPosition = 11
 
         var alive = Set<Int>()
         for p in match.projectiles {

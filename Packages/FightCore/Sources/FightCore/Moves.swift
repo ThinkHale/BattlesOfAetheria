@@ -173,11 +173,11 @@ public struct MoveSet: Sendable {
                         knockback: Vec(10, 8), impact: .heavy, knocksDown: true, counterWindow: 4...30)
         case .volley:
             let bolt = ProjectileSpec(kind: .bolt, origin: Vec(52, 112 * s), velocity: Vec(15, 0), box: LocalBox(x: -18, y: -6, width: 36, height: 12),
-                                      damage: 48, hitstun: 18, blockstun: 12, knockback: Vec(3, 0), lifetime: 80, impact: .light)
-            return Move(slot: .special, name: name, startup: 13, active: 9, recovery: 16, damage: 0,
+                                      damage: 54, hitstun: 18, blockstun: 12, knockback: Vec(3, 0), lifetime: 80, impact: .light)
+            return Move(slot: .special, name: name, startup: 11, active: 9, recovery: 16, damage: 0,
                         hitstun: 0, blockstun: 0, hitbox: LocalBox(x: 0, y: 0, width: 0, height: 0),
                         knockback: .zero, impact: .light, chip: 0.1,
-                        projectiles: [(13, bolt), (21, bolt)])
+                        projectiles: [(11, bolt), (19, bolt)])
         case .partingShot:
             var arrow = ProjectileSpec(kind: .arrow, origin: Vec(40, 120 * s), velocity: Vec(14, 0), box: LocalBox(x: -20, y: -6, width: 40, height: 12),
                                        damage: 76, hitstun: 22, blockstun: 14, knockback: Vec(4, 0), lifetime: 70, impact: .medium)
@@ -215,7 +215,7 @@ public struct MoveSet: Sendable {
                         armor: 1...12, armorHits: 1,
                         selfGrant: (16, ConditionGrant(condition: .fortified, frames: 240, magnitude: 0.2), 0))
         case .eyeOfHorus:
-            let orb = ProjectileSpec(kind: .orb, origin: Vec(56, 110 * s), velocity: Vec(6.6, 0), box: LocalBox(x: -24, y: -24, width: 48, height: 48),
+            let orb = ProjectileSpec(kind: .orb, origin: Vec(56, 110 * s), velocity: Vec(7.4, 0), box: LocalBox(x: -24, y: -24, width: 48, height: 48),
                                      damage: 56, hitstun: 26, blockstun: 16, knockback: Vec(3, 0), lifetime: 170,
                                      onHit: ConditionGrant(condition: .marked, frames: 300, magnitude: 0.25), priority: 2, impact: .medium)
             return Move(slot: .special, name: name, startup: 14, active: 4, recovery: 17, damage: 0,

@@ -1,5 +1,5 @@
 {
- "idle": {"action": "Archery_Aim_with_Lateral_Scan", "frames": 10, "loop": true, "aim": true},
+ "idle": {"action": "Archery_Aim_with_Lateral_Scan", "frames": 12, "loop": true, "aim": true, "range": [0, 44], "pingpong": true},
  "walk": {"action": "Walk_Forward_with_Bow_Aimed", "frames": 8, "loop": true},
  "dash": {"action": "Back_Jump", "frames": 7, "loop": false},
  "guard": {"action": "Hit_Reaction_with_Bow", "frames": 6, "loop": false, "range": [0, 18]},

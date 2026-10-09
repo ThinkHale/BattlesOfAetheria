@@ -9,7 +9,7 @@
   ],
   "loop": true,
   "figureHeight": 354.5,
-  "fps": 7.5
+  "fps": 6.0
  },
  "walk": {
   "frames": 10,
@@ -21,7 +21,7 @@
   ],
   "loop": true,
   "figureHeight": 354.5,
-  "fps": 7.5
+  "fps": 6.0
  },
  "dash": {
   "frames": 7,
@@ -33,7 +33,7 @@
   ],
   "loop": true,
   "figureHeight": 354.5,
-  "fps": 15.0
+  "fps": 12.0
  },
  "guard": {
   "frames": 6,
@@ -45,7 +45,7 @@
   ],
   "loop": false,
   "figureHeight": 354.5,
-  "fps": 9.0
+  "fps": 7.2
  },
  "jump": {
   "frames": 10,
@@ -57,7 +57,7 @@
   ],
   "loop": false,
   "figureHeight": 354.5,
-  "fps": 6.82
+  "fps": 5.45
  },
  "light": {
   "frames": 10,
@@ -69,7 +69,8 @@
   ],
   "loop": false,
   "figureHeight": 354.5,
-  "fps": 4.17
+  "fps": 3.33,
+  "contact": 3
  },
  "light2": {
   "frames": 8,
@@ -81,7 +82,8 @@
   ],
   "loop": false,
   "figureHeight": 354.5,
-  "fps": 6.67
+  "fps": 5.33,
+  "contact": 3
  },
  "light3": {
   "frames": 10,
@@ -93,7 +95,8 @@
   ],
   "loop": false,
   "figureHeight": 354.5,
-  "fps": 3.95
+  "fps": 3.16,
+  "contact": 3
  },
  "heavy": {
   "frames": 12,
@@ -105,7 +108,8 @@
   ],
   "loop": false,
   "figureHeight": 354.5,
-  "fps": 3.46
+  "fps": 2.77,
+  "contact": 4
  },
  "air": {
   "frames": 10,
@@ -117,7 +121,8 @@
   ],
   "loop": false,
   "figureHeight": 354.5,
-  "fps": 3.75
+  "fps": 3.0,
+  "contact": 3
  },
  "throw": {
   "frames": 9,
@@ -129,7 +134,8 @@
   ],
   "loop": false,
   "figureHeight": 354.5,
-  "fps": 4.74
+  "fps": 3.79,
+  "contact": 5
  },
  "special": {
   "frames": 12,
@@ -141,7 +147,8 @@
   ],
   "loop": false,
   "figureHeight": 354.5,
-  "fps": 6.67
+  "fps": 5.33,
+  "contact": 6
  },
  "super": {
   "frames": 12,
@@ -153,7 +160,8 @@
   ],
   "loop": false,
   "figureHeight": 354.5,
-  "fps": 3.46
+  "fps": 2.77,
+  "contact": 4
  },
  "hit": {
   "frames": 6,
@@ -165,7 +173,7 @@
   ],
   "loop": false,
   "figureHeight": 354.5,
-  "fps": 6.43
+  "fps": 5.14
  },
  "ko": {
   "frames": 10,
@@ -177,7 +185,7 @@
   ],
   "loop": false,
   "figureHeight": 354.5,
-  "fps": 3.85
+  "fps": 3.08
  },
  "victory": {
   "frames": 12,
@@ -189,6 +197,6 @@
   ],
   "loop": false,
   "figureHeight": 354.5,
-  "fps": 1.96
+  "fps": 1.57
  }
 }

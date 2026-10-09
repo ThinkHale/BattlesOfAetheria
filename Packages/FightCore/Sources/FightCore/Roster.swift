@@ -211,7 +211,7 @@ public enum Roster {
                  victory: "Remember this. Fear is a teacher too.",
                  defeat: "Enjoy it. It will not be repeated.",
                  bio: "A general of the Persian guard who trusts only power and results, openly contemptuous of softness and of Atossa. His rival kingdom and his feud with her are the stuff of Aetheria's border wars.",
-                 stats: stats(.guardian, stature: 1.08, power: 0.98, speed: 0.92, health: 1.0), rival: (.atossa, "Atossa. Your soft heart will be the end of Persia. Let me end it first."))
+                 stats: stats(.guardian, stature: 1.08, power: 0.98, speed: 0.92, health: 1.0, reach: 1.15), rival: (.atossa, "Atossa. Your soft heart will be the end of Persia. Let me end it first."))
         case .weiJian:
             Hero(id: id, name: "Wei Jian", title: "The Survivor of the Han", empire: .han, archetype: .guardian,
                  special: .ironFormation, specialName: "Iron Formation",
@@ -235,7 +235,7 @@ public enum Roster {
                  victory: "The scales settle. Rest now.",
                  defeat: "A dream warned me of this. I did not listen.",
                  bio: "High Priestess of Amun who keeps the balance between kingdoms with omens, grain ledgers and an army she would rather not use. She answers questions with questions.",
-                 stats: stats(.archer, toughness: 0.98, reach: 1.18), rival: (.livia, "Lady Livia. Rome's balance and mine are not the same scale."))
+                 stats: stats(.archer, toughness: 0.98, health: 1.04, reach: 1.18), rival: (.livia, "Lady Livia. Rome's balance and mine are not the same scale."))
         case .arsames:
             Hero(id: id, name: "Arsamis", title: "The Persian Strategist", empire: .persia, archetype: .rider,
                  special: .levy, specialName: "Satrap's Levy",
@@ -259,7 +259,7 @@ public enum Roster {
                  victory: "Agreement, at last.",
                  defeat: "Noted.",
                  bio: "Wife of Augustus and mother of Tiberius, who spent a lifetime making sure Rome would never again tear itself apart. In Aetheria her counsel is measured, formal and dry, and she never wastes a word.",
-                 stats: stats(.guardian, power: 1.02, speed: 1.02, health: 0.98), rival: (.atossa, "Queen Atossa. Two empires, one conversation. Shall we have it?"))
+                 stats: stats(.guardian, power: 1.02, speed: 1.02, health: 0.98, reach: 1.18), rival: (.atossa, "Queen Atossa. Two empires, one conversation. Shall we have it?"))
         case .nefru:
             Hero(id: id, name: "Nefru", title: "The Daughter of Kush", empire: .egypt, archetype: .archer,
                  special: .sunlitVolley, specialName: "Sunlit Volley",
@@ -283,7 +283,7 @@ public enum Roster {
                  victory: "Get up. Persia has room for you yet.",
                  defeat: "The people will forgive me this. Will you?",
                  bio: "Daughter of Cyrus the Great, who speaks with the authority of his house and the warmth of someone responsible for thousands. She judges every plan by whether people will be safer for it.",
-                 stats: stats(.rider, stature: 1.02, toughness: 0.96, speed: 0.96, health: 1.04), rival: (.bardiya, "Bardiya. Fear made you a general. It will not make you a king."))
+                 stats: stats(.rider, stature: 1.02, toughness: 0.96, speed: 0.96, health: 1.04, reach: 1.12), rival: (.bardiya, "Bardiya. Fear made you a general. It will not make you a king."))
         case .meiLin:
             Hero(id: id, name: "Mei Lin", title: "The Archer of a Thousand Plans", empire: .han, archetype: .archer,
                  special: .stratagem, specialName: "Thousand Bolt Stratagem",

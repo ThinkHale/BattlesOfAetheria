@@ -32,6 +32,13 @@ Work happens in `art-inbox/3d/<hero>/` (git-ignored apart from `strips.json`).
 6. **Install:** `python3 Tools/install-fighter-strips.py strips <hero_id>` (palette-compresses
    into `App/Resources/Fighters`), then `xcodegen generate`.
 
+Each strip's JSON carries playback hints that `SpriteBody` uses: `fps` (at the rate the clips were imported),
+`contact` on attack strips (the frame where the blow lands, found from how far the hands, feet and weapon move
+forward; the release for archery), `backward` for a back-jump or dodge used as the dash, and `pingpong` for a loop
+cut from the middle of a long clip (set `"pingpong": true` in strips.json). To refresh the hints on installed strips
+without rendering: `blender -b -P Tools/render-strips.py -- <Name>_game.blend /tmp/unused <hero_id> strips.json
+--contacts-only App/Resources/Fighters/fighter-<hero_id>.json`.
+
 ### A body made elsewhere and rigged in Mixamo (Atossa, Kepri)
 
 Tripo bodies are rigged in Mixamo with no clips (Mixamo has no spear or sword-only sets). Instead the Meshy clips

@@ -1,6 +1,6 @@
 # Aetheria Rising: Clash of the Crossing
 
-[![CI](https://github.com/ThinkHale/AetherianWars/actions/workflows/ci.yml/badge.svg)](https://github.com/ThinkHale/AetherianWars/actions/workflows/ci.yml)
+[![CI](https://github.com/ThinkHale/BattlesOfAetheria/actions/workflows/ci.yml/badge.svg)](https://github.com/ThinkHale/BattlesOfAetheria/actions/workflows/ci.yml)
 
 A 2D fighting game for iPhone and iPad set in the world of
 [Aetheria Rising](https://github.com/ThinkHale/aetheria.rising). The thirteen
@@ -8,7 +8,7 @@ commanders of Aetheria (Romans, Egyptians, Persians and Han, drawn out of
 their own centuries by the mist of the Crossing) fight one another, and at the
 end of arcade the mist itself takes the player's face.
 
-Website: https://thinkhale.github.io/AetherianWars/ (source in `site/`,
+Website: https://thinkhale.github.io/BattlesOfAetheria/ (source in `site/`,
 deployed by GitHub Pages on every push that touches it).
 
 Native Swift: SpriteKit for the fight, SwiftUI for the menus, no third-party

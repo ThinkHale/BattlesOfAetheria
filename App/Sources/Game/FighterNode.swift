@@ -1,8 +1,8 @@
 import SpriteKit
 import FightCore
 
-/// One fighter on stage. Draws them with painted sprite sheets when the
-/// bundle has them (see docs/ART-PIPELINE.md) and with the jointed vector
+/// One fighter on stage. Draws them from the rendered sprite strips when the
+/// bundle has them (see docs/3d-fighter-pipeline.md) and with the jointed vector
 /// rig otherwise, posed from the simulation every tick.
 final class FighterNode: SKNode {
     let heroID: HeroID
@@ -52,7 +52,8 @@ final class FighterNode: SKNode {
         flashColor = color
     }
 
-    func update(_ f: Fighter) {
+    /// `clock` is the simulation tick (the match's frame count) the fighter is shown at.
+    func update(_ f: Fighter, clock: Int) {
         tick += 1
         position = CGPoint(x: f.position.x, y: f.position.y)
         let facing = CGFloat(f.facing)
@@ -65,7 +66,7 @@ final class FighterNode: SKNode {
         shadow.alpha = 1 - lift * 0.6
 
         if let sprite {
-            sprite.show(f)
+            sprite.show(f, clock: clock)
         } else if let rig {
             let target = pose(for: f)
             // Attacks and blows snap; everything else blends in.
@@ -84,7 +85,7 @@ final class FighterNode: SKNode {
         if flashFrames > 0 {
             flashFrames -= 1
             rig?.flash(flashColor, amount: flashFrames > 0 ? 0.75 : 0)
-            sprite?.flash(flashFrames > 0)
+            sprite?.flash(flashFrames > 0 ? flashColor : nil)
         }
         // Flicker while invulnerable getting up.
         alpha = f.invulnerable > 0 && tick % 4 < 2 ? 0.6 : 1

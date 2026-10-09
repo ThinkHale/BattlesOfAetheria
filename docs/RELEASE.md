@@ -11,7 +11,7 @@
    (or *Aetheria Rising: Clash* if the full title is taken), primary language
    English (U.S.), bundle ID above, SKU `aetheria-clash`.
 3. **Privacy.** App Privacy → *Data Not Collected*. Privacy policy URL:
-   https://thinkhale.github.io/AetherianWars/privacy.html (from `site/`,
+   https://thinkhale.github.io/BattlesOfAetheria/privacy.html (from `site/`,
    deployed by the Website workflow). The
    bundle carries `PrivacyInfo.xcprivacy` (UserDefaults CA92.1, system boot
    time 35F9.1, no tracking).
@@ -68,8 +68,8 @@ Special and a devastating Crossing Art.
 
 **What's new (1.0):** The Crossing opens.
 
-**Support URL:** https://thinkhale.github.io/AetherianWars/support.html
-**Marketing URL:** https://thinkhale.github.io/AetherianWars/
+**Support URL:** https://thinkhale.github.io/BattlesOfAetheria/support.html
+**Marketing URL:** https://thinkhale.github.io/BattlesOfAetheria/
 
 ## Screenshots
 

@@ -1,96 +1,18 @@
 {
- "idle": {
-  "action": "Archery_Aim_with_Lateral_Scan",
-  "frames": 10,
-  "loop": true,
-  "aim": true
- },
- "walk": {
-  "action": "Walk_Forward_with_Bow_Aimed",
-  "frames": 8,
-  "loop": true
- },
- "dash": {
-  "action": "Back_Jump",
-  "frames": 7,
-  "loop": false
- },
- "guard": {
-  "action": "Hit_Reaction_with_Bow",
-  "frames": 6,
-  "loop": false,
-  "range": [
-   0,
-   18
-  ]
- },
- "jump": {
-  "action": "Regular_Jump",
-  "frames": 10,
-  "loop": false,
-  "lock_rise": true
- },
- "light": {
-  "action": "Archery_Shot_1",
-  "frames": 7,
-  "loop": false,
-  "aim": true
- },
- "light2": {
-  "action": "Spartan_Kick",
-  "frames": 8,
-  "loop": false
- },
- "light3": {
-  "action": "Roundhouse_Kick",
-  "frames": 10,
-  "loop": false
- },
- "heavy": {
-  "action": "High_Kick",
-  "frames": 10,
-  "loop": false
- },
- "air": {
-  "action": "Basic_Jump",
-  "frames": 10,
-  "loop": false,
-  "range": [
-   30,
-   110
-  ],
-  "lock_rise": true
- },
- "throw": {
-  "action": "Shield_Push_Left",
-  "frames": 9,
-  "loop": false
- },
- "special": {
-  "action": "Archery_Shot",
-  "frames": 12,
-  "loop": false,
-  "aim": true
- },
- "super": {
-  "action": "Draw_and_Shoot_from_Back",
-  "frames": 14,
-  "loop": false,
-  "aim": true
- },
- "hit": {
-  "action": "Hit_Reaction_1",
-  "frames": 6,
-  "loop": false
- },
- "ko": {
-  "action": "Knock_Down_1",
-  "frames": 10,
-  "loop": false
- },
- "victory": {
-  "action": "victory",
-  "frames": 12,
-  "loop": true
- }
+ "idle": {"action": "Archery_Aim_with_Lateral_Scan", "frames": 12, "loop": true, "aim": true, "range": [0, 44], "pingpong": true},
+ "walk": {"action": "Walk_Forward_with_Bow_Aimed", "frames": 8, "loop": true},
+ "dash": {"action": "Back_Jump", "frames": 7, "loop": false},
+ "guard": {"action": "Hit_Reaction_with_Bow", "frames": 6, "loop": false, "range": [0, 18]},
+ "jump": {"action": "Regular_Jump", "frames": 10, "loop": false, "lock_rise": true},
+ "light": {"action": "Archery_Shot_1", "frames": 7, "loop": false, "aim": true},
+ "light2": {"action": "Spartan_Kick", "frames": 8, "loop": false},
+ "light3": {"action": "Roundhouse_Kick", "frames": 10, "loop": false},
+ "heavy": {"action": "High_Kick", "frames": 10, "loop": false},
+ "air": {"action": "Basic_Jump", "frames": 10, "loop": false, "range": [30, 110], "lock_rise": true},
+ "throw": {"action": "Shield_Push_Left", "frames": 9, "loop": false},
+ "special": {"action": "Archery_Shot", "frames": 12, "loop": false, "aim": true},
+ "super": {"action": "Draw_and_Shoot_from_Back", "frames": 14, "loop": false, "aim": true},
+ "hit": {"action": "Hit_Reaction_1", "frames": 6, "loop": false},
+ "ko": {"action": "Knock_Down_1", "frames": 10, "loop": false},
+ "victory": {"action": "victory", "frames": 12, "loop": true}
 }
